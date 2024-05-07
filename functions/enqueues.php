@@ -2,10 +2,6 @@
 /*
  * Enqueues
  */
-
-
-
- 
 function b4st_enqueues() {
 
 	// Styles
