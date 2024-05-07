@@ -1,0 +1,48 @@
+:root {
+  --sf-quicksand: 'Quicksand';
+  --sf-bloomsbury: 'bloomsburysans';
+  --sf-font-body: var(--sf-quicksand), sans-serif; 
+  --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
+}
+
+/* header */
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+@font-face {
+  font-family: 'bloomsburysans';
+  src:
+    url('./fonts/bloomsbury_sans-webfont.woff2') format('woff2'),
+    url('./fonts/bloomsbury_sans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.sf-bloomsbury {
+  font-family: var(--sf-bloomsbury);
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand-Regular.woff2') format('woff2'),
+      url('./fonts/Quicksand-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand-Medium.woff2') format('woff2'),
+      url('./fonts/Quicksand-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.sf-quicksand {
+  font-family: var(--sf-quicksand);
+}
