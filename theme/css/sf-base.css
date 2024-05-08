@@ -60,13 +60,13 @@ main {
 
 #navbarDropdown .navbar-nav {
   opacity: 0;
-  transition: opacity .6s var(--sf-ease);
+  transition: opacity .6s ease-out;
   transition-delay: 0s;
 }
 
 #navbarDropdown.show .navbar-nav {
   opacity: 1;
-  transition-delay: calc(var(--sf-mobile-menu-speed) * 1.8);
+  transition-delay: calc(var(--sf-mobile-menu-speed) * 1.5);
 }
 
 .navbar-light .navbar-nav .nav-link {
