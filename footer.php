@@ -1,4 +1,4 @@
-<footer id="footer" class="mt-5">
+<footer id="footer">
 
   <!-- Check for footer widgets -->
   <?php if(is_active_sidebar('footer-widget-area')): ?>
