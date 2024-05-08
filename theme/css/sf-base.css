@@ -78,14 +78,17 @@ main {
 
 /* FOOTER */
 footer {
-  background: #222 !important;
+  background-color: #222222 !important;
   font-size: 11px;
-  color: #c5c5c5;
-  padding: 10px 20px;
+  font-weight: 500;
   font-family: var(--sf-roboto);
 }
 
-span.mpire-m,
+footer, footer a{
+  color: #c5c5c5;
+}
+
+.mpire-m,
 footer a.mpire-link:hover {
  color: #c51520;
 }
