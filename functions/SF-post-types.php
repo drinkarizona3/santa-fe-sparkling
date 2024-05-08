@@ -15,8 +15,16 @@ function create_posttype() {
             'rewrite' => array('slug' => 'flavors'),
             'show_in_rest' => true,
             'menu_position' => '3.3',
-            'menu_icon' => 'dashicons-carrot'
-  
+            'menu_icon' => 'dashicons-carrot',
+            'supports'  => array( 
+                'title', 
+                'editor', 
+                'excerpt', 
+                'author', 
+                'thumbnail', 
+                'revisions', 
+                'custom-fields', 
+            )
         )
     );
 }

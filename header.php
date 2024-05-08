@@ -12,23 +12,28 @@
 <?php b4st_navbar_before();?>
 
 <nav id="navbar" class="navbar navbar-expand-md">
-  <div class="container">
 
-    <?php b4st_navbar_brand(); ?>
+    <div class="d-flex">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <?php b4st_navbar_brand(); ?>
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <span class="sf-navbar-toggler">
+          <?php get_template_part('snippets/sf-lemon-outline'); ?>
+        </span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarDropdown">
+  
+        <?php b4st_nav(); ?>
+  
+        <?php //b4st_navbar_search();?>    
+        
+      </div>
 
-    <div class="collapse navbar-collapse" id="navbarDropdown">
-
-      <?php b4st_nav(); ?>
-
-      <?php //b4st_navbar_search();?>    
-      
     </div>
 
-  </div>
 </nav>
 
 <?php b4st_navbar_after();?>
