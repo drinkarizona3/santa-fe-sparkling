@@ -1,12 +1,79 @@
 :root {
+  --sf-header-height: 7rem;
   --sf-quicksand: 'Quicksand';
   --sf-bloomsbury: 'bloomsburysans';
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
 }
 
-/* header */
+main {
+  margin-top: calc(var(--sf-header-height)* -1);
+}
 
+/* header */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--sf-header-height);
+  padding: 0 max(3%, 1.8rem);
+  background: transparent !important;
+}
+
+.navbar-brand {
+  font-size: clamp(3rem, 3vw, 3rem);
+  letter-spacing: -.05em;
+  line-height: .9;
+  margin: 0;
+  padding: 0;
+}
+  
+#navbarDropdown {
+  position: fixed;
+  top: 0;
+  background: pink;
+  left: 0;
+  right: 0;
+  min-height: 100svh;
+  transform: translate3d(100%, -100%, 0) scale(.6) rotateX(40deg);
+  border-radius: 0 0 0 100%;
+  transition: transform .6s cubic-bezier(0.785, 0.135, 0.15, 0.86) .2s, border-radius .6s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  z-index: 10;
+}
+
+#navbarDropdown.show {
+  transform: translate3d(0, 0, 0) scale(1) rotateY(0);
+  transition: transform .6s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s, border-radius .4s cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s, background .4s ease-in-out;
+}
+
+#navbarDropdown .navbar-nav {
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -ms-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  -ms-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+}
+
+#navbarDropdown.show .navbar-nav {
+  opacity: 1;
+  -webkit-transition-delay: .7s;
+  -moz-transition-delay: .7s;
+  -ms-transition-delay: .7s;
+  -o-transition-delay: .7s;
+  transition-delay: .7s;
+}
+
+.navbar-nav .nav-link {
+  font-size: clamp(1.4rem, calc(5vw + 1rem), 7rem);
+  font-family: var(--sf-font-heading);
+  color: black;
+}
 
 /* ==========================================================================
    Typography

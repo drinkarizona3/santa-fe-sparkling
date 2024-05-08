@@ -11,29 +11,22 @@
 
 <?php b4st_navbar_before();?>
 
-<nav id="navbar" class="navbar">
+<nav id="navbar" class="bg-light navbar navbar-light">
 
-    <div class="d-flex w-100">
+  <div class="collapse navbar-collapse d-flex flex-column justify-content-center align-items-center" id="navbarDropdown">
+    <?php b4st_nav(); ?>
+  </div>
 
-      <?php b4st_navbar_brand(); ?>
-  
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <?php /* <span class="sf-navbar-toggler">
-          <?php get_template_part('snippets/sf-lemon-outline'); ?>
-        </span> */ ?>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarDropdown">
-  
-        <?php b4st_nav(); ?>
-  
-        <?php //b4st_navbar_search();?>    
-        
-      </div>
+  <div class="d-flex w-100">
 
-    </div>
+    <?php b4st_navbar_brand(); ?>
+
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><?php get_template_part('snippets/sf-lemon-outline'); ?></span>
+    </button>
+  </div>
 
 </nav>
+
 
 <?php b4st_navbar_after();?>
