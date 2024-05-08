@@ -67,7 +67,7 @@ function b4st_nav()
 			'container'       => false,
 			'menu_class'      => '',
 			'fallback_cb'     => '__return_false',
-			'items_wrap'      => '<div class="sf-nav__menu-container"><div class="sf-nav__nav-container"><ul id="%1$s" class="navbar-nav mt-2 mt-lg-0 %2$s">%3$s</ul></div></div>',
+			'items_wrap'      => '<div class="sf-nav__menu-container"><div class="sf-nav__nav-container d-flex justify-content-center"><ul id="%1$s" class="align-items-center navbar-nav mt-2 mt-lg-0 %2$s">%3$s</ul></div></div>',
 			'depth'           => 2,
 			'walker'          => new b4st_walker_nav_menu()
 	  	) 
