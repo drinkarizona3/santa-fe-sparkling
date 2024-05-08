@@ -20,8 +20,8 @@ function b4st_enqueues() {
 	wp_register_style('sf-base', get_template_directory_uri() . '/theme/css/sf-base.css', false, null);
 	wp_enqueue_style('sf-base');
 
-	wp_register_style('sf-base', get_template_directory_uri() . '/theme/css/sf-base.css', false, null);
-	wp_enqueue_style('sf-base');
+	wp_register_style('sf-utils', get_template_directory_uri() . '/theme/css/sf-utils.css', false, null);
+	wp_enqueue_style('sf-utils');
 
 	// Scripts
 
