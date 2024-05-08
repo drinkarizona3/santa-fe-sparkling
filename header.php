@@ -17,7 +17,7 @@
     <?php b4st_nav(); ?>
   </div>
 
-  <div class="d-flex w-100">
+  <div class="d-flex align-items-center w-100 position-relative">
 
     <?php b4st_navbar_brand(); ?>
 
