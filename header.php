@@ -11,17 +11,17 @@
 
 <?php b4st_navbar_before();?>
 
-<nav id="navbar" class="navbar navbar-expand-md">
+<nav id="navbar" class="navbar">
 
-    <div class="d-flex">
+    <div class="d-flex w-100">
 
       <?php b4st_navbar_brand(); ?>
   
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- <span class="navbar-toggler-icon"></span> -->
-        <span class="sf-navbar-toggler">
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <?php /* <span class="sf-navbar-toggler">
           <?php get_template_part('snippets/sf-lemon-outline'); ?>
-        </span>
+        </span> */ ?>
       </button>
   
       <div class="collapse navbar-collapse" id="navbarDropdown">
