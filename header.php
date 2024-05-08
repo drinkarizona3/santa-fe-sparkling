@@ -18,10 +18,10 @@
       <?php b4st_navbar_brand(); ?>
   
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- <span class="navbar-toggler-icon"></span> -->
-        <span class="sf-navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+        <!-- <span class="sf-navbar-toggler">
           <?php get_template_part('snippets/sf-lemon-outline'); ?>
-        </span>
+        </span> -->
       </button>
   
       <div class="collapse navbar-collapse" id="navbarDropdown">
