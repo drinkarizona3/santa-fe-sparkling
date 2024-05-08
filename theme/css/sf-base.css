@@ -60,7 +60,7 @@ main {
 
 #navbarDropdown .navbar-nav {
   opacity: 0;
-  transition: opacity .3s var(--sf-ease);
+  transition: opacity .6s var(--sf-ease);
   transition-delay: 0s;
 }
 
