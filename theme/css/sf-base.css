@@ -2,6 +2,7 @@
   --sf-header-height: 7rem;
   --sf-quicksand: 'Quicksand';
   --sf-bloomsbury: 'bloomsburysans';
+  --sf-roboto: 'Roboto', sans-serif;
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
   --sf-ease: cubic-bezier(0.25, 1, 0.5, 1);
@@ -75,6 +76,23 @@ main {
   color: black;
 }
 
+/* FOOTER */
+footer {
+  background: #222 !important;
+  font-size: 11px;
+  color: #c5c5c5;
+  padding: 10px 20px;
+  font-family: var(--sf-roboto);
+}
+
+span.mpire-m,
+footer a.mpire-link:hover {
+ color: #c51520;
+}
+
+.dev-copyright {
+  color: #717171;
+}
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -112,4 +130,35 @@ main {
 
 .sf-quicksand {
   font-family: var(--sf-quicksand);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+      url('./fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Bold.woff2') format('woff2'),
+      url('./fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Medium.woff2') format('woff2'),
+      url('./fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.sf-roboto {
+  font-family: var(--sf-roboto);
 }
