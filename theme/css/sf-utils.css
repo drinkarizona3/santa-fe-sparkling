@@ -2,6 +2,17 @@
   min-height: 100vh;
 }
 
+a.sf-button {
+  display: inline-flex;
+  background: white;
+  padding: .85em 2em .95em;
+  line-height: 1;
+  color: black;
+  text-transform: uppercase;
+  background-color: #00C4B3;
+  border: 4px solid #f5e341;
+}
+
 .sf-section.sf-section__short {
   min-height: 50vh;
 }
@@ -29,6 +40,7 @@
   font-size: 100%;
 }
 
-.sf-scaling-text > .sf-subtitle {
-  font-size: 30% !important;
+.sf-scaling-text > .sf-subtitle,
+.sf-scaling-text > a {
+  font-size: 35% !important;
 }
