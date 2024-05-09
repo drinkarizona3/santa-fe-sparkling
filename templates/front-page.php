@@ -52,7 +52,7 @@
 
         $flavors = new WP_Query(array(
           'post_type' => 'sf_flavor'
-        ))
+        ));
         
         print_r($flavors);
       
