@@ -56,7 +56,7 @@
         
         var_dump($flavors);
       
-      foreach ($flavors as $post) : setup_postdata($post); ?>
+        while ( $flavors->have_posts() ) : $flavors->the_post(); ?>
 
         <article class="sf-flavor sf-section">
           <div class="container-xl">
@@ -79,10 +79,7 @@
             </div>
           </div>
         </article> <?php
-
-        wp_reset_postdata();
-
-      endforeach; ?>
+      endwhile;  wp_reset_postdata(); ?>
   </section>
 
 </main>
