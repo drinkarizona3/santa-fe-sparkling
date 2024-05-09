@@ -48,8 +48,7 @@
       <?php 
         $flavors = get_posts(array(
           'post_type' => 'flavor',
-          'post_status' => 'publish',
-          'posts_per_page' => -1
+          'post_status' => 'publish'
         ));
       
       foreach ($flavors as $post) : setup_postdata($post); ?>
