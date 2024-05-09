@@ -46,9 +46,13 @@
   <section id="sf-flavors" class="sf-section">
 
       <?php 
-        $flavors = get_posts(array(
+        // $flavors = get_posts(array(
+        //   'post_type' => 'sf_flavor'
+        // ));
+
+        $flavors = new WP_Query(array(
           'post_type' => 'sf_flavor'
-        ));
+        ))
         
         print_r($flavors);
       
