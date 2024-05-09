@@ -10,7 +10,7 @@ function SF_create_flavor_post_type() {
                 'singular_name' => __( 'Flavor', 'santa-fe' )
             ),
             'public' => true,
-            'publicly_queryable' => false,
+           // 'publicly_queryable' => false,
             'has_archive' => false,
             'rewrite' => array('slug' => 'flavors'),
             'show_in_rest' => true,
