@@ -28,15 +28,21 @@
     </div>
 
   </section>
-  <div class="row">
 
-    <div class="col-sm">
-      <div id="content" role="main">
-        
+  <section id="sf-main__content" class="mh-100">
+      <div class="container">
+        <div class="row">
+      
+          <div class="col-sm">
+            <div id="content" role="main">
+              <?= the_content(); ?>
+            </div>
+          </div>
+      
+        </div>
       </div>
-    </div>
+  </section>
 
-  </div>
 </main>
 
 <?php 
