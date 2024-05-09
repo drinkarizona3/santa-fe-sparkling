@@ -49,6 +49,8 @@
         $flavors = get_posts(array(
           'post_type' => 'sf_flavor'
         ));
+        
+        print_r($flavors);
       
       foreach ($flavors as $post) : setup_postdata($post); ?>
 
