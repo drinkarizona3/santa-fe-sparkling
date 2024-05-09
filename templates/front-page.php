@@ -29,7 +29,7 @@
 
   </section>
 
-  <section id="sf-main__content" class="mh-100">
+  <section id="sf-main__content" class="sf-section sf-section__short d-flex align-items-center">
       <div class="container">
         <div class="row">
       
