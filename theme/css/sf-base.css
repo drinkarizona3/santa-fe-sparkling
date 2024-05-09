@@ -5,12 +5,14 @@
   --sf-roboto: 'Roboto', sans-serif;
 
   --sf-font-size-body: 2.8rem;
-  --sf-font-size-heading: 7rem;
+  --sf-font-size-heading: 9rem;
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
 
   --sf-ease: cubic-bezier(0.25, 1, 0.5, 1);
   --sf-mobile-menu-speed: .5s;
+
+  --sf-color-flavor-background: #FFE800;
 }
 
 body {
@@ -19,6 +21,7 @@ body {
   font-family: var(--sf-font-body);
   font-weight: 500;
   font-size: var(--sf-font-size-body);
+  color: black;
 }
 
 main {
@@ -27,7 +30,7 @@ main {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: .25em;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 p {
@@ -57,6 +60,10 @@ p {
   background: none !important;
   height: auto;
   width: auto;
+}
+
+.navbar-toggler:focus {
+  animation: .8s toggler-reaction cubic-bezier(1, 0, 0, 1) forwards; 
 }
 
 span.sf-nav-text {
@@ -186,9 +193,18 @@ section#sf-main__content a {
   font-family: var(--sf-font-heading);
 }
 
-.navbar-toggler:focus {
-  animation: .8s toggler-reaction cubic-bezier(1, 0, 0, 1) forwards; 
+/* Flavor loop */
+#sf-falvors .sf-section {
+  background-color: var(--sf-color-flavor-background);
 }
+
+.sf-flavor__content > .sf-inner {
+  gap: .25em;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
 
 @keyframes toggler-reaction {
   0% {
@@ -201,6 +217,8 @@ section#sf-main__content a {
     transform: scale(1);
   }
 }
+
+
 /* ==========================================================================
    Typography
    ========================================================================== */

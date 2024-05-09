@@ -49,22 +49,35 @@
         $flavors = get_posts(array(
           'post_type' => 'sf_flavor',
           'post_status' => 'publish',
-          'numberposts' => -1
+          'numberposts' => -1,
+          'order' => 'ASC'
         ));
       
-    foreach ($flavors as $post) : setup_postdata($post); ?>
+    foreach ($flavors as $post) : setup_postdata($post); 
+    
+        $link = get_field('sf_pdp_button', $post->ID);
+        $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
 
-      <article class="sf-flavor sf-section">
-        <div class="container-xl">
-          <div class="row">
+      <article class="sf-flavor sf-section d-flex align-items-center">
+        <div class="container-md">
+          <div class="row flex-column-reverse flex-md-row text-center text-md-left">
 
-            <div class="col-6 sf-flavor__content">
-                <h4><?php the_title(); ?></h4>
+            <div class="col-md-6 sf-flavor__content">
+                <div class="inner d-flex flex-column align-items-center align-items-md-start sf-scaling-text">
+                  <h4 class="sf-title sf-bloomsbury"><?php the_title(); ?></h4>
 
-                <?php the_content(); ?>
+                  <div class="sf-subtitle">
+                    <?php the_content(); ?>
+                  </div>
+
+                  <?php if(!empty($link)): ?>
+                    <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
+                  <?php endif; ?>
+                </div>
             </div>
 
-            <div class="col-6 sf-flavor__image">
+            <div class="col-md-6 sf-flavor__image">
               <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
 
               <figure class="sf-flavor__image-image">
