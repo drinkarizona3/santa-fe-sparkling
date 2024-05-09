@@ -6,7 +6,7 @@ function b4st_enqueues() {
 
 	// Styles
 
-	wp_register_style('bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css', false, '5.3.3', null);
+	wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css', false, '4.6.2', null);
 	wp_enqueue_style('bootstrap');
 
 	wp_register_style('fontawesome5', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', false, '5.8.1', null);
