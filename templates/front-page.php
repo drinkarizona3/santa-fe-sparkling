@@ -47,14 +47,10 @@
 
       <?php 
         $flavors = get_posts(array(
-          'post_type' => 'sf_flavor'
+          'post_type' => 'sf_flavor',
+          'post_status' => 'publish',
+          'numberposts' => -1
         ));
-
-        // $flavors = new WP_Query(array(
-        //   'post_type' => 'sf_flavor'
-        // ));
-        
-       // var_dump($flavors);
       
       foreach ($flavors as $post) : setup_postdata($post); ?>
 
