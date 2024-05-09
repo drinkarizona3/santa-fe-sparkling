@@ -47,7 +47,7 @@
 
       <?php 
         $flavors = get_posts(array(
-          'post_type' => 'flavor',
+          'post_type' => 'sf_flavor',
           'post_status' => 'publish',
           'posts_per_page' => -1
         ));
