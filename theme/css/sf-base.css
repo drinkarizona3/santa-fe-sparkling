@@ -57,13 +57,14 @@ main {
 
 .sf-nav__inner {
   position: absolute;
-  height: 100%;
+  top: calc(var(--sf-header-height));
+  height: calc(100% - var(--sf-header-height));
   width: 100%;
   overflow: hidden;
 }
 
 .sf-nav__scroll-container {
-  position: absolute;
+  position: relative;
   top: 0;
   height: 100%;
   width: 100%;
@@ -72,7 +73,6 @@ main {
 
 .sf-nav__menu-container {
   min-height: 100%;
-  padding: var(--sf-header-height) 0;
 }
 
 #navbarDropdown.show {
@@ -84,6 +84,8 @@ main {
   opacity: 0;
   transition: opacity .6s ease-out;
   transition-delay: 0s;
+  padding: var(--sf-header-height) 0 2rem;
+  transform: translateY(calc(var(--sf-header-height) * -1));
 }
 
 #navbarDropdown.show .navbar-nav {
