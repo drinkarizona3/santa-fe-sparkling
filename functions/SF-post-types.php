@@ -1,13 +1,13 @@
 <?php
 // Our custom post type function
-function create_posttype() {
+function SF_create_flavor_post_type() {
   
-    register_post_type( 'flavors',
+    register_post_type( 'sf_flavor',
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'Flavors' ),
-                'singular_name' => __( 'Flavor' )
+                'name' => __( 'Flavors', 'santa-fe' ),
+                'singular_name' => __( 'Flavor', 'santa-fe' )
             ),
             'public' => true,
             'publicly_queryable' => false,
@@ -29,4 +29,4 @@ function create_posttype() {
     );
 }
 
-add_action( 'init', 'create_posttype' );
+add_action( 'init', 'SF_create_flavor_post_type' );
