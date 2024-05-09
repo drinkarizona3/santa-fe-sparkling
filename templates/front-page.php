@@ -21,9 +21,9 @@
     </div>
 
     <div class="position-relative sf-hero__content">
-      <h1 class="sf-bloomsbury text-center">
+      <h1 class="sf-bloomsbury text-center sf-scaling-text">
         <span class="sf-brandname"><?= bloginfo('name'); ?></span>
-        <span class="d-block sf-tagline"><?= bloginfo('description'); ?></span>
+        <span class="d-block sf-subtitle"><?= bloginfo('description'); ?></span>
       </h1>
     </div>
 

@@ -1,16 +1,37 @@
 :root {
-  --sf-header-height: 7rem;
+  --sf-header-height: 8rem;
   --sf-quicksand: 'Quicksand';
   --sf-bloomsbury: 'bloomsburysans';
   --sf-roboto: 'Roboto', sans-serif;
+
+  --sf-font-size-body: 2.8rem;
+  --sf-font-size-heading: 7rem;
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
+
   --sf-ease: cubic-bezier(0.25, 1, 0.5, 1);
   --sf-mobile-menu-speed: .5s;
 }
 
+body {
+  --wp--preset--font-size--x-large: var(--sf-font-size-heading);
+
+  font-family: var(--sf-font-body);
+  font-weight: 500;
+  font-size: var(--sf-font-size-body);
+}
+
 main {
   margin-top: calc(var(--sf-header-height)* -1);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .25em;
+  line-height: 1.1;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 /* header */
@@ -24,7 +45,7 @@ main {
 }
 
 .navbar-brand {
-  font-size: clamp(3rem, 3vw, 3rem);
+  font-size: clamp(3rem, 3vw, 3rem) !important;
 }
 
 .navbar-toggler {
@@ -34,8 +55,17 @@ main {
 
 .navbar-toggler-icon {
   background: none !important;
-  height: 3.5em;
-  width: 3.5em;
+  height: auto;
+  width: auto;
+}
+
+span.sf-nav-text {
+  letter-spacing: -.025em;
+}
+
+span.navbar-toggler-icon svg {
+  display: block;
+  width: 3.4em;
 }
   
 #navbarDropdown {
@@ -90,7 +120,7 @@ main {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-size: clamp(1.4rem, calc(5vw + 1rem), 7rem);
+  font-size: clamp(1.4rem, calc(5vw + 1rem), 7rem) !important;
   font-family: var(--sf-font-heading);
   color: black;
 }
@@ -147,18 +177,38 @@ section.sf-hero {
 }
 
 .sf-hero__content h1 {
-  font-size: clamp(2rem, 15vw, 20rem);
+  font-size: clamp(2rem, 15vw, 20rem) !important;
   display: flex;
   flex-direction: column;
   text-shadow: 0 0 .05em rgba(0,0,0,.25);
   color: #FFFFFF;
 }
 
-.sf-hero__content h1 .sf-tagline {
-  font-size: 29%;
-  line-height: 1;
+/* homepage page content */
+
+section#sf-main__content {
+  background-color: pink;
 }
 
+section#sf-main__content a {
+  font-family: var(--sf-font-heading);
+}
+
+.navbar-toggler:focus {
+  animation: .8s toggler-reaction cubic-bezier(1, 0, 0, 1) forwards; 
+}
+
+@keyframes toggler-reaction {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+}
 /* ==========================================================================
    Typography
    ========================================================================== */
