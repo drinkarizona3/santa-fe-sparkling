@@ -20,7 +20,7 @@ main {
   z-index: 100;
   height: var(--sf-header-height);
   padding: 0 max(3%, 1.8rem);
-  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .navbar-brand {
@@ -55,15 +55,24 @@ main {
   overflow-x: hidden;
 }
 
-.sf-nav__menu-container {
+.sf-nav__inner {
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
-.sf-nav__nav-container {
+.sf-nav__scroll-container {
+  position: absolute;
+  top: 0;
   height: 100%;
+  width: 100%;
   overflow-y: auto;
+}
+
+.sf-nav__menu-container {
+  min-height: 100%;
+  padding: var(--sf-header-height) 0;
 }
 
 #navbarDropdown.show {
@@ -75,9 +84,6 @@ main {
   opacity: 0;
   transition: opacity .6s ease-out;
   transition-delay: 0s;
-  height: 100%;
-  display: grid;
-  padding: max(8%, 19rem) 0;
 }
 
 #navbarDropdown.show .navbar-nav {
