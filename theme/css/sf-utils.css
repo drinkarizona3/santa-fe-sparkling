@@ -1,5 +1,15 @@
+.sf-brandname {
+  letter-spacing: -.05em;
+  line-height: .9;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-family: var(--sf-font-heading);
+}
+
 .sf-object-fit {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
