@@ -4,9 +4,9 @@
     /* Template Name: Front Page */
 ?>
 
-<main id="main">
+<main id="main" class="overflow-hidden">
 
-  <section class="sf-hero">
+  <section class="sf-hero d-flex flex-column justify-content-center position-relative">
 
     <div class="sf-hero__background position-absolute">
       <?= wp_get_attachment_image( 10, null, null, array(
@@ -14,8 +14,8 @@
       )); ?>
     </div>
 
-    <div class="sf-hero__background position-absolute">
-      <?= wp_get_attachment_image( 47, null, null, array(
+    <div class="sf-hero__background position-absolute sf-cans">
+      <?= wp_get_attachment_image( 48, null, null, array(
         'class' => 'sf-object-fit'
       )); ?>
     </div>
@@ -33,11 +33,11 @@
     <div class="col-sm">
       <div id="content" role="main">
         
-      </div><!-- /#content -->
+      </div>
     </div>
 
-  </div><!-- /.row -->
-</main><!-- /.container -->
+  </div>
+</main>
 
 <?php 
     b4st_main_after();

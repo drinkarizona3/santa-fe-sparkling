@@ -129,6 +129,23 @@ section.sf-hero {
   width: 100%;
 }
 
+.sf-hero__background.sf-cans {
+  --cans-width: max(min(93vw, 150rem), 50rem);
+  width: var(--cans-width);
+  height: calc(var(--cans-width)* 1.2);
+  transform: rotate(90deg);
+  transform-origin: 40%;
+  top: auto;
+  bottom: 0;
+  left: 20%;
+}
+
+.sf-hero__content {
+  width: 100%;
+  max-width: max(min(78%, 90rem), 31rem);
+  margin: 0 auto;
+}
+
 .sf-hero__content h1 {
   font-size: clamp(2rem, 15vw, 20rem);
   display: flex;
