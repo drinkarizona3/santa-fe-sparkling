@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" class="position-relative">
 
   <!-- Check for footer widgets -->
   <?php if(is_active_sidebar('footer-widget-area')): ?>
