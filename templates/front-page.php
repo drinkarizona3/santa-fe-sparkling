@@ -46,17 +46,17 @@
   <section id="sf-flavors" class="sf-section">
 
       <?php 
-        // $flavors = get_posts(array(
-        //   'post_type' => 'sf_flavor'
-        // ));
-
-        $flavors = new WP_Query(array(
+        $flavors = get_posts(array(
           'post_type' => 'sf_flavor'
         ));
+
+        // $flavors = new WP_Query(array(
+        //   'post_type' => 'sf_flavor'
+        // ));
         
-        var_dump($flavors);
+       // var_dump($flavors);
       
-        while ( $flavors->have_posts() ) : $flavors->the_post(); ?>
+      foreach ($flavors as $post) : setup_postdata($post); ?>
 
         <article class="sf-flavor sf-section">
           <div class="container-xl">
@@ -79,7 +79,10 @@
             </div>
           </div>
         </article> <?php
-      endwhile;  wp_reset_postdata(); ?>
+
+        wp_reset_postdata();
+
+      endforeach; ?>
   </section>
 
 </main>
