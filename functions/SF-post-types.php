@@ -11,7 +11,7 @@ function SF_create_flavor_post_type() {
             ),
             'public' => true,
            // 'publicly_queryable' => false,
-            'has_archive' => false,
+            'has_archive' => true,
             'rewrite' => array('slug' => 'flavors'),
             'show_in_rest' => true,
             'menu_position' => '3.3',
