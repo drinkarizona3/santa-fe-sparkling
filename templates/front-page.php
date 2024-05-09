@@ -8,17 +8,23 @@
 
   <section class="sf-hero">
 
-    <div class="sf-hero__background">
-      <?= wp_get_attachment_image( 10, 'large', null, array(
+    <div class="sf-hero__background position-absolute">
+      <?= wp_get_attachment_image( 10, null, null, array(
         'class' => 'sf-object-fit'
       )); ?>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-        </div>
-      </div>
+    <div class="sf-hero__background position-absolute">
+      <?= wp_get_attachment_image( 47, null, null, array(
+        'class' => 'sf-object-fit'
+      )); ?>
+    </div>
+
+    <div class="position-relative sf-hero__content">
+      <h1 class="sf-bloomsbury text-center">
+        <span class="sf-brandname"><?= bloginfo('name'); ?></span>
+        <span class="d-block sf-tagline"><?= bloginfo('description'); ?></span>
+      </h1>
     </div>
 
   </section>
