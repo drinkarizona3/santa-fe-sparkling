@@ -45,40 +45,37 @@
 
   <section id="sf-flavors" class="sf-section">
 
-      <?php 
+    <?php 
         $flavors = get_posts(array(
           'post_type' => 'sf_flavor',
           'post_status' => 'publish',
           'numberposts' => -1
         ));
       
-      foreach ($flavors as $post) : setup_postdata($post); ?>
+    foreach ($flavors as $post) : setup_postdata($post); ?>
 
-        <article class="sf-flavor sf-section">
-          <div class="container-xl">
-            <div class="row">
+      <article class="sf-flavor sf-section">
+        <div class="container-xl">
+          <div class="row">
 
-              <div class="col-6 sf-flavor__content">
-                  <h4><?php the_title(); ?></h4>
+            <div class="col-6 sf-flavor__content">
+                <h4><?php the_title(); ?></h4>
 
-                  <?php the_content(); ?>
-              </div>
+                <?php the_content(); ?>
+            </div>
 
-              <div class="col-6 sf-flavor__image">
-                <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
+            <div class="col-6 sf-flavor__image">
+              <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
 
-                <figure class="sf-flavor__image-image">
-                    <?= wp_get_attachment_image( $flavor_img_ID, null, null, array()); ?>
-                </figure>
+              <figure class="sf-flavor__image-image">
+                  <?= wp_get_attachment_image( $flavor_img_ID, null, null, array()); ?>
+              </figure>
 
-              </div>
             </div>
           </div>
-        </article> <?php
-
-        wp_reset_postdata();
-
-      endforeach; ?>
+        </div>
+      </article> <?php
+    endforeach;   wp_reset_postdata(); ?>
   </section>
 
 </main>
