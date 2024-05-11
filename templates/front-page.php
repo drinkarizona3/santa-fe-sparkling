@@ -77,7 +77,9 @@
               <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
 
               <figure class="sf-flavor__image-image">
-                  <?= wp_get_attachment_image( $flavor_img_ID, null, null, array()); ?>
+                  <?= wp_get_attachment_image( $flavor_img_ID, null, null, array(
+                    'loading' => 'lazy'
+                  )); ?>
               </figure>
 
             </div>
