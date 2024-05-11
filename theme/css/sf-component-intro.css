@@ -35,7 +35,7 @@
   width: 100%;
   background-color: var(--sf-intro-bg);
   transform: scaleX(0);
-  transform-origin: right;
+  transform-origin: left;
   z-index: 200;
 }
 
@@ -102,7 +102,7 @@ body.sf-end-intro .sf-fruit {
   }
 
   50% {
-    transfrom: scaleX(1)
+    transform: scaleX(1)
   }
 
   100% {
