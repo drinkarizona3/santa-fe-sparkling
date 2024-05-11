@@ -1,5 +1,6 @@
 :root {
   --sf-intro-bg: #FFFFFF;
+  --sf-transition-duration: 1s;
 }
 
 #sf-intro {
@@ -15,7 +16,7 @@
   z-index: 100;
   opacity: 1;
   visibility: visible;
-  transition: opacity .5s cubic-bezier(1,0,0,1) .25s, visibility .3s cubic-bezier(1,0,0,1) .25s;
+  transition: opacity .2s cubic-bezier(1,0,0,1) calc(var(--sf-transition-duration) / 2), visibility .3s cubic-bezier(1,0,0,1) calc(var(--sf-transition-duration) / 2);
 }
 
 #sf-intro > .sf-inner {
@@ -45,7 +46,7 @@ body.sf-end-intro #sf-intro {
 }
 
 body.sf-end-intro #intro-tranition {
-  animation: 1.5s swipe cubic-bezier(1,0,0,1) forwards;
+  animation: var(--sf-transition-duration) swipe cubic-bezier(1,0,0,1) forwards;
 }
 
 svg {
