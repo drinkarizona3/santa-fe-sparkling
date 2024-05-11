@@ -24,11 +24,12 @@
 
 		// You can put your own code in here
 
-		// const loadingWait = 1000;
-		// $(window).on('load', ()=> {
-		// 	setTimeout($('body').addClass('sf-end-intro'), loadingWait);
-		// 	setTimeout($('body').addClass('sf-loaded'), loadingWait * 1.5 );
-		// });
+		const loadingWait = 1000;
+		$(window).on('load', ()=> {
+			const $body = $('body');
+			setTimeout($body.addClass('sf-end-intro'), loadingWait);
+			setTimeout($body.addClass('sf-loaded'), loadingWait * 1.5 );
+		});
 
 	});
 
