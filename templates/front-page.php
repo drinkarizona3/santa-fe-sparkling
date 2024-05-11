@@ -46,12 +46,8 @@
   <section id="sf-flavors" class="sf-section">
 
     <?php 
-        $flavors = get_posts(array(
-          'post_type' => 'sf_flavor',
-          'post_status' => 'publish',
-          'numberposts' => -1,
-          'order' => 'ASC'
-        ));
+    
+    $flavors = SF_get_flavors();
       
     foreach ($flavors as $post) : setup_postdata($post); 
     

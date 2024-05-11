@@ -105,7 +105,7 @@
 		</g>
 	</g>
 </g>
-<g id="Simple_Dieline" class="st17">
+<g class="st17">
 </g>
 <g id="_x31_6oz_x2F__Print_Window" class="st17">
 </g>

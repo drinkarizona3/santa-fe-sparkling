@@ -4,14 +4,14 @@
   </div>
 
   <div class="sf-fruits">
-    <?php $flavors = get_terms(array('post_type' => 'sf_flavor')); ?>
-
     <?php 
-    
+
+      $flavors = SF_get_flavors();
+
       foreach($flavors as $flavor): ?>
 
-        <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>">
-          <?php get_template_part('snippets/sf-lemon'); ?>
+        <div class="sf-fruit" data-flavor="<?= $flavor->name ?>">
+          <?php get_template_part('snippets/sf-grapefruit'); ?>
         </div> <?php
 
       endforeach;
