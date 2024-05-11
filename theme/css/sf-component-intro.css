@@ -8,7 +8,7 @@
   z-index: 100;
   gap: clamp(32px, 4vw, 100px);
 
-  --sf-animation-duration: 1.5s;
+  --sf-animation-duration: 1.2s;
 }
 
 svg {
@@ -39,12 +39,12 @@ svg {
 
 @keyframes bounce {
   0%,15% {
-    transform: translate(0,0) rotate(0deg) scale(1);
+    transform: translate(0,0) scaleX(1);
   }
   50% {
-    transform: translate(5px,-30px) rotate(-10deg) scale(.9);
+    transform: translate(0,-30px) scaleX(.8);
   }
   85%, 100% {
-    transform: translate(0,0) rotate(0deg) scale(1);
+    transform: translate(0,0) scaleX(1);
   };
 }
