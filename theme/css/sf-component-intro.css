@@ -27,6 +27,12 @@ svg {
 
 .sf-fruits {
   gap: 1em;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+body.sf-start-intro .sf-fruits {
+  opacity: 1;
 }
 
 .sf-logo {
@@ -55,4 +61,9 @@ svg {
   85%, 100% {
     transform: translate(0,0) scaleX(1);
   };
+}
+
+
+body.no-js #sf-intro {
+  display: none;
 }
