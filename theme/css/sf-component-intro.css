@@ -1,22 +1,46 @@
 #sf-intro {
+
+  --sf-animation-duration: 1.2s;
+  --sf-intro-bg: #FFFFFF;
+
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
+  background-color: var(--sf-intro-bg);
   z-index: 100;
+}
+
+#sf-intro > .sf-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
   gap: clamp(32px, 4vw, 100px);
   opacity: 1;
   visibility: visible;
-  transition: opacity 1s ease-out, visibility 1s ease-out;
+  transition: opacity 1s ease-out .25s, visibility 1s ease-out .25s;
+}
 
-  --sf-animation-duration: 1.2s;
+#sf-intro::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--sf-intro-bg);
+  transform: scaleX(0);
 }
 
 body.sf-end-intro #sf-intro {
   opacity: 0;
   visibility: hidden;
+}
+
+body.sf-end-intro #sf-intro::after {
+  animation: 1s swipe cubic-bezier(1,0,0,1) forwards;
 }
 
 svg {
@@ -51,6 +75,10 @@ body.sf-start-intro .sf-fruits {
   animation: bounce var( --sf-animation-duration) infinite cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+body.sf-end-intro .sf-fruit {
+  animation: none;
+}
+
 @keyframes bounce {
   0%,15% {
     transform: translate(0,0) scaleX(1);
@@ -61,6 +89,16 @@ body.sf-start-intro .sf-fruits {
   85%, 100% {
     transform: translate(0,0) scaleX(1);
   };
+}
+
+@keyframes swipe {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transfrom: scaleX(0)
+  }
 }
 
 
