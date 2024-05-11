@@ -8,7 +8,7 @@
       $body = $('body'),
       loadingWait = 1500;
 
-    $body.addClass('sf-end-intro');
+    $body.addClass('sf-start-intro');
 
     $(window).on('load', ()=> {
       setTimeout( () => $body.addClass('sf-end-intro'), loadingWait);
