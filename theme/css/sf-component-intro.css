@@ -102,9 +102,8 @@ body.sf-end-intro .sf-fruit {
     transform-origin: left;
   }
 
-  50%, 80% {
+  25%, 50% {
     transform: scaleX(1);
-    transform-origin: right;
   }
 
   100% {
