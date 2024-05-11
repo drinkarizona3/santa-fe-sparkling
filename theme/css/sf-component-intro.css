@@ -39,12 +39,12 @@ svg {
 
 @keyframes bounce {
   0%,15% {
-    transform: translate(0,0) scale(1);
+    transform: translate(0,0) scaleX(1);
   }
   50% {
-    transform: translate(0,-30px) scale(.9);
+    transform: translate(0,-30px) scaleX(.8);
   }
   85%, 100% {
-    transform: translate(0,0) scale(1);
+    transform: translate(0,0) scaleX(1);
   };
 }
