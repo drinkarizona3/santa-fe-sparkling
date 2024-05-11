@@ -31,5 +31,4 @@
 
 </nav>
 
-
 <?php b4st_navbar_after();?>
