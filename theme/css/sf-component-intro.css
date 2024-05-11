@@ -36,6 +36,7 @@
   background-color: var(--sf-intro-bg);
   transform: scaleX(0);
   transform-origin: right;
+  z-index: 200;
 }
 
 body.sf-end-intro #sf-intro {
@@ -44,7 +45,7 @@ body.sf-end-intro #sf-intro {
 }
 
 body.sf-end-intro #intro-tranition {
-  animation: 1s swipe cubic-bezier(1,0,0,1) forwards;
+  animation: s swipe cubic-bezier(1,0,0,1) forwards;
 }
 
 svg {
@@ -96,12 +97,16 @@ body.sf-end-intro .sf-fruit {
 }
 
 @keyframes swipe {
-  from {
-    transform: scaleX(1);
+  0% {
+    transform: scaleX(0);
   }
 
-  to {
-    transfrom: scaleX(0)
+  50% {
+    transfrom: scaleX(1)
+  }
+
+  100% {
+    transform: scaleX(0);
   }
 }
 
