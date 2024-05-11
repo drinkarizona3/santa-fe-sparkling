@@ -7,6 +7,8 @@
   background-color: white;
   z-index: 100;
   gap: clamp(32px, 4vw, 100px);
+
+  --sf-animation-duration: 2s;
 }
 
 svg {
@@ -24,12 +26,25 @@ svg {
   max-width: clamp(10rem, 72vw, 70rem);
 }
 
-.sf-fruit {
-  transition: all .3s ease;
-}
-
 .sf-fruits {
   display: grid;
   grid-template-columns: repeat(4, max(7vw, 2em));
   grid-column-gap: 1em;
+}
+
+.sf-fruit {
+  transition: all .3s ease;
+  animation: bounce var( --sf-animation-duration) infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,15% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(0,-30px);
+  }
+  85%, 100% {
+    transform: translate(0,0);
+  };
 }

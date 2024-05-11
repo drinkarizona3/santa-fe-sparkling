@@ -12,9 +12,10 @@
 
         $flavors = SF_get_flavors();
 
-        foreach($flavors as $flavor): ?>
+        foreach($flavors as $i => $flavor): ?>
 
-          <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>">
+          <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>" style="animation-delay: calc(var(--sf-animation-duration) * (<?= $i + 1 ?>))">
+            <div><?= $i + 1 ?></div>
             <?php get_template_part('snippets/sf-grapefruit'); ?>
           </div> <?php
 
