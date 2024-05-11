@@ -5,54 +5,6 @@
 	.st1{fill:#F3C300;}
 	.st2{fill:#FFFFFF;}
 	.st3{fill:#E54360;}
-	.st4{clip-path:url(#SVGID_2_);}
-	.st5{fill:#00C4B3;}
-	.st6{fill:#FDBBCB;stroke:#000000;stroke-width:0.8868;}
-	.st7{fill:none;stroke:#000000;stroke-width:5.477;}
-	.st8{fill:none;stroke:#000000;stroke-width:2.3473;}
-	.st9{fill:none;stroke:#000000;stroke-width:0.2677;}
-	.st10{fill:none;stroke:#000000;stroke-width:2.8731;}
-	.st11{stroke:#000000;stroke-width:0.4905;}
-	.st12{fill:#FDBBCB;stroke:#FDBBCB;stroke-width:8.815;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st13{fill:#FDBBCB;stroke:#FDBBCB;stroke-width:3.8625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st14{fill:#FDBBCB;stroke:#FDBBCB;stroke-width:4.4075;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st15{fill:none;stroke:#E54360;stroke-width:1.3335;stroke-miterlimit:10;}
-	.st16{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-	.st17{display:none;}
-	.st18{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#EC008C;stroke-width:0.5;stroke-miterlimit:3.8637;}
-	.st19{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#00AEEF;stroke-width:0.5;stroke-miterlimit:3.8637;}
-	.st20{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#C4CED4;}
-	.st21{display:inline;fill:#C4CED4;}
-	.st22{display:inline;fill:none;stroke:#000000;stroke-width:0.9486;stroke-miterlimit:10;}
-	.st23{display:inline;}
-	.st24{display:inline;fill-rule:evenodd;clip-rule:evenodd;}
-	
-		.st25{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:0.9486;stroke-miterlimit:3.8637;}
-	.st26{fill:#FFFAC4;}
-	.st27{fill:none;stroke:#000000;stroke-width:0.9486;stroke-miterlimit:10;}
-	.st28{fill:#FCBA7F;}
-	.st29{fill:none;stroke:#000000;stroke-miterlimit:3.8637;}
-	.st30{fill:#D33127;}
-	.st31{fill:#00AEEF;}
-	.st32{fill:#006EB9;}
-	.st33{fill:#846A78;}
-	.st34{fill:none;stroke:#000000;}
-	.st35{display:inline;fill:none;stroke:#00B26B;}
-	.st36{fill-rule:evenodd;clip-rule:evenodd;fill:#00B26B;}
-	
-		.st37{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#00B26B;stroke-width:0.9999;stroke-miterlimit:3.8637;}
-	.st38{display:inline;fill:none;stroke:#00B26B;stroke-width:0.9999;stroke-miterlimit:3.8637;}
-	
-		.st39{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#00B26B;stroke-width:0.2498;stroke-miterlimit:3.8637;}
-	
-		.st40{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#00B26B;stroke-width:0.5616;stroke-miterlimit:3.8637;}
-	.st41{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#00B26B;stroke-width:1.0001;stroke-miterlimit:3.8637;}
-	
-		.st42{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#E2D9DE;fill-opacity:0.5;stroke:#00B26B;stroke-width:0.2498;stroke-miterlimit:3.8637;}
-	
-		.st43{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#00B26B;stroke-width:1.0001;stroke-miterlimit:3.8637;stroke-dasharray:8,4;}
-	.st44{fill:#00B26B;}
-	.st45{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#846A78;}
 </style>
 <g id="Layer_1">
 	<g>
