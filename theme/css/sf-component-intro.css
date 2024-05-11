@@ -35,6 +35,7 @@
   width: 100%;
   background-color: var(--sf-intro-bg);
   transform: scaleX(0);
+  transform-origin: left;
 }
 
 body.sf-end-intro #sf-intro {
