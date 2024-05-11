@@ -14,7 +14,7 @@
   --sf-animation-duration: 1.2s;
 }
 
-body.sf-loaded #sf-intro {
+body.sf-end-intro #sf-intro {
   opacity: 0;
   visibility: hidden;
 }
