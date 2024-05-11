@@ -13,6 +13,11 @@
   --sf-mobile-menu-speed: .5s;
 
   --sf-color-flavor-background: #F3EFD4;
+
+  --sf-theme-primary:#FDBBCB;
+  --sf-theme-secondary: #E54360;
+  --sf-theme-background: #F3C300;
+  --sf-theme-midground: #FFFFFF;
 }
 
 body {
