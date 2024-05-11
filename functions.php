@@ -16,3 +16,4 @@ require get_template_directory() . '/functions/search-widget.php';
 require get_template_directory() . '/functions/index-pagination.php';
 require get_template_directory() . '/functions/single-split-pagination.php';
 require get_template_directory() . '/functions/SF-post-types.php';
+require get_template_directory() . '/functions/SF-utils.php';
