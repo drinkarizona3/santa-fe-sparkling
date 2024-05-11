@@ -1,0 +1,35 @@
+#sf-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 100;
+  gap: clamp(32px, 4vw, 100px);
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.sf-fruits {
+  gap: 1em;
+}
+
+.sf-logo {
+  width: 100%;
+  max-width: clamp(10rem, 72vw, 70rem);
+}
+
+.sf-fruit {
+  transition: all .3s ease;
+}
+
+.sf-fruits {
+  display: grid;
+  grid-template-columns: repeat(4, max(7vw, 2em));
+  grid-column-gap: 1em;
+}
