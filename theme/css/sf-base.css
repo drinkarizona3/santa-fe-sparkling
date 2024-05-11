@@ -20,7 +20,7 @@
   --sf-theme-midground: #FFFFFF;
 }
 
-[data-theme="lemon"] {
+[data-sf-theme="lemon"] {
   --sf-theme-primary:#FFE800;
   --sf-theme-secondary: #FFE800;
   --sf-theme-background:#FFE800;
