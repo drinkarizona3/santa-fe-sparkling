@@ -24,6 +24,8 @@
 
 		// You can put your own code in here
 
+		$(window).on('load', ()=> $('body').addClass('sf-loaded'));
+
 	});
 
 }(jQuery));
