@@ -25,6 +25,9 @@
 		// You can put your own code in here
 
 		const loadingWait = 1500;
+
+		$body.addClass('sf-end-intro');
+
 		$(window).on('load', ()=> {
 			const $body = $('body');
 			setTimeout( () => $body.addClass('sf-end-intro'), loadingWait);
