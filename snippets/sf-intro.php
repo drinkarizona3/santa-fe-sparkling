@@ -14,7 +14,7 @@
 
         foreach($flavors as $i => $flavor): ?>
 
-          <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>" style="animation-delay: calc(200ms * <?= $i ?>);">
+          <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>" style="animation-delay: calc(150ms * <?= $i ?>);">
             <?php get_template_part('snippets/sf-grapefruit'); ?>
           </div> <?php
 
