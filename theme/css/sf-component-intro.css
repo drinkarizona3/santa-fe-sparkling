@@ -1,6 +1,6 @@
 :root {
   --sf-intro-bg: #FFFFFF;
-  --sf-transition-duration: 2s;
+  --sf-transition-duration: 1s;
 }
 
 #sf-intro {
@@ -16,7 +16,7 @@
   z-index: 100;
   opacity: 1;
   visibility: visible;
-  transition: opacity .2s cubic-bezier(1,0,0,1) 1s, visibility .2s cubic-bezier(1,0,0,1) 1s;
+  transition: opacity .2s cubic-bezier(1,0,0,1) calc(var(--sf-animation-duration) * .5), visibility .2s cubic-bezier(1,0,0,1) calc(var(--sf-transition-duration) * .5);
 }
 
 #sf-intro > .sf-inner {
@@ -103,7 +103,8 @@ body.sf-end-intro .sf-fruit {
   }
 
   50% {
-    transform: scaleX(1)
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   100% {
