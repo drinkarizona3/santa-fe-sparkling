@@ -24,7 +24,9 @@
 
 		// You can put your own code in here
 
-		$(window).on('load', ()=> $('body').addClass('sf-loaded'));
+		$(window).on('load', ()=> {
+			setTimeout($('body').addClass('sf-loaded'), 500);
+		});
 
 	});
 
