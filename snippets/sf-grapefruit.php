@@ -1,10 +1,10 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 171.15 171.15" style="enable-background:new 0 0 171.15 171.15;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FDBBCB;}
-	.st1{fill:#F3C300;}
-	.st2{fill:#FFFFFF;}
-	.st3{fill:#E54360;}
+	.st0{fill:var(--sf-theme-primary);}
+	.st1{fill:var(--sf-theme-background);}
+	.st2{fill:ar(--sf-theme-midground);}
+	.st3{fill:var(--sf-theme-secondary);}
 </style>
 <g id="Layer_1">
 	<g>
