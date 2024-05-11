@@ -101,11 +101,11 @@ body.sf-end-intro .sf-fruit {
     transform: scaleX(0);
     transform-origin: left;
   }
-/* 
+
   25% {
     transform: scaleX(1);
     transform-origin: left;
-  } */
+  }
 
   50% {
     transform: scaleX(1);
