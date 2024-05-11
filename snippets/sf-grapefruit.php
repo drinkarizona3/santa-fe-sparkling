@@ -1,10 +1,9 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class="sf-fruit-slice" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 171.15 171.15" style="enable-background:new 0 0 171.15 171.15;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:var(--sf-theme-primary);}
-	.st1{fill:var(--sf-theme-background);}
-	.st2{fill:ar(--sf-theme-midground);}
-	.st3{fill:var(--sf-theme-secondary);}
+	.st1{fill:var(--sf-theme-accent);}
+	.st2{fill:ar(--sf-theme-rind);}
+	.st3{fill:var(--sf-theme-accent);}
 </style>
 <g id="Layer_1">
 	<g>
