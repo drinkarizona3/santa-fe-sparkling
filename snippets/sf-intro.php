@@ -28,3 +28,5 @@
   </div>
 
 </div>
+
+<div id="intro-tranition"></div>

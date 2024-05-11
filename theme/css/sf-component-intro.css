@@ -1,7 +1,10 @@
+:root {
+  --sf-intro-bg: #FFFFFF;
+}
+
 #sf-intro {
 
   --sf-animation-duration: 1.2s;
-  --sf-intro-bg: #FFFFFF;
 
   position: fixed;
   top: 0;
@@ -10,6 +13,9 @@
   bottom: 0;
   background-color: var(--sf-intro-bg);
   z-index: 100;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-out .5s, visibility 1s ease-out .5s;
 }
 
 #sf-intro > .sf-inner {
@@ -17,12 +23,9 @@
   height: 100%;
   width: 100%;
   gap: clamp(32px, 4vw, 100px);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s ease-out .25s, visibility 1s ease-out .25s;
 }
 
-#sf-intro::after {
+#intro-tranition {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +42,7 @@ body.sf-end-intro #sf-intro {
   visibility: hidden;
 }
 
-body.sf-end-intro #sf-intro::after {
+body.sf-end-intro #intro-tranition {
   animation: 1s swipe cubic-bezier(1,0,0,1) forwards;
 }
 
