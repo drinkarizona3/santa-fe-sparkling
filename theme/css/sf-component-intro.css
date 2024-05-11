@@ -45,7 +45,7 @@ body.sf-end-intro #sf-intro {
 }
 
 body.sf-end-intro #intro-tranition {
-  animation: s swipe cubic-bezier(1,0,0,1) forwards;
+  animation: 1.5s swipe cubic-bezier(1,0,0,1) forwards;
 }
 
 svg {
