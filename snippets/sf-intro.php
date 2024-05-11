@@ -10,7 +10,7 @@
 
       foreach($flavors as $flavor): ?>
 
-        <div class="sf-fruit" data-flavor="<?= $flavor->name ?>">
+        <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>">
           <?php get_template_part('snippets/sf-grapefruit'); ?>
         </div> <?php
 
