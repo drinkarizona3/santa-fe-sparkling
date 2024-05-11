@@ -1,6 +1,6 @@
 :root {
   --sf-intro-bg: #FFFFFF;
-  --sf-transition-duration: 1.5s;
+  --sf-transition-duration: 1.2s;
 }
 
 #sf-intro {
@@ -45,7 +45,7 @@ body.sf-end-intro #sf-intro {
 }
 
 body.sf-end-intro #intro-tranition {
-  animation: var(--sf-transition-duration) swipe cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: var(--sf-transition-duration) swipe cubic-bezier(1,0,0,1) forwards;
 }
 
 svg {
