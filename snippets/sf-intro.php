@@ -1,6 +1,7 @@
-<link rel="stylesheet" href="../css/sf-component-intro.css">
 
 <div id="sf-intro" class="d-flex flex-column justify-content-center align-items-center">
+
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-intro.css">
 
   <div class="d-flex sf-logo">
     <?php get_template_part('snippets/santa-fe-logo'); ?>
