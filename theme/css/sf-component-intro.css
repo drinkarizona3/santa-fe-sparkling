@@ -36,7 +36,6 @@
   width: 100%;
   background-color: pink;
   transform: scaleX(0);
-  transform-origin: right;
   z-index: 200;
 }
 
@@ -100,6 +99,7 @@ body.sf-end-intro .sf-fruit {
 @keyframes swipe {
   0% {
     transform: scaleX(0);
+    transform-origin: left;
   }
 
   50% {
@@ -108,6 +108,7 @@ body.sf-end-intro .sf-fruit {
 
   100% {
     transform: scaleX(0);
+    transform-origin: right;
   }
 }
 
