@@ -7,8 +7,16 @@
   background-color: white;
   z-index: 100;
   gap: clamp(32px, 4vw, 100px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
 
   --sf-animation-duration: 1.2s;
+}
+
+body.sf-loaded #sf-intro {
+  opacity: 0;
+  visibility: hidden;
 }
 
 svg {
