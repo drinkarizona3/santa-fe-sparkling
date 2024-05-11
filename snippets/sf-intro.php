@@ -20,4 +20,6 @@
         endforeach;
       ?>
   </div>
+
+  <div class="sf-message">Squeezin' the juice...</div>
 </div>
