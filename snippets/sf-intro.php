@@ -8,8 +8,6 @@
 
       $flavors = SF_get_flavors();
 
-      echo '<pre>' .  print_r($flavors) .  '</pre>';
-
       foreach($flavors as $flavor): ?>
 
         <div class="sf-fruit" data-flavor="<?= $flavor->name ?>">
