@@ -1,5 +1,6 @@
 :root {
   --sf-intro-bg: #FFFFFF;
+  --sf-transition-duration: 1.2s;
 }
 
 #sf-intro {
@@ -15,7 +16,7 @@
   z-index: 100;
   opacity: 1;
   visibility: visible;
-  transition: opacity 1s ease-out .5s, visibility 1s ease-out .5s;
+  transition: opacity .2s cubic-bezier(1,0,0,1) calc(var(--sf-animation-duration) * .5), visibility .2s cubic-bezier(1,0,0,1) calc(var(--sf-transition-duration) * .5);
 }
 
 #sf-intro > .sf-inner {
@@ -33,8 +34,9 @@
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--sf-intro-bg);
+  background-color: pink;
   transform: scaleX(0);
+  z-index: 200;
 }
 
 body.sf-end-intro #sf-intro {
@@ -43,7 +45,7 @@ body.sf-end-intro #sf-intro {
 }
 
 body.sf-end-intro #intro-tranition {
-  animation: 1s swipe cubic-bezier(1,0,0,1) forwards;
+  animation: var(--sf-transition-duration) swipe cubic-bezier(1,0,0,1) forwards;
 }
 
 svg {
@@ -95,12 +97,24 @@ body.sf-end-intro .sf-fruit {
 }
 
 @keyframes swipe {
-  from {
-    transform: scaleX(1);
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
   }
 
-  to {
-    transfrom: scaleX(0)
+  25% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
   }
 }
 
