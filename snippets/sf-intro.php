@@ -1,4 +1,3 @@
-
 <div id="sf-intro" class="d-flex flex-column justify-content-center align-items-center">
 
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-intro.css">
@@ -14,7 +13,7 @@
 
         foreach($flavors as $i => $flavor): ?>
 
-          <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>" style="animation-delay: calc(200 * <?= $i ?>)ms">
+          <div class="sf-fruit" data-flavor="<?= $flavor->post_name ?>" style="animation-delay: calc(150ms * <?= $i ?>);">
             <?php get_template_part('snippets/sf-grapefruit'); ?>
           </div> <?php
 
