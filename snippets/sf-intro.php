@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/sf-component-intro.css">
+<link rel="stylesheet" href="../css/sf-component-intro.css">
 
 <div id="sf-intro" class="d-flex flex-column justify-content-center align-items-center">
 
