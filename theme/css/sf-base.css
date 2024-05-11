@@ -20,6 +20,13 @@
   --sf-theme-midground: #FFFFFF;
 }
 
+[data-theme="lemon"] {
+  --sf-theme-primary:#FFE800;
+  --sf-theme-secondary: #FFE800;
+  --sf-theme-background:#FFE800;
+  --sf-theme-midground: #FFFFFF;
+}
+
 body {
   --wp--preset--font-size--x-large: var(--sf-font-size-heading);
 
