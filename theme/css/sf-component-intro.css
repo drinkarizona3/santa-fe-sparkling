@@ -1,6 +1,6 @@
 :root {
   --sf-intro-bg: #FFFFFF;
-  --sf-transition-duration: 1.5s;
+  --sf-transition-duration: 2s;
 }
 
 #sf-intro {
@@ -35,7 +35,7 @@
   height: 100%;
   width: 100%;
   background-color: pink;
-  opacity: 0;
+  transform: scaleX(0);
   z-index: 200;
 }
 
@@ -46,7 +46,6 @@ body.sf-end-intro #sf-intro {
 
 body.sf-end-intro #intro-tranition {
   animation: var(--sf-transition-duration) swipe cubic-bezier(1,0,0,1) forwards;
-  opacity: 1;
 }
 
 svg {
@@ -103,7 +102,7 @@ body.sf-end-intro .sf-fruit {
     transform-origin: left;
   }
 
-  50% {
+  50%, 80% {
     transform: scaleX(1);
     transform-origin: left;
   }
