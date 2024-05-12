@@ -52,19 +52,20 @@
           'order' => 'ASC'
         ));
       
-    foreach ($flavors as $post) : setup_postdata($post); 
+    foreach ($flavors as $i => $post) : setup_postdata($post); 
     
         $link = get_field('sf_pdp_button', $post->ID);
         $link_target = $link['target'] ? $link['target'] : '_self';
-    ?>
+        $column_direction = ($i % 2 === 0) ? ' flex-md-row-reverse' : ' flex-md-row'; ?>
 
-      <article class="sf-flavor sf-section d-flex align-items-center">
+      <article class="sf-flavor sf-section d-flex align-items-center" data-sf-theme="lemon">
         <div class="container-md">
-          <div class="row flex-column-reverse flex-md-row text-center text-md-left align-items-center">
+          <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
 
             <div class="col-md-6 sf-flavor__content">
                 <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
-                  <h4 class="sf-title sf-bloomsbury"><?php the_title(); ?></h4>
+
+                  <h4 class="sf-bloomsbury"><?php the_title(); ?></h4>
 
                   <div>
                     <?php the_content(); ?>
@@ -73,6 +74,7 @@
                   <?php if(!empty($link)): ?>
                     <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
                   <?php endif; ?>
+
                 </div>
             </div>
 
@@ -89,6 +91,7 @@
           </div>
         </div>
       </article> <?php
+
     endforeach;   wp_reset_postdata(); ?>
   </section>
 
