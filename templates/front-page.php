@@ -52,7 +52,7 @@
     
         $link = get_field('sf_pdp_button', $post->ID);
         $link_target = $link['target'] ? $link['target'] : '_self';
-        $column_direction = ($i % 2 === 0) ? ' flex-md-row-reverse' : ' flex-md-row'; ?>
+        $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
 
       <?php SF_test($flavors) ?>
 
@@ -63,7 +63,7 @@
             <div class="col-md-6 sf-flavor__content">
                 <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
 
-                  <h4 class="sf-bloomsbury"><?php the_title(); ?></h4>
+                  <h4 class="sf-bloomsbury sf-title"><?php the_title(); ?></h4>
 
                   <div>
                     <?php the_content(); ?>
