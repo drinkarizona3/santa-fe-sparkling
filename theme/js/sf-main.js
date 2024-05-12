@@ -18,12 +18,12 @@
     function observeSections(){
 
       const 
-        flavorSections = document.querySelectorAll(".sf-flavor"),
+        flavorSections = [...document.querySelectorAll(".sf-flavor"), ...document.querySelector('#sf-social')],
         fixedContent = document.querySelector('#sf-background'),
         options = {
           root: null,
           rootMargin: "0px",
-          threshhold: .5
+          threshold: .5
         },
         callback = (entries, observer) => {
           entries.forEach( entry => {

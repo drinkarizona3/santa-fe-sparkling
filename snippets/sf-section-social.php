@@ -1,4 +1,4 @@
-<div id="sf-social" class="sf-section d-flex align-items-center" data-sf-theme="lemon">
+<div id="sf-social" class="sf-section d-flex align-items-center" data-flavor="lemon" data-sf-theme="lemon">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-section-social.css">
     <div class="container-lg">
       <div class="row">
