@@ -44,3 +44,7 @@ a.sf-button {
 .sf-scaling-text > a {
   font-size: 35% !important;
 }
+
+.sf-gap__small {
+  gap: .25em
+}

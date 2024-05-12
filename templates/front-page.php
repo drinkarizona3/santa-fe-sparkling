@@ -29,7 +29,7 @@
 
   </section>
 
-  <section id="sf-main__content" class="sf-section sf-section__short d-flex align-items-center">
+  <section id="sf-main__content" class="sf-section d-flex align-items-center">
       <div class="container-xl">
         <div class="row">
       
@@ -44,7 +44,6 @@
   </section>
 
   <section id="sf-flavors" class="sf-section">
-
     <?php 
     
     $flavors = SF_get_flavors();
@@ -60,7 +59,7 @@
           <div class="row flex-column-reverse flex-md-row text-center text-md-left">
 
             <div class="col-md-6 sf-flavor__content">
-                <div class="inner d-flex flex-column align-items-center align-items-md-start sf-scaling-text">
+                <div class="inner d-flex flex-column align-items-center align-items-md-start sf-scaling-text sf-gap__small">
                   <h4 class="sf-title sf-bloomsbury"><?php the_title(); ?></h4>
 
                   <div class="sf-subtitle">
@@ -88,6 +87,9 @@
       </article> <?php
     endforeach;   wp_reset_postdata(); ?>
   </section>
+
+  <!-- Social -->
+  <?php get_template_part('snippets/sf-section-social'); ?>
 
 </main>
 
