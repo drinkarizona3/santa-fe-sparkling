@@ -9,6 +9,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php get_template_part('snippets/sf-fixed-content'); ?>
+
 <?php b4st_navbar_before();?>
 
 <nav id="navbar" class="bg-light navbar navbar-light" data-sf-theme="pink-grapefruit">
