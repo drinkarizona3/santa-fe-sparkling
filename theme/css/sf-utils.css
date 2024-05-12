@@ -32,6 +32,14 @@
   object-fit: cover;
 }
 
+.sf-title {
+  font-size: var(--sf-font-size-heading);
+}
+
+.sf-body__larger {
+  font-size: var(--sf-font-size-body-larger);
+}
+
 .sf-scaling-text {
   font-size: clamp(var(--sf-font-size-body), 5vw, var(--sf-font-size-heading)) !important;;
 }
