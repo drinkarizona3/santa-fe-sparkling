@@ -23,6 +23,15 @@
   --sf-theme-rind: #FFFFFF;
 }
 
+
+[data-sf-theme="arnold-palmer"] {
+  --sf-theme-primary:#97D1DC;
+  --sf-theme-accent: #FFE800;
+  --sf-theme-midground: #FFE800;
+  --sf-theme-secondary:#ab6526;
+  --sf-theme-rind: #FFFFFF;
+}
+
 [data-sf-theme="pink-grapefruit"] {
   --sf-theme-primary:#FDBBCB;
   --sf-theme-accent: #E54360;
