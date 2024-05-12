@@ -23,7 +23,7 @@
         options = {
           root: null,
           rootMargin: "0px",
-          threshhold: 1.0
+          threshold: 1.0
         },
         callback = (entries, observer) => {
           entries.forEach( entry => {
