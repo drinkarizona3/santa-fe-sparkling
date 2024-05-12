@@ -4,10 +4,10 @@
   --sf-bloomsbury: 'bloomsburysans';
   --sf-roboto: 'Roboto', sans-serif;
 
-  --sf-font-size-body: 2.8rem;
+  --sf-font-size-body: 3rem;
   --sf-font-size-body-larger: calc(var(--sf-font-size-body) * 1.145);
   --sf-font-size-heading: 9.6rem;
-  --sf-font-size-heading-level-2: calc(var(--sf-font-heading) * .67);
+  --sf-font-size-heading-level-2: calc(var(--sf-font-size-heading) * .74);
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
 
@@ -213,7 +213,7 @@ section#sf-main__content a {
 }
 
 .sf-flavor p {
-  font-size: var( --sf-font-size-body-larger);
+  margin: 0;
 }
 
 .sf-flavor .sf-button {
