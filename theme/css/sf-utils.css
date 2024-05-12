@@ -9,8 +9,8 @@
   line-height: 1;
   color: black;
   text-transform: uppercase;
-  background-color: #00C4B3;
-  border: 4px solid #f5e341;
+  background-color: var(--sf-theme-primary);
+  border: 4px solid var(--sf-theme-accent);
 }
 
 .sf-section.sf-section__short {
