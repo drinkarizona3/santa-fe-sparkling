@@ -22,7 +22,8 @@
         fixedContent = document.querySelector('#sf-background'),
         options = {
           root: null,
-          rootMargin: "0px"
+          rootMargin: "0px",
+          threshhold: .5
         },
         callback = (entries, observer) => {
           entries.forEach( entry => {

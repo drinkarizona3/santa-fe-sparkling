@@ -4,7 +4,7 @@
     /* Template Name: Front Page */
 ?>
 
-<main id="main" class="overflow-hidden">
+<main id="main" class="overflow-hidden position-relative">
 
   <section class="sf-hero d-flex flex-column justify-content-center position-relative">
 
