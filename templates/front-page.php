@@ -54,6 +54,8 @@
         $link_target = $link['target'] ? $link['target'] : '_self';
         $column_direction = ($i % 2 === 0) ? ' flex-md-row-reverse' : ' flex-md-row'; ?>
 
+      <?php SF_test($flavors) ?>
+
       <article class="sf-flavor sf-section d-flex align-items-center" data-sf-theme="lemon">
         <div class="container-md">
           <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
