@@ -1,4 +1,5 @@
 <?php if(is_front_page()): ?>
+  <?php get_template_part('snippets/sf-fixed-content'); ?>
   <?php get_template_part('snippets/sf-intro'); ?>
 <?php endif; ?>
 

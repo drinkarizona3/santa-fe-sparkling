@@ -28,7 +28,9 @@
           entries.forEach( entry => {
 
             if (entry.isIntersecting) {
-              console.log(entry);
+              const flavorHandle = entry.target.dataset.flavor;
+
+              fixedContent.setAttribute('data-sf-theme', flavorHandle);
             }
           });
         };
