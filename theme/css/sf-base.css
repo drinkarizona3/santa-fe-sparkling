@@ -5,7 +5,9 @@
   --sf-roboto: 'Roboto', sans-serif;
 
   --sf-font-size-body: 2.8rem;
-  --sf-font-size-heading: 9rem;
+  --sf-font-size-body-larger: calc(var(--sf-font-size-body) * 1.145);
+  --sf-font-size-heading: 9.6rem;
+  --sf-font-size-heading-level-2: calc(var(--sf-font-heading) * .67);
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
 
@@ -59,7 +61,7 @@
 }
 
 body {
-  --wp--preset--font-size--x-large: var(--sf-font-size-heading);
+  --wp--preset--font-size--x-large: var(--sf-font-size-heading-level-2);
 
   font-family: var(--sf-font-body);
   font-weight: 500;
@@ -72,12 +74,19 @@ main {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .25em;
   line-height: 1;
+}
+
+h2 {
+  font-size: var(--sf-font-size-heading-level-2);
 }
 
 p {
   margin-bottom: 1em;
+}
+
+.sf-subtitle > p {
+  margin: 0;
 }
 
 /* header */
@@ -227,7 +236,7 @@ section.sf-hero {
 }
 
 .sf-hero__content h1 {
-  font-size: clamp(2rem, 15vw, 20rem) !important;
+  font-size: clamp(2rem, 15vw, calc(var(--sf-font-size-heading) * 1.95)) !important;
   display: flex;
   flex-direction: column;
   text-shadow: 0 0 .05em rgba(0,0,0,.25);
@@ -247,6 +256,19 @@ section#sf-main__content a {
 /* Flavor loop */
 #sf-flavors .sf-section {
   background-color: var(--sf-color-flavor-background);
+}
+
+.sf-flavor h4.sf-title {
+  line-height: .9;
+  margin: 0;
+}
+
+.sf-flavor p {
+  font-size: var( --sf-font-size-body-larger);
+}
+
+.sf-flavor .sf-button {
+  margin: .5em 0;
 }
 
 /* ==========================================================================

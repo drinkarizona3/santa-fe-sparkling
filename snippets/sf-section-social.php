@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col">
           <div class="sf-inner d-flex flex-column align-items-center justify-content-center sf-gap__small">
-            <h2 class="sf-text-primary">It'<span>SOUR</span> Instagram</h2>
+            <h2 class="sf-title sf-bloomsbury">It'<span>SOUR</span> Instagram</h2>
               
-            <p class="sf-text-medium">Follow Us <a href="https://www.instagram.com/drinksantafe/" target="_blank"> @drinksantafe</a></p>
+            <p>Follow Us <a href="https://www.instagram.com/drinksantafe/" target="_blank"> @drinksantafe</a></p>
 
             <a href="https://www.instagram.com/drinksantafe/" target="_blank" class="align-items-center d-flex flex-column justify-content-center">
               <?php get_template_part('snippets/sf-grapefruit'); ?>
