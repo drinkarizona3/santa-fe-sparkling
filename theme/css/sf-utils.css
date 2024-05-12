@@ -9,7 +9,7 @@
   line-height: 1;
   color: black;
   text-transform: uppercase;
-  background-color: var(--sf-theme-primary);
+  background-color: var(--sf-theme-midground);
   border: 4px solid var(--sf-theme-accent);
 }
 
