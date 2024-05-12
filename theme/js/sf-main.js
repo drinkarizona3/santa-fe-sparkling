@@ -32,8 +32,6 @@
               const flavorHandle = entry.target.dataset.flavor;
 
               fixedContent.setAttribute('data-sf-theme', flavorHandle);
-
-              console.log(entry);
             }
           });
         };
