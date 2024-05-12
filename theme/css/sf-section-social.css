@@ -1,6 +1,3 @@
-#sf-social {
-   --sf-theme-primary: #97D1DC;
-}
 #sf-social h2 > span {
   font-size: 130%;
   color: var(--sf-theme-accent);
