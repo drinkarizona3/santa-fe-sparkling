@@ -18,7 +18,7 @@
     function observeSections(){
 
       const 
-        flavorSections = document.querySelectorAll(".sf-flavor"),
+        flavorSections = [...document.querySelectorAll(".sf-flavor"), ...document.querySelector('#sf-social')],
         fixedContent = document.querySelector('#sf-background'),
         options = {
           root: null,
