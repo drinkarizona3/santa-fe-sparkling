@@ -60,13 +60,13 @@
 
       <article class="sf-flavor sf-section d-flex align-items-center">
         <div class="container-md">
-          <div class="row flex-column-reverse flex-md-row text-center text-md-left">
+          <div class="row flex-column-reverse flex-md-row text-center text-md-left align-items-center">
 
             <div class="col-md-6 sf-flavor__content">
-                <div class="inner d-flex flex-column align-items-center align-items-md-start sf-scaling-text sf-gap__small">
+                <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
                   <h4 class="sf-title sf-bloomsbury"><?php the_title(); ?></h4>
 
-                  <div class="sf-subtitle">
+                  <div>
                     <?php the_content(); ?>
                   </div>
 

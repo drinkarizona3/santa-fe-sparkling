@@ -2,7 +2,7 @@
   min-height: 100vh;
 }
 
-a.sf-button {
+.sf-button {
   display: inline-flex;
   background: white;
   padding: .85em 2em .95em;
@@ -42,9 +42,13 @@ a.sf-button {
 
 .sf-scaling-text > .sf-subtitle,
 .sf-scaling-text > a {
-  font-size: 35% !important;
+  font-size: 28% !important;
 }
 
 .sf-gap__small {
   gap: .25em
+}
+
+.sf-gap__large {
+  gap: .75em;
 }
