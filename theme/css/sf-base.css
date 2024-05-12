@@ -78,7 +78,7 @@ span.navbar-toggler-icon svg {
 #navbarDropdown {
   position: fixed;
   top: 0;
-  background: pink;
+  background: var(--sf-theme-primary);
   left: 0;
   right: 0;
   min-height: 100svh;
@@ -198,10 +198,6 @@ section#sf-main__content a {
   background-color: var(--sf-color-flavor-background);
 }
 
-.sf-flavor__content > .sf-inner {
-  gap: .25em;
-}
-
 /* ==========================================================================
    Animations
    ========================================================================== */
@@ -217,8 +213,6 @@ section#sf-main__content a {
     transform: scale(1);
   }
 }
-
-
 /* ==========================================================================
    Typography
    ========================================================================== */

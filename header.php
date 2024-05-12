@@ -11,9 +11,9 @@
 
 <?php b4st_navbar_before();?>
 
-<nav id="navbar" class="bg-light navbar navbar-light">
+<nav id="navbar" class="bg-light navbar navbar-light" data-sf-theme="pink-grapefruit">
 
-  <div class="collapse navbar-collapse d-flex flex-column justify-content-center align-items-center" id="navbarDropdown">
+  <div  class="collapse navbar-collapse d-flex flex-column justify-content-center align-items-center" id="navbarDropdown">
     <?php b4st_nav(); ?>
   </div>
 
