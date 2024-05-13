@@ -44,7 +44,7 @@
 
                 element.classList.add('sf-animate');
 
-                setTimeout( () => element.classList.add('sf-animate'), 500)
+                setTimeout( () => element.classList.remove('sf-animate'), 100)
               });
             }
           });
