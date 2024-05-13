@@ -18,8 +18,13 @@
     function observeSections(){
 
       const 
+        dynamicSelectors = ['#sf-background', '#navbar'],
+        navbar = document.querySelector('#navbar'),
         flavorSections = document.querySelectorAll('.sf-flavor, #sf-social'),
         fixedContent = document.querySelector('#sf-background'),
+        changeElementTheme = function(selectors){
+
+        },
         options = {
           root: null,
           rootMargin: "0px",
@@ -31,8 +36,13 @@
             if (entry.isIntersecting) {
               const flavorHandle = entry.target.dataset.flavor;
 
-              fixedContent.setAttribute('data-sf-theme', flavorHandle);
-            }
+              dynamicSelectors.forEach( (selector, i) => {
+
+                const element = document.querySelector(selector);
+
+                element.setAttribute('data-sf-theme', flavorHandle);
+              });
+            } 
           });
         };
 
