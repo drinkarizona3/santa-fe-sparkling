@@ -2,3 +2,8 @@
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition);
 }
+
+.sf-midground {
+  top: auto;
+  bottom: 0;
+}
