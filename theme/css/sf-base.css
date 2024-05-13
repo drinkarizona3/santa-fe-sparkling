@@ -22,7 +22,7 @@
   --sf-theme-secondary:#ab6526;
   --sf-theme-rind: #FFFFFF;
 
-  --sf-theme-transition: .5s ease-out;
+  --sf-theme-transition: 1s ease-out;
 }
 
 
@@ -152,7 +152,7 @@ span.navbar-toggler-icon svg {
 }
 
 #navbar.sf-animate span.navbar-toggler-icon svg {
-  animation: var(--sf-theme-transition) flip forwards;
+  animation: .6s flip cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
   
 #navbarDropdown {
