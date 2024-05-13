@@ -7,3 +7,7 @@
   top: auto;
   bottom: 0;
 }
+
+.sf-midground path {
+  transition:fill var(--sf-theme-transition);
+}
