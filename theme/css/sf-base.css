@@ -121,6 +121,7 @@ p {
   bottom: 0;
   -webkit-text-stroke: .25em var(--sf-theme-accent);
   z-index: -1;
+  transition: text-stroke .3s ease-in-out;
 }
 
 .navbar-toggler {

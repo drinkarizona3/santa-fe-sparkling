@@ -41,8 +41,12 @@
                 const element = document.querySelector(selector);
 
                 element.setAttribute('data-sf-theme', flavorHandle);
+
+                element.classList.add('active');
               });
-            } 
+            } else {
+              dynamicSelectors.forEach( selector =>  element.classList.remove('active') );
+            }
           });
         };
 

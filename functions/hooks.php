@@ -17,7 +17,7 @@ function b4st_navbar_after() {
 function b4st_navbar_brand() {
   if ( ! has_action('navbar_brand') ) {
     $sitename = str_replace('Sparkling', '', get_bloginfo('name'));
-    ?> <a class="navbar-brand sf-brandname" href="<?php echo esc_url( home_url('/') ); ?>" data-text="<?= $sitename; ?>"><?= $sitename; ?></a> <?php
+    ?> <a class="navbar-brand sf-brandname position-relative" href="<?php echo esc_url( home_url('/') ); ?>" data-text="<?= $sitename; ?>"><?= $sitename; ?></a> <?php
   } else {
 		do_action('navbar_brand');
 	}
