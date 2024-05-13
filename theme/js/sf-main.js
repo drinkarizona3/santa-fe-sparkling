@@ -42,10 +42,10 @@
 
                 element.setAttribute('data-sf-theme', flavorHandle);
 
-                element.classList.add('active');
+                element.classList.add('sf-animate');
+
+                setTimeout( () => element.classList.add('sf-animate'), 500)
               });
-            } else {
-              dynamicSelectors.forEach( selector =>  element.classList.remove('active') );
             }
           });
         };
