@@ -1,4 +1,4 @@
 #sf-background {
   background-color: var(--sf-theme-primary);
-  transition:background-color .5s ease-out;
+  transition:background-color var(--sf-theme-transition);
 }
