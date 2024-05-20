@@ -20,7 +20,7 @@
       const 
         elementsToChange = ['#sf-background', '#navbar'],
         navbar = document.querySelector('#navbar'),
-        sections = document.querySelectorAll('.sf-flavor, #sf-social, #sf-intro'),
+        sections = document.querySelectorAll('.sf-flavor, #sf-social'),
         fixedContent = document.querySelector('#sf-background'),
         changeElementTheme = function(selectors){
 
@@ -36,13 +36,7 @@
             if (entry.isIntersecting) {
               const flavorHandle = entry.target.dataset.flavor;
 
-              console.log(entry.target)
-
-              if (entry.target.id === 'sf-intro') {
-                $body.addClass('scrolled-intro');
-              } else {
-                $body.removeClass('scrolled-intro');
-              }
+              $body.addClass('sf-products-in-view');
 
               elementsToChange.forEach( (selector, i) => {
 
@@ -54,6 +48,8 @@
 
                 setTimeout( () => element.classList.remove('sf-animate'), 800)
               });
+            } else {
+              $body.removeClass('sf-products-in-view');
             }
           });
         };
