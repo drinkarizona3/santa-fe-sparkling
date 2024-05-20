@@ -159,6 +159,10 @@ span.navbar-toggler-icon svg {
   display: block;
   width: 60%;
 }
+
+#navbar.sf-animate span.navbar-toggler-icon svg {
+  animation: .6s flip cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
   
 #navbarDropdown {
   position: fixed;
