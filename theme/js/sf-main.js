@@ -30,8 +30,7 @@
     }
 
     function observeProductsSection(){
-      const flavorsSectionWrapper = document.querySelector('#sf-flavors'),
-            flavorsSection = document.querySelector('#sf-flavor-main'),
+      const flavorsSection = document.querySelector('#sf-flavors'),
             navbar = document.querySelector('#navbar');
 
       function checkIfInProductsSection(entry) {
@@ -49,8 +48,8 @@
       }
 
       createObserver([flavorsSection], checkIfInProductsSection, {
-        root: flavorsSectionWrapper,
-        rootMargin: "-50% 0px 50%",
+        root: null,
+        rootMargin: "-50% 0% -50% 0%",
         threshold: 0
       });
     }
