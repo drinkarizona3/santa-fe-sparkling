@@ -70,7 +70,7 @@
 
         function handleStateChange(entry) {
           if (entry.isIntersecting) {
-            const flavorHandle = entry.target.dataset.flavor;
+            const flavorHandle = entry.target.dataset.sfTheme;
 
             elementSelectors.forEach( (selector, i) => changeSectionState(selector, flavorHandle));
           }
