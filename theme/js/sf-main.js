@@ -29,8 +29,8 @@
 
         element.classList.add('sf-animate');
 
-        navLinks.forEach( link => link.classList.remove('active'));
-        currentMenuLink.classList.add('active');
+        // navLinks.forEach( link => link.classList.remove('active'));
+        // currentMenuLink.classList.add('active');
 
         setTimeout( () => element.classList.remove('sf-animate'), 800)
       };
