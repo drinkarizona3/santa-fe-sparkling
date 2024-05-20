@@ -1,18 +1,19 @@
 #sf-background {
   background-color: var(--sf-theme-primary);
-  opacity: 0;
-  transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
+  transition:background-color var(--sf-theme-transition);
 }
 
 .sf-midground {
   top: auto;
   bottom: 0;
+  opacity: 0;
+  transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
 }
 
 .sf-midground path {
   transition:fill var(--sf-theme-transition);
 }
 
-body.sf-intersecting-products #sf-background {
+body.sf-intersecting-products #sf-background .sf-midground {
   opacity: 1;
 }
