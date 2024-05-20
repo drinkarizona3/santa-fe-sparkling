@@ -21,11 +21,16 @@
       },
       changeSectionState = function(selector, handle){
 
-        const element = document.querySelector(selector);
+        const element = document.querySelector(selector),
+              navLinks = document.querySelectorAll('.nav-link'),
+              currentMenuLink = document.querySelector(`#nav-link__${handle}`);
             
         element.setAttribute('data-sf-theme', handle);
 
         element.classList.add('sf-animate');
+
+        navLinks.forEach( link => link.classList.remove('active'));
+        currentMenuLink.classList.add('active');
 
         setTimeout( () => element.classList.remove('sf-animate'), 800)
       };
