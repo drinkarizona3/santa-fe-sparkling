@@ -196,20 +196,11 @@ section.sf-hero {
 }
 
 /* homepage page content */
-
-section#sf-main__content {
-  background-color: pink;
-}
-
 section#sf-main__content a {
   font-family: var(--sf-font-heading);
 }
 
 /* Flavor loop */
-#sf-flavors .sf-section {
-  background-color: var(--sf-color-flavor-background);
-}
-
 .sf-flavor h4.sf-title {
   line-height: .9;
   margin: 0;
@@ -225,9 +216,16 @@ section#sf-main__content a {
 
 @media only screen and (min-width: 48.06rem) {
   html {
+    font-size:42.5%;
+  }
+}
+
+@media only screen and (min-width: 48.06rem) {
+  html {
     font-size:62.5%;
   }
 }
+
 
 /* ==========================================================================
    Animations
