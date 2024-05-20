@@ -143,7 +143,7 @@ body:not(.sf-intersecting-products) .navbar-brand.sf-brandname:after {
 .navbar-toggler-icon {
   background: none !important;
   height: auto;
-  width: auto;
+  width: 70px;
 }
 
 .navbar-toggler:focus {
@@ -152,21 +152,18 @@ body:not(.sf-intersecting-products) .navbar-brand.sf-brandname:after {
 
 span.sf-nav-text {
   letter-spacing: -.025em;
+  font-size: 12px;
 }
 
 span.navbar-toggler-icon svg {
   display: block;
-  width: 3.4em;
-}
-
-#navbar.sf-animate span.navbar-toggler-icon svg {
-  animation: .6s flip cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  width: 60%;
 }
   
 #navbarDropdown {
   position: fixed;
   top: 0;
-  background: var(--sf-theme-primary);
+  background: var(--sf-theme-midground);
   left: 0;
   right: 0;
   min-height: 100svh;
@@ -215,9 +212,26 @@ span.navbar-toggler-icon svg {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-size: clamp(1.4rem, calc(5vw + 1rem), 7rem) !important;
+  font-size: clamp(34px, calc(5vw + 1rem), 70px) !important;
   font-family: var(--sf-font-heading);
   color: black;
+  position: relative;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link:before {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-text-stroke: .15em transparent;
+  z-index: -1;
+  transition: all .3s ease;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link:before,
+.navbar-light .navbar-nav .nav-item:hover .nav-link:before {
+  -webkit-text-stroke-color: .15em var(--sf-theme-primary);
 }
 
 /* FOOTER */
