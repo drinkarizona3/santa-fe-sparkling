@@ -53,9 +53,13 @@
       
         $link = get_field('sf_pdp_button', $post->ID);
         $link_target = $link['target'] ? $link['target'] : '_self';
-        $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
+        $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; 
+        
+        SF_test($post);
+      
+      ?>
 
-      <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-flavor sf-section d-flex align-items-center" data-sf-theme="<?= $flavors[0]->post_name ?>" data-sf-post-id="<?= $post->ID ?>">
+      <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-flavor sf-section d-flex align-items-center" data-sf-theme="<?= $flavors[0]->post_name ?>">
         <div class="container-md">
           <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
 
