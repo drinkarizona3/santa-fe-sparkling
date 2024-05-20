@@ -55,7 +55,6 @@
         $link_target = $link['target'] ? $link['target'] : '_self';
         $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; 
         
-        SF_test(wp_get_nav_menu_items('Navbar'));
       
       ?>
 
