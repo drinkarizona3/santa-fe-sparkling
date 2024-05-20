@@ -40,8 +40,8 @@
 
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: null,
-        rootMargin: "0px",
-        threshold: 0
+        rootMargin: "50vh",
+        threshold: .5
       });
     }
 
@@ -65,6 +65,8 @@
 
               setTimeout( () => element.classList.remove('sf-animate'), 800)
             });
+          } else {
+            element.setAttribute('data-sf-theme', 'pink-grapefruit');
           }
         }
 
