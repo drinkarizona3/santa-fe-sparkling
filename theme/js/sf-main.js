@@ -6,7 +6,13 @@
     
     const
       $body = $('body'),
-      loadingWait = 1500;
+      loadingWait = 1500,
+      createObserver = function(sections, options, callback) {
+        sections.forEach( section => {
+          const observer = new IntersectionObserver(callback, options);
+          observer.observe(section);
+        });
+      };
 
     $body.addClass('sf-start-intro');
 
@@ -15,12 +21,12 @@
       setTimeout( () => $body.addClass('sf-loaded'), loadingWait * 1.5 );
     });
 
-    function observeSections(){
+    function changeProductSectionState(){
 
       const 
         elementsToChange = ['#sf-background', '#navbar'],
         navbar = document.querySelector('#navbar'),
-        sections = document.querySelectorAll('.sf-flavor, #sf-social, #sf-intro'),
+        sections = document.querySelectorAll('.sf-flavor, #sf-social'),
         fixedContent = document.querySelector('#sf-background'),
         changeElementTheme = function(selectors){
 
@@ -36,12 +42,6 @@
             if (entry.isIntersecting) {
               const flavorHandle = entry.target.dataset.flavor;
 
-              if (entry.target.id === 'sf-intro') {
-                $body.addClass('scrolled-intro');
-              } else {
-                $body.removeClass('scrolled-intro');
-              }
-
               elementsToChange.forEach( (selector, i) => {
 
                 const element = document.querySelector(selector);
@@ -56,13 +56,10 @@
           });
         };
 
-      sections.forEach( flavor => {
-        const observer = new IntersectionObserver(callback, options);
-        observer.observe(flavor);
-      });
+        createObserver(sections, options, callback);
     }
 
-    observeSections();
+    changeProductSectionState();
 
   });
 
