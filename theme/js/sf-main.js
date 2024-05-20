@@ -66,7 +66,7 @@
               setTimeout( () => element.classList.remove('sf-animate'), 800)
             });
           } else {
-            element.setAttribute('data-sf-theme', 'pink-grapefruit');
+
             elementSelectors.forEach( selector => {
               const element = document.querySelector(selector);
               element.setAttribute('data-sf-theme', 'pink-grapefruit');
