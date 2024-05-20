@@ -13,6 +13,6 @@
   transition:fill var(--sf-theme-transition);
 }
 
-#sf-background {
+body:not(.sf-intersecting-products) #sf-background {
   opacity: 1;
 }
