@@ -1,18 +1,26 @@
 #sf-background {
   background-color: var(--sf-theme-primary);
+  transition:background-color var(--sf-theme-transition);
+  position: relative;
+}
+
+.sf-forground {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sf-horizon {
+  top: auto;
+  bottom: 0;
   opacity: 0;
   transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
 }
 
-.sf-midground {
-  top: auto;
-  bottom: 0;
-}
-
-.sf-midground path {
+.sf-horizon path {
   transition:fill var(--sf-theme-transition);
 }
 
-body.sf-intersecting-products #sf-background {
+body.sf-intersecting-products #sf-background .sf-horizon {
   opacity: 1;
 }
