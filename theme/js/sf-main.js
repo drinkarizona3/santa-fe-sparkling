@@ -18,9 +18,9 @@
     function observeSections(){
 
       const 
-        dynamicSelectors = ['#sf-background', '#navbar'],
+        elementsToChange = ['#sf-background', '#navbar'],
         navbar = document.querySelector('#navbar'),
-        flavorSections = document.querySelectorAll('.sf-flavor, #sf-social'),
+        sections = document.querySelectorAll('.sf-flavor, #sf-social, #sf-intro'),
         fixedContent = document.querySelector('#sf-background'),
         changeElementTheme = function(selectors){
 
@@ -36,7 +36,13 @@
             if (entry.isIntersecting) {
               const flavorHandle = entry.target.dataset.flavor;
 
-              dynamicSelectors.forEach( (selector, i) => {
+              if (entry.target.id === 'sf-intro') {
+                $body.addClass('scrolled-intro');
+              } else {
+                $body.removeClass('scrolled-intro');
+              }
+
+              elementsToChange.forEach( (selector, i) => {
 
                 const element = document.querySelector(selector);
 
@@ -50,7 +56,7 @@
           });
         };
 
-      flavorSections.forEach( flavor => {
+      sections.forEach( flavor => {
         const observer = new IntersectionObserver(callback, options);
         observer.observe(flavor);
       });
