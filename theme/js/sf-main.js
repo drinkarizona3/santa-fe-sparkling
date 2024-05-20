@@ -39,7 +39,7 @@
       }
 
       createObserver([flavorsSection], checkIfInProductsSection, {
-        root: null,
+        root: flavorsSection,
         rootMargin: "-10% 0% 0%",
         threshold: .5
       });
@@ -65,13 +65,7 @@
 
               setTimeout( () => element.classList.remove('sf-animate'), 800)
             });
-          } else {
-
-            elementSelectors.forEach( selector => {
-              const element = document.querySelector(selector);
-              element.setAttribute('data-sf-theme', 'pink-grapefruit');
-            });
-          }
+          } 
         }
 
         createObserver(sections, changeState, {
