@@ -30,6 +30,7 @@
       const flavorsSection = document.querySelector('#sf-flavors');
 
       function checkIfInProductsSection(entry) {
+
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products')
         } else {
@@ -40,7 +41,7 @@
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: null,
         rootMargin: "0px",
-        threshold: .5
+        threshold: .9
       });
     }
 
