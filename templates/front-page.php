@@ -43,52 +43,57 @@
       </div>
   </section>
 
-  <section id="sf-flavors" class="sf-section">
-    <?php 
-    
-    $flavors = SF_get_flavors();
+  <section id="sf-flavors">
+
+    <section id="sf-flavor-main">
+
+      <?php 
       
-    foreach ($flavors as $i => $post) : setup_postdata($post); 
-    
-      $link = get_field('sf_pdp_button', $post->ID);
-      $link_target = $link['target'] ? $link['target'] : '_self';
-      $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
+        $flavors = SF_get_flavors();
+        
+        foreach ($flavors as $i => $post) : setup_postdata($post); 
+        
+          $link = get_field('sf_pdp_button', $post->ID);
+          $link_target = $link['target'] ? $link['target'] : '_self';
+          $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
 
-      <article class="sf-flavor sf-section d-flex align-items-center" data-flavor="<?= $post->post_name ?>" data-sf-theme="<?= $post->post_name ?>">
-        <div class="container-md">
-          <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
+          <article class="sf-flavor sf-section d-flex align-items-center" data-flavor="<?= $post->post_name ?>" data-sf-theme="<?= $post->post_name ?>">
+            <div class="container-md">
+              <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
 
-            <div class="col-md-6 sf-flavor__content">
-                <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
+                <div class="col-md-6 sf-flavor__content">
+                    <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
 
-                  <h4 class="sf-bloomsbury sf-title"><?php the_title(); ?></h4>
+                      <h4 class="sf-bloomsbury sf-title"><?php the_title(); ?></h4>
 
-                  <div>
-                    <?php the_content(); ?>
-                  </div>
+                      <div>
+                        <?php the_content(); ?>
+                      </div>
 
-                  <?php if(!empty($link)): ?>
-                    <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
-                  <?php endif; ?>
+                      <?php if(!empty($link)): ?>
+                        <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
+                      <?php endif; ?>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 sf-flavor__image">
+                  <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
+
+                  <figure class="sf-flavor__image-image">
+                      <?= wp_get_attachment_image( $flavor_img_ID, null, null, array(
+                        'loading' => 'lazy'
+                      )); ?>
+                  </figure>
 
                 </div>
+              </div>
             </div>
+          </article> <?php
 
-            <div class="col-md-6 sf-flavor__image">
-              <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
-
-              <figure class="sf-flavor__image-image">
-                  <?= wp_get_attachment_image( $flavor_img_ID, null, null, array(
-                    'loading' => 'lazy'
-                  )); ?>
-              </figure>
-
-            </div>
-          </div>
-        </div>
-      </article> <?php
-
-    endforeach;   wp_reset_postdata(); ?>
+        endforeach;   wp_reset_postdata(); 
+      ?>
+    </section>
   </section>
 
   <!-- Social -->
