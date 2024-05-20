@@ -18,8 +18,20 @@
       <?php get_template_part('snippets/sf-dots-square'); ?>
     </div>
     
-    <?php for ($i = 1; $i <= 2; $i++): ?>
-      <div class="sf-cloud position-absolute">
+    <?php for ($i = 1; $i <= 2; $i++): 
+
+      $cloud_class = '';
+
+      switch ($i) {
+        case 1:
+          $cloud_class = ' sf-cloud-back';
+          break;
+        case 2:
+          $cloud_class = ' sf-cloud-front';
+        break;
+      } 
+    ?>
+      <div class="position-absolute sf-cloud<?= $cloud_class; ?>">
         <?php get_template_part('snippets/sf-cloud'); ?>
       </div>
     <?php endfor; ?>
