@@ -7,7 +7,12 @@
     const
       $body = $('body'),
       loadingWait = 1500,
-      createObserver = function(sections, options, callback) {
+      createObserver = function(sections, func, options) {
+
+        const callback = (entries, observer) => entries.forEach( entry => {
+          func(entry);
+        });
+
         sections.forEach( section => {
           const observer = new IntersectionObserver(callback, options);
           observer.observe(section);
@@ -21,44 +26,55 @@
       setTimeout( () => $body.addClass('sf-loaded'), loadingWait * 1.5 );
     });
 
+    function observeProductsSection(){
+      const flavorsSection = document.querySelector('#sf-flavors');
+
+      function checkIfInProductsSection(entry) {
+        if (entry.isIntersecting) {
+          $body.addClass('sf-intersecting-products')
+        } else {
+          $body.removeClass('sf-intersection-products');
+        }
+      }
+
+      createObserver([...flavorsSection], checkIfInProductsSection, {
+        root: null,
+        rootMargin: "0px",
+        threshold: .5
+      });
+    }
+
     function changeProductSectionState(){
 
       const 
         elementsToChange = ['#sf-background', '#navbar'],
-        navbar = document.querySelector('#navbar'),
-        sections = document.querySelectorAll('.sf-flavor, #sf-social'),
-        fixedContent = document.querySelector('#sf-background'),
-        changeElementTheme = function(selectors){
+        sections = document.querySelectorAll('.sf-flavor, #sf-social');
 
-        },
-        options = {
+        function changeState(entry) {
+          if (entry.isIntersecting) {
+            const flavorHandle = entry.target.dataset.flavor;
+
+            elementsToChange.forEach( (selector, i) => {
+
+              const element = document.querySelector(selector);
+
+              element.setAttribute('data-sf-theme', flavorHandle);
+
+              element.classList.add('sf-animate');
+
+              setTimeout( () => element.classList.remove('sf-animate'), 800)
+            });
+          }
+        }
+
+        createObserver(sections, changeState, {
           root: null,
           rootMargin: "0px",
           threshold: .5
-        },
-        callback = (entries, observer) => {
-          entries.forEach( entry => {
-
-            if (entry.isIntersecting) {
-              const flavorHandle = entry.target.dataset.flavor;
-
-              elementsToChange.forEach( (selector, i) => {
-
-                const element = document.querySelector(selector);
-
-                element.setAttribute('data-sf-theme', flavorHandle);
-
-                element.classList.add('sf-animate');
-
-                setTimeout( () => element.classList.remove('sf-animate'), 800)
-              });
-            } 
-          });
-        };
-
-        createObserver(sections, options, callback);
+        });
     }
 
+    observeProductsSection();
     changeProductSectionState();
 
   });
