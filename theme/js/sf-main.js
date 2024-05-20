@@ -52,9 +52,7 @@
 
                 setTimeout( () => element.classList.remove('sf-animate'), 800)
               });
-            } else {
-              $body.removeClass('sf-products-in-view');
-            }
+            } 
           });
         };
 
