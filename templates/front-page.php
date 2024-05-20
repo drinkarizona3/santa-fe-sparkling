@@ -4,7 +4,7 @@
     /* Template Name: Front Page */
 ?>
 
-<main id="main" class="overflow-hidden">
+<main id="main" class="overflow-hidden position-relative">
 
   <section class="sf-hero d-flex flex-column justify-content-center position-relative">
 
@@ -45,12 +45,8 @@
 
   <section id="sf-flavors" class="sf-section">
     <?php 
-        $flavors = get_posts(array(
-          'post_type' => 'sf_flavor',
-          'post_status' => 'publish',
-          'numberposts' => -1,
-          'order' => 'ASC'
-        ));
+    
+    $flavors = SF_get_flavors();
       
     foreach ($flavors as $i => $post) : setup_postdata($post); 
     
@@ -58,7 +54,7 @@
       $link_target = $link['target'] ? $link['target'] : '_self';
       $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
 
-      <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-flavor sf-section d-flex align-items-center" data-sf-theme="<?= $flavors[0]->post_name ?>" data-sf-post-id="<?= $post->ID ?>">
+      <article class="sf-flavor sf-section d-flex align-items-center" data-flavor="<?= $post->post_name ?>" data-sf-theme="<?= $post->post_name ?>">
         <div class="container-md">
           <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
 
