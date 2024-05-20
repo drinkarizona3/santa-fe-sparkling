@@ -50,7 +50,7 @@
 
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: flavorsSectionWrapper,
-        rootMargin: "50% 0px 50%",
+        rootMargin: "-50% 0px 50%",
         threshold: 0
       });
     }
