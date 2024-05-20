@@ -39,7 +39,7 @@
 
       createObserver([...flavorsSection], checkIfInProductsSection, {
         root: null,
-        rootMargin: "50vh",
+        rootMargin: "50% 0% 0%",
         threshold: .5
       });
     }
@@ -47,14 +47,14 @@
     function changeProductSectionState(){
 
       const 
-        elementsToChange = ['#sf-background', '#navbar'],
+        elementSelectors = ['#sf-background', '#navbar'],
         sections = document.querySelectorAll('.sf-flavor, #sf-social');
 
         function changeState(entry) {
           if (entry.isIntersecting) {
             const flavorHandle = entry.target.dataset.flavor;
 
-            elementsToChange.forEach( (selector, i) => {
+            elementSelectors.forEach( (selector, i) => {
 
               const element = document.querySelector(selector);
 
@@ -66,6 +66,10 @@
             });
           } else {
             element.setAttribute('data-sf-theme', 'pink-grapefruit');
+            elementSelectors.forEach( selector => {
+              const element = document.querySelector(selector);
+              element.setAttribute('data-sf-theme', 'pink-grapefruit');
+            });
           }
         }
 
