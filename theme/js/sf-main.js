@@ -33,13 +33,13 @@
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products')
         } else {
-          $body.removeClass('sf-intersection-products');
+          $body.removeClass('sf-intersecting-products');
         }
       }
 
       createObserver([...flavorsSection], checkIfInProductsSection, {
         root: null,
-        rootMargin: "0px",
+        rootMargin: "50vh",
         threshold: .5
       });
     }
@@ -64,6 +64,8 @@
 
               setTimeout( () => element.classList.remove('sf-animate'), 800)
             });
+          } else {
+            element.setAttribute('data-sf-theme', 'pink-grapefruit');
           }
         }
 

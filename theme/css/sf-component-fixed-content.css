@@ -1,6 +1,7 @@
 #sf-background {
   background-color: var(--sf-theme-primary);
-  transition:background-color var(--sf-theme-transition);
+  opacity: 0;
+  transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
 }
 
 .sf-midground {
@@ -10,4 +11,8 @@
 
 .sf-midground path {
   transition:fill var(--sf-theme-transition);
+}
+
+#sf-background {
+  opacity: 1;
 }
