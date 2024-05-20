@@ -38,6 +38,8 @@
         }
       }
 
+      console.log(flavorsSection)
+
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: flavorsSection,
         rootMargin: "10px",
