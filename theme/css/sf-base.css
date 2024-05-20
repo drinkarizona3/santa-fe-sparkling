@@ -38,14 +38,28 @@ main {
 
 .navbar-toggler-icon {
   background: none !important;
-  height: 3.5em;
-  width: 3.5em;
+  height: auto;
+  width: 70px;
+}
+
+.navbar-toggler:focus {
+  animation: .8s toggler-reaction cubic-bezier(1, 0, 0, 1) forwards; 
+}
+
+span.sf-nav-text {
+  letter-spacing: -.025em;
+  font-size: 12px;
+}
+
+span.navbar-toggler-icon svg {
+  display: block;
+  width: 60%;
 }
   
 #navbarDropdown {
   position: fixed;
   top: 0;
-  background: pink;
+  background: var(--sf-theme-midground);
   left: 0;
   right: 0;
   min-height: 100svh;
@@ -94,9 +108,26 @@ main {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-size: clamp(1.4rem, calc(5vw + 1rem), 7rem);
+  font-size: clamp(34px, calc(5vw + 1rem), 70px) !important;
   font-family: var(--sf-font-heading);
   color: black;
+  position: relative;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link:before {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-text-stroke: .15em transparent;
+  z-index: -1;
+  transition: all .3s ease;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link:before,
+.navbar-light .navbar-nav .nav-item:hover .nav-link:before {
+  -webkit-text-stroke-color: .15em var(--sf-theme-primary);
 }
 
 /* FOOTER */
