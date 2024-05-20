@@ -14,7 +14,7 @@
       <?php get_template_part('snippets/sf-dots-reactangle'); ?>
     </div>
 
-    <div class="sf-dots__rectangle position-absolute">
+    <div class="sf-dots__square position-absolute">
       <?php get_template_part('snippets/sf-dots-square'); ?>
     </div>
     
