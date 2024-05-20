@@ -7,6 +7,7 @@
     const
       $body = $('body'),
       loadingWait = 1500,
+      elementSelectors = ['#sf-background', '#navbar'],
       createObserver = function(sections, func, options) {
 
         const callback = (entries, observer) => entries.forEach( entry => {
@@ -19,23 +20,30 @@
         });
       };
 
-    $body.addClass('sf-start-intro');
-
-    $(window).on('load', ()=> {
-      setTimeout( () => $body.addClass('sf-end-intro'), loadingWait);
-      setTimeout( () => $body.addClass('sf-loaded'), loadingWait * 1.5 );
-    });
+    function intro() {
+      $body.addClass('sf-start-intro');
+  
+      $(window).on('load', ()=> {
+        setTimeout( () => $body.addClass('sf-end-intro'), loadingWait);
+        setTimeout( () => $body.addClass('sf-loaded'), loadingWait * 1.5 );
+      });
+    }
 
     function observeProductsSection(){
-      const flavorsSection = document.querySelector('#sf-flavors');
+      const flavorsSection = document.querySelector('#sf-flavors'),
+            navbar = document.querySelector('#navbar');
 
       function checkIfInProductsSection(entry) {
         console.log(flavorsSection)
 
         if (entry.isIntersecting) {
-          $body.addClass('sf-intersecting-products')
+          $body.addClass('sf-intersecting-products');
         } else {
           $body.removeClass('sf-intersecting-products');
+          elementSelectors.forEach( selector => {
+            document.querySelector(selector)
+                    .setAttribute('data-sf-theme', 'pink-grapefruit');
+          })
         }
       }
 
@@ -44,15 +52,13 @@
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: null,
         rootMargin: "0px 0px -50%",
-        threshold: 0
+        threshold: 1
       });
     }
 
     function changeProductSectionState(){
 
-      const 
-        elementSelectors = ['#sf-background', '#navbar'],
-        sections = document.querySelectorAll('.sf-flavor, #sf-social');
+      const sections = document.querySelectorAll('.sf-flavor, #sf-social');
 
         function changeState(entry) {
           if (entry.isIntersecting) {
@@ -68,7 +74,7 @@
 
               setTimeout( () => element.classList.remove('sf-animate'), 800)
             });
-          } 
+          }
         }
 
         createObserver(sections, changeState, {
@@ -78,6 +84,7 @@
         });
     }
 
+    intro();
     observeProductsSection();
     changeProductSectionState();
 
