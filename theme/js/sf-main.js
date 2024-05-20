@@ -37,6 +37,8 @@
         }
       }
 
+      console.log([...flavorsSection]);
+
       createObserver([...flavorsSection], checkIfInProductsSection, {
         root: null,
         rootMargin: "0px",
