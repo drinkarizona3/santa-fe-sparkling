@@ -33,6 +33,8 @@
         callback = (entries, observer) => {
           entries.forEach( entry => {
 
+            console.log(entry.target)
+
             if (entry.isIntersecting) {
               const flavorHandle = entry.target.dataset.flavor;
 
