@@ -52,10 +52,6 @@ class b4st_walker_nav_menu extends Walker_Nav_menu {
 
 		$output .= apply_filters ( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 
-		echo '<pre>';
-		echo print_r($item);
-		echo '</pre>';
-
 	}
 
 }
