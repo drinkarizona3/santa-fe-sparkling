@@ -40,7 +40,7 @@
 
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: flavorsSection,
-        rootMargin: "5%",
+        rootMargin: "1%",
         threshold: 0
       });
     }
