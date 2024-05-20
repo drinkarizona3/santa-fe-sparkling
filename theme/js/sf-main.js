@@ -34,7 +34,7 @@
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products')
         } else {
-          $body.removeClass('sf-intersection-products');
+          $body.removeClass('sf-intersecting-products');
         }
       }
 
