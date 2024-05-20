@@ -1,5 +1,5 @@
 :root {
-  --sf-header-height: 8rem;
+  --sf-header-height: 80px;
   --sf-quicksand: 'Quicksand';
   --sf-bloomsbury: 'bloomsburysans';
   --sf-roboto: 'Roboto', sans-serif;
@@ -15,6 +15,10 @@
   --sf-mobile-menu-speed: .5s;
 
   --sf-color-flavor-background: #F3EFD4;
+}
+
+html {
+  font-size: 37.5%;
 }
 
 body {
@@ -57,7 +61,7 @@ p {
 }
 
 .navbar-brand {
-  font-size: clamp(3rem, 3vw, 3rem) !important;
+  font-size: 30px !important;
 }
 
 .navbar-toggler {
@@ -160,6 +164,7 @@ footer a.mpire-link:hover {
 
 section.sf-hero {
   height: 100svh;
+  overflow: hidden;
 }
 
 .sf-hero__background {
@@ -168,14 +173,12 @@ section.sf-hero {
 }
 
 .sf-hero__background.sf-cans {
-  --cans-width: max(min(93vw, 150rem), 50rem);
+  --cans-width: max(min(93vw, 1500px), 450px);
   width: var(--cans-width);
   height: calc(var(--cans-width)* 1.2);
-  transform: rotate(90deg);
-  transform-origin: 40%;
-  top: auto;
-  bottom: 0;
-  left: 20%;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 0;
 }
 
 .sf-hero__content {
@@ -218,6 +221,12 @@ section#sf-main__content a {
 
 .sf-flavor .sf-button {
   margin: .5em 0;
+}
+
+@media only screen and (min-width: 48.06rem) {
+  html {
+    font-size:62.5%;
+  }
 }
 
 /* ==========================================================================
