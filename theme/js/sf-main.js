@@ -18,6 +18,16 @@
           const observer = new IntersectionObserver(callback, options);
           observer.observe(section);
         });
+      },
+      changeSectionState = function(selector, handle){
+
+        const element = document.querySelector(selector);
+            
+        element.setAttribute('data-sf-theme', handle);
+
+        element.classList.add('sf-animate');
+
+        setTimeout( () => element.classList.remove('sf-animate'), 800)
       };
 
     function intro() {
@@ -30,24 +40,21 @@
     }
 
     function observeProductsSection(){
-      const flavorsSection = document.querySelector('#sf-flavors'),
-            navbar = document.querySelector('#navbar');
+      const flavorsSection = document.querySelector('#sf-flavors');
 
       function checkIfInProductsSection(entry) {
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products');
         } else {
           $body.removeClass('sf-intersecting-products');
-          elementSelectors.forEach( selector => {
-            document.querySelector(selector)
-                    .setAttribute('data-sf-theme', 'pink-grapefruit');
-          })
+
+          elementSelectors.forEach( selector => changeSectionState(selector, 'pink-grapefruit'));
         }
       }
 
-      createObserver([...flavorsSection], checkIfInProductsSection, {
+      createObserver([flavorsSection], checkIfInProductsSection, {
         root: null,
-        rootMargin: "0px 0px -100%",
+        rootMargin: "-25% 0% -50% 0%",
         threshold: 0
       });
     }
@@ -56,24 +63,15 @@
 
       const sections = document.querySelectorAll('.sf-flavor, #sf-social');
 
-        function changeState(entry) {
+        function handleStateChange(entry) {
           if (entry.isIntersecting) {
             const flavorHandle = entry.target.dataset.flavor;
 
-            elementSelectors.forEach( (selector, i) => {
-
-              const element = document.querySelector(selector);
-
-              element.setAttribute('data-sf-theme', flavorHandle);
-
-              element.classList.add('sf-animate');
-
-              setTimeout( () => element.classList.remove('sf-animate'), 800)
-            });
+            elementSelectors.forEach( (selector, i) => changeSectionState(selector, flavorHandle));
           }
         }
 
-        createObserver(sections, changeState, {
+        createObserver(sections, handleStateChange, {
           root: null,
           rootMargin: "0px",
           threshold: .5
