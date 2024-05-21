@@ -1,7 +1,7 @@
 <svg viewBox="0 0 122.01 127.27">
   <style type="text/css">
     .cls-1 {
-      fill: var(--sf-theme-accent);
+      fill: var(--sf-theme-secondary);
     }
   </style>
   <g>
