@@ -20,6 +20,7 @@
   --sf-theme-secondary: #00B4AA;
   --sf-theme-rind: #FFFFFF;
   --sf-theme-pulp: var(--sf-theme-accent);
+  --sf-theme-cloud: #FFFFFF;
 }
 
 
@@ -48,6 +49,7 @@
   --sf-theme-secondary:#F27FB2;
   --sf-theme-rind: #FFFFFF;
   --sf-theme-pulp: #FFF27F;
+  --sf-theme-cloud: var(--sf-theme-secondary);
 }
 
 [data-sf-theme="orange-mango"] {
