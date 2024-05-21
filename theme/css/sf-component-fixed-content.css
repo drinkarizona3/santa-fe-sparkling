@@ -73,7 +73,7 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 
 #sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-roof,
 #sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-pole,
-#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-6 {
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-4 {
   fill: var(--sf-theme-accent)
 }
 
