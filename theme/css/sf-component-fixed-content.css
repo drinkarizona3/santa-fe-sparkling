@@ -57,35 +57,35 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   z-index: 2;
 }
 
-.sf-background[data-sf-theme="pink-grapefruit"] .sf-dots__rectangle path {
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-dots__rectangle path {
   fill: var(--sf-theme-accent);
 }
 
-.sf-background[data-sf-theme="raspberry-lime"] .sf-dots__rectangle path {
+#sf-background[data-sf-theme="raspberry-lime"] .sf-dots__rectangle path {
   fill: var(--sf-theme-secondary);
 }
 
-.sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-roof,
-.sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-pole,
-.sf-background[data-sf-theme="lemon"] .sf-pueblo-house .cls-6 {
+#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-roof,
+#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-pole,
+#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .cls-6 {
   fill: var(--sf-theme-midground)
 }
 
-.sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-roof,
-.sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-pole,
-.sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-6 {
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-roof,
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-pole,
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-6 {
   fill: var(--sf-theme-accent)
 }
 
-.sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-5 {
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-5 {
   fill: var(--sf-theme-secondary);
 }
 
-.sf-background[data-sf-theme="raspberry-lime"] .cls-4 {
+#sf-background[data-sf-theme="raspberry-lime"] .cls-4 {
   fill: var(--sf-theme-midground);
 }
 
-.sf-background[data-sf-theme="raspberry-lime"] .cls-6 {
+#sf-background[data-sf-theme="raspberry-lime"] .cls-6 {
   fill: var(--sf-theme-secondary);
 }
 
