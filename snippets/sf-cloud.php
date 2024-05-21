@@ -1,7 +1,7 @@
 <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.04 107.23">
   <style type="text/css">
     .cls-3 {
-      fill: var(--sf-theme-rind);
+      fill: var(--sf-theme-cloud);
       stroke-width: 0px;
     }
   </style>
