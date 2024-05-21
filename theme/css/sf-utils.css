@@ -9,8 +9,8 @@
   line-height: 1;
   color: black;
   text-transform: uppercase;
-  background-color: var(--sf-theme-midground);
-  border: 4px solid var(--sf-theme-accent);
+  background-color: var(--sf-theme-accent);
+  border: 4px solid var(--sf-theme-secondary);
 }
 
 .sf-section.sf-section__short {

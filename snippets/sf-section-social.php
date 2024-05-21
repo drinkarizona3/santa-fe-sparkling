@@ -9,7 +9,7 @@
             <p>Follow Us <a href="https://www.instagram.com/drinksantafe/" target="_blank"> @drinksantafe</a></p>
 
             <a href="https://www.instagram.com/drinksantafe/" target="_blank" class="align-items-center d-flex flex-column justify-content-center">
-              <?php get_template_part('snippets/sf-grapefruit'); ?>
+              <?php get_template_part('snippets/sf-citrus-slice'); ?>
             </a>
           </div>
         </div>
