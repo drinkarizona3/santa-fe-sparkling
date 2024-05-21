@@ -16,7 +16,7 @@
           foreach($flavors as $i => $flavor): ?>
   
             <div class="sf-fruit" data-sf-theme="<?= $flavor->post_name ?>" style="animation-delay: calc(120ms * <?= $i ?>);">
-              <?php get_template_part('snippets/sf-grapefruit'); ?>
+              <?php get_template_part('snippets/sf-citrus-slice'); ?>
             </div> <?php
   
           endforeach;
