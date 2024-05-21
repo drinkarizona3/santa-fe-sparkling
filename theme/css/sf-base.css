@@ -12,13 +12,12 @@
   --sf-ease: cubic-bezier(0.25, 1, 0.5, 1);
   --sf-mobile-menu-speed: .5s;
 
-  --sf-color-flavor-background: #F3EFD4;
-
-  --sf-theme-primary:#F3EFD4;
-  --sf-theme-accent: #FFE800;
-  --sf-theme-midground: #00C4B3;
-  --sf-theme-secondary:#ab6526;
+  --sf-theme-primary:#F8BACA;
+  --sf-theme-accent: #E54460;
+  --sf-theme-midground: #F1CD15;
+  --sf-theme-secondary: #00B4AA;
   --sf-theme-rind: #FFFFFF;
+  --sf-theme-pulp: var(--sf-theme-accent);
 }
 
 
@@ -28,38 +27,43 @@
   --sf-theme-midground: #FFE800;
   --sf-theme-secondary:#ab6526;
   --sf-theme-rind: #FFFFFF;
+  --sf-theme-pulp: #FFFFFF;
 }
 
 [data-sf-theme="pink-grapefruit"] {
-  --sf-theme-primary:#FDBBCB;
-  --sf-theme-accent: #E54360;
-  --sf-theme-midground: #F3C300;
-  --sf-theme-secondary: #00C4B3;
+  --sf-theme-primary:#F8BACA;
+  --sf-theme-accent: #E54460;
+  --sf-theme-midground: #F1CD15;
+  --sf-theme-secondary: #00B4AA;
   --sf-theme-rind: #FFFFFF;
+  --sf-theme-pulp: #FFFFFF;
 }
 
 [data-sf-theme="lemon"] {
-  --sf-theme-primary:#F3EFD4;
-  --sf-theme-accent: #FFE800;
-  --sf-theme-midground: #00C4B3;
-  --sf-theme-secondary:#ab6526;
+  --sf-theme-primary:#FFFFFF;
+  --sf-theme-accent: #FFE600;
+  --sf-theme-midground: #00B4AA;
+  --sf-theme-secondary:#F27FB2;
   --sf-theme-rind: #FFFFFF;
+  --sf-theme-pulp: #FFF27F;
 }
 
 [data-sf-theme="orange-mango"] {
-  --sf-theme-primary:#FFE800;
-  --sf-theme-accent: #FF9015;
-  --sf-theme-midground: #93D500;
-  --sf-theme-secondary:#F32735;
+  --sf-theme-primary:#FFE600;
+  --sf-theme-accent: #F78E28;
+  --sf-theme-midground: #95C93D;
+  --sf-theme-secondary:#EE2B37;
   --sf-theme-rind: #FFFFFF;
+  --sf-theme-pulp: #FFFFFF;
 }
 
 [data-sf-theme="raspberry-lime"] {
-  --sf-theme-primary:#F45197;
-  --sf-theme-accent: #93D500;
-  --sf-theme-midground: #960048;
-  --sf-theme-secondary:#E1E667;
+  --sf-theme-primary:#EF5196;
+  --sf-theme-accent: #95C93D;
+  --sf-theme-midground: #961A4B;
+  --sf-theme-secondary:#E0E669;
   --sf-theme-rind: #FFFFFF;
+  --sf-theme-pulp: var(--sf-theme-secondary);
 }
 
 
