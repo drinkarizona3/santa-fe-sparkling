@@ -72,9 +72,17 @@
 
         function handleStateChange(entry) {
           if (entry.isIntersecting) {
-            const flavorHandle = entry.target.dataset.sfTheme;
 
-            elementSelectors.forEach( (selector, i) => changeSectionState(selector, flavorHandle));
+            const 
+              _target = entry.target,
+              flavorHandle = _target.dataset.sfTheme;
+
+            sections.forEach( section => section.classList.remove('sf-active'));
+            _target.classList.add('sf-active');
+
+            elementSelectors.forEach( (selector, i) => {
+              changeSectionState(selector, flavorHandle);
+            });
           }
         }
 
