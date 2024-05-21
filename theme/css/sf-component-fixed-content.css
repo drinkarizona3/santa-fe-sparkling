@@ -50,6 +50,13 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   max-width: max(34%, 250px);
 }
 
+.sf-pueblo-house {
+  bottom: -7%;
+  left: -15%;
+  width: 46%;
+  z-index: 2;
+}
+
 .sf-background[data-sf-theme="pink-grapefruit"] .sf-dots__rectangle path {
   fill: var(--sf-theme-accent);
 }
