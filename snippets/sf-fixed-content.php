@@ -10,11 +10,15 @@
       <path d="M1819 0V557H0L1819 0Z" fill="var(--sf-theme-midground)"/>
     </svg>
 
-    <div class="sf-dots__rectangle position-absolute">
+    <div class="sf-dots sf-dots__rectangle position-absolute">
       <?php get_template_part('snippets/sf-dots-rectangle'); ?>
     </div>
 
-    <div class="sf-dots__square position-absolute">
+    <div class="sf-pueblo-house position-absolute">
+      <?php get_template_part('snippets/sf-pueblo-house'); ?>
+    </div>
+
+    <div class="sf-dots sf-dots__square position-absolute">
       <?php get_template_part('snippets/sf-dots-square'); ?>
     </div>
     
