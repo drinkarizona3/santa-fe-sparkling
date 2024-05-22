@@ -309,7 +309,7 @@ section#sf-main__content a {
 
 /* Flavor loop */
 
-.sf-flavor:has(.sf-sticky) {
+.sf-flavor__container:has(.sf-sticky) {
   min-height: 200vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,7 +323,7 @@ section#sf-main__content a {
           justify-content: flex-start;
 }
 
-.sf-flavor > .sf-sticky {
+.sf-flavor.sf-sticky {
   position:-webkit-sticky;
   position:sticky;
   top: 0;
