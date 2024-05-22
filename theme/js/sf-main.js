@@ -95,7 +95,7 @@
         //   // //   if (entry.isIntersecting) animateBackgroundElements();
         //   // // }
 
-          console.log(entry)
+          console.log(entry.target)
 
       }
 
