@@ -96,6 +96,8 @@
     function parallax() {
       const 
         background = document.querySelector(elementSelectors[0]),
+        flavorSection = document.querySelector('.sf-section'),
+        flavorSectionIsVisible = flavorSection.classList.contains('sf-active'),
         parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
         thresholds = [],
         animateBackgroundElements = function(entry) {
@@ -109,7 +111,10 @@
         }
 
         function handleParallax(entry) {
-          if (entry.isIntersecting) {
+
+          console.log(flavorSectionIsVisible);
+
+          if (entry.isIntersecting && flavorSectionIsVisible) {
             console.log(entry.target)
           }
         }
