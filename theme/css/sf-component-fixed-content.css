@@ -2,7 +2,6 @@
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition);
   position: relative;
-  overflow: hidden;
 }
 
 .sf-foreground {
