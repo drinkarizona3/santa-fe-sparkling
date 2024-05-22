@@ -105,10 +105,13 @@
 
         if (entry.isIntersecting) {
 
-          const _target = entry.target,
-                flavorHandle = _target.dataset.sfTheme;
+          const _target = entry.target;
+         
 
           if (entry.intersectionRatio <= .5) {
+
+            const flavorHandle = _target.dataset.sfTheme;
+
             sections.forEach( section => section.classList.remove('sf-active'));
             _target.classList.add('sf-active');
   
