@@ -94,7 +94,7 @@
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
 
-          console.log(background)
+          console.log(entry.target, background)
 
       }
 
