@@ -48,7 +48,6 @@
       const flavorsSection = document.querySelector('#sf-flavors');
 
       function checkIfInProductsSection(entry) {
-        console.log(flavorsSection)
 
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products');
@@ -61,7 +60,7 @@
 
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: null,
-        rootMargin: "-25% 0% -50% 0%",
+        rootMargin: "-15% 0% -50% 0%",
         threshold: 0
       });
     }
@@ -71,56 +70,68 @@
       const sections = document.querySelectorAll('.sf-flavor, #sf-social'),
             thresholds = [];
 
+
       for (let i = 0; i <= 1.0; i += 0.01) {
         thresholds.push(i);
       }
 
-      function parallax(target, entry) {
-        const 
-          background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`),
-          parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
-          animateBackgroundElements = function(entry) {
-            entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
-          };
+      function parallax(entry) {
 
-          console.log(parallaxElements);
-  
-          if (!parallaxElements.length) return;
-  
+        const 
+           target = entry.target,
+            background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`);
+            // parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
+            // animateBackgroundElements = function(entry) {
+            //   entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
+            // }
+
+          // if (background) {
+          //   if (!parallaxElements.length) return
+          //   console.log(entry.intersectionRatio);
+          // }
+
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
 
+          //console.log(entry.target, background)
+
       }
 
       function handleStateChange(entry) {
+
+
         if (entry.isIntersecting) {
 
-          const 
-            _target = entry.target,
-            flavorHandle = _target.dataset.sfTheme;
+          console.log(entry.intersectionRatio);
 
-          sections.forEach( section => section.classList.remove('sf-active'));
-          _target.classList.add('sf-active');
+          if (entry.intersectionRatio === .5) {
 
-          elementSelectors.forEach( (selector, i) => {
-            changeSectionState(selector, flavorHandle);
-          });
+            const _target = entry.target,
+                  flavorHandle = _target.dataset.sfTheme;
 
-          parallax(_target, entry);
+            sections.forEach( section => section.classList.remove('sf-active'));
+            _target.classList.add('sf-active');
+  
+            elementSelectors.forEach( (selector, i) => {
+              changeSectionState(selector, flavorHandle);
+            });
+          }   
+          
+          parallax(entry);
         }
+
+    
       }
 
       createObserver(sections, handleStateChange, {
         root: null,
         rootMargin: "0px",
-        threshold: .5
+        threshold: thresholds
       });
 
 
     }
-
-    
 
     intro();
     observeProductsSection();
