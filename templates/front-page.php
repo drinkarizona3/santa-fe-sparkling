@@ -4,7 +4,7 @@
     /* Template Name: Front Page */
 ?>
 
-<main id="main" class="overflow-hidden position-relative">
+<main id="main" class="position-relative">
 
   <section class="sf-hero d-flex flex-column justify-content-center position-relative">
 
@@ -56,7 +56,7 @@
         $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
 
       <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-flavor sf-section d-flex align-items-center" data-sf-theme="<?= $post->post_name ?>">
-        <div class="container-md">
+        <div class="sf-sticky container-lg">
           <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
 
               <div class="col-md-6 sf-flavor__content">
