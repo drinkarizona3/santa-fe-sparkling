@@ -78,7 +78,7 @@
       function parallax(entry) {
 
         const 
-           target = entry.target;
+           target = entry.target,
             background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`);
             // parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
             // animateBackgroundElements = function(entry) {
