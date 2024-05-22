@@ -100,12 +100,11 @@
 
       function handleStateChange(entry) {
 
-
         if (entry.isIntersecting) {
 
           console.log(entry.intersectionRatio);
 
-          if (entry.intersectionRatio == .50 ) {
+          if (Math.floor(entry.intersectionRatio) === 0.5 ) {
 
             const _target = entry.target,
                   flavorHandle = _target.dataset.sfTheme;
