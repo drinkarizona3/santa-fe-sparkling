@@ -86,6 +86,8 @@
           console.log(parallaxElements);
   
           if (!parallaxElements.length) return;
+
+          console.log(entry.intersectionRatio);
   
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
