@@ -75,6 +75,9 @@
       }
 
       function parallax(target, entry) {
+
+        if (!target) return;
+        
         const 
           background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`),
           parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
@@ -84,7 +87,7 @@
 
           console.log(parallaxElements);
   
-          if (!parallaxElements.length || !target) return;
+          if (!parallaxElements.length) return;
 
           console.log(target, entry.intersectionRatio, 'parallax');
   
