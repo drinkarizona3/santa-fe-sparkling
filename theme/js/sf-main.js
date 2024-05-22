@@ -128,7 +128,7 @@
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
 
-          console.log(entry.target, entry.target.firstChild);
+          console.dir(entry.target);
       }
 
       createObserver(sections, handleParallax, {
