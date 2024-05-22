@@ -104,7 +104,9 @@
 
           const roundedRatio = +entry.intersectionRatio.toFixed(1);
 
-          if (roundedRatio === 0.5 ) {
+          console.log(roundedRatio);
+
+          if (roundedRatio === 0.5) {
 
             const _target = entry.target,
                   flavorHandle = _target.dataset.sfTheme;
