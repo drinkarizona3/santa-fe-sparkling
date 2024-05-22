@@ -94,7 +94,7 @@
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
 
-          console.log(entry.target, background)
+          //console.log(entry.target, background)
 
       }
 
@@ -102,6 +102,8 @@
 
 
         if (entry.isIntersecting) {
+
+          console.log(entry.intersectionRatio);
 
           if (entry.intersectionRatio === .5) {
 
