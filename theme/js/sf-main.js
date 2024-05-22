@@ -48,7 +48,6 @@
       const flavorsSection = document.querySelector('#sf-flavors');
 
       function checkIfInProductsSection(entry) {
-        console.log(flavorsSection)
 
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products');
@@ -87,7 +86,7 @@
   
           if (!parallaxElements.length) return;
 
-          console.log(entry.intersectionRatio);
+          //console.log(entry.intersectionRatio);
   
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
@@ -96,6 +95,9 @@
       }
 
       function handleStateChange(entry) {
+
+        console.log(entry.intersectionRatio);
+
         if (entry.isIntersecting) {
 
           const 
