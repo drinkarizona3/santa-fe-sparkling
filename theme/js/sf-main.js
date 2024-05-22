@@ -115,7 +115,9 @@
 
 
         if (entry.isIntersecting) {
-          parallax(_target, entry.intersectionRatio);
+          //parallax(_target, entry.intersectionRatio);
+
+          console.log(entry.intersectionRatio)
         }
       }
 
