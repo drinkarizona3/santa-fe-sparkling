@@ -116,7 +116,7 @@
       createObserver(sections, handleStateChange, {
         root: null,
         rootMargin: "0px",
-        threshold: .5
+        threshold: thresholds
       });
 
 
