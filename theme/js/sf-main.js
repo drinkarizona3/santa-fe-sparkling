@@ -70,14 +70,12 @@
       const sections = document.querySelectorAll('.sf-flavor, #sf-social'),
             thresholds = [];
 
-      
-      let _target = null;
 
       for (let i = 0; i <= 1.0; i += 0.01) {
         thresholds.push(i);
       }
 
-      function parallax(entry) {
+      function parallax(entry, target) {
 
         // const 
         //   // target = entry.target;
@@ -98,7 +96,7 @@
         //   // //   if (entry.isIntersecting) animateBackgroundElements();
         //   // // }
 
-          console.log(_target)
+          console.log(target)
 
       }
 
@@ -106,9 +104,8 @@
 
         if (entry.isIntersecting && entry.intersectionRatio === .5) {
 
-          _target = entry.target
-
-          const flavorHandle = _target.dataset.sfTheme;
+          const _target = entry.target,
+                flavorHandle = _target.dataset.sfTheme;
 
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
@@ -119,7 +116,7 @@
         }
 
         if (entry.isIntersecting) {
-          parallax(entry);
+          parallax(entry, _target);
         }
       }
 
