@@ -49,7 +49,7 @@
 
       function checkIfInProductsSection(entry) {
 
-        if (entry.isIntersecting && entry.intersectionRatio === .5) {
+        if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products');
         } else {
           $body.removeClass('sf-intersecting-products');
@@ -98,7 +98,7 @@
 
         console.log(entry.intersectionRatio);
 
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio === .5) {
 
           const 
             _target = entry.target,
