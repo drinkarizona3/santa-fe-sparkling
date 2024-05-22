@@ -102,25 +102,25 @@
 
       function handleStateChange(entry) {
 
-        let _target;
-
-        if (entry.isIntersecting && entry.intersectionRatio <= .5) {
-
-          _target = entry.target;
-          
-          const flavorHandle = _target.dataset.sfTheme;
-
-          sections.forEach( section => section.classList.remove('sf-active'));
-          _target.classList.add('sf-active');
-
-          elementSelectors.forEach( (selector, i) => {
-            changeSectionState(selector, flavorHandle);
-          });
-        }
 
         if (entry.isIntersecting) {
+
+          const _target = entry.target,
+                flavorHandle = _target.dataset.sfTheme;
+
+          if (entry.intersectionRatio <= .5) {
+            sections.forEach( section => section.classList.remove('sf-active'));
+            _target.classList.add('sf-active');
+  
+            elementSelectors.forEach( (selector, i) => {
+              changeSectionState(selector, flavorHandle);
+            });
+          }   
+          
           parallax(entry, _target);
         }
+
+    
       }
 
       createObserver(sections, handleStateChange, {
