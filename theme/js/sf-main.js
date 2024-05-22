@@ -70,6 +70,9 @@
       const sections = document.querySelectorAll('.sf-flavor, #sf-social'),
             thresholds = [];
 
+      
+      let _target = null;
+
       for (let i = 0; i <= 1.0; i += 0.01) {
         thresholds.push(i);
       }
@@ -95,13 +98,11 @@
         //   // //   if (entry.isIntersecting) animateBackgroundElements();
         //   // // }
 
-          console.log(entry.target)
+          console.log(_target)
 
       }
 
       function handleStateChange(entry) {
-
-        let _target = null;
 
         if (entry.isIntersecting && entry.intersectionRatio === .5) {
 
