@@ -83,10 +83,13 @@
           animateBackgroundElements = function(entry) {
             entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
           };
-  
-          if (!parallaxElements.length) return;
 
-          console.log(entry.intersectionRatio);
+          if (background) {
+            if (!parallaxElements.length) return;
+
+            console.log(entry.intersectionRatio);
+          }
+  
   
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
