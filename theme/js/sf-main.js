@@ -86,7 +86,7 @@
   
           if (!parallaxElements.length) return;
 
-          //console.log(entry.intersectionRatio);
+          console.log(entry.intersectionRatio, 'parallax');
   
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
@@ -96,13 +96,13 @@
 
       function handleStateChange(entry) {
 
-        console.log(entry.intersectionRatio);
+        let _target = null;
 
         if (entry.isIntersecting && entry.intersectionRatio === .5) {
 
-          const 
-            _target = entry.target,
-            flavorHandle = _target.dataset.sfTheme;
+          _target = entry.target
+
+          const flavorHandle = _target.dataset.sfTheme;
 
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
@@ -110,7 +110,10 @@
           elementSelectors.forEach( (selector, i) => {
             changeSectionState(selector, flavorHandle);
           });
+        }
 
+
+        if (_target && entry.isIntersecting) {
           parallax(_target, entry);
         }
       }
