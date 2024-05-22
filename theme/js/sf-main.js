@@ -74,22 +74,20 @@
         thresholds.push(i);
       }
 
-      function parallax(target, entry) {
+      function parallax(target, scrollRatio) {
 
         if (!target) return;
-        
+
         const 
           background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`),
           parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
           animateBackgroundElements = function(entry) {
             entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
           };
-
-          console.log(parallaxElements);
   
           if (!parallaxElements.length) return;
 
-          console.log(target, entry.intersectionRatio, 'parallax');
+          console.log(scrollRatio);
   
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
@@ -117,7 +115,7 @@
 
 
         if (entry.isIntersecting) {
-          parallax(_target, entry);
+          parallax(_target, entry.intersectionRatio);
         }
       }
 
