@@ -45,10 +45,10 @@
     }
 
     function observeProductsSection(){
+
       const flavorsSection = document.querySelector('#sf-flavors');
 
       function checkIfInProductsSection(entry) {
-        console.log(flavorsSection)
 
         if (entry.isIntersecting) {
           $body.addClass('sf-intersecting-products');
@@ -93,9 +93,36 @@
         });
     }
 
+    function parallax() {
+      const 
+        background = document.querySelector(elementSelectors[0]),
+        parallaxElements = background.querySelector('[data-sf-parallax]'),
+        thresholds = [],
+        animateBackgroundElements = function(el) {
+
+        };
+
+        console.log(parallaxElements);
+
+        if (!parallaxElements) return;
+
+        for (let i = 0; i <= 1.0; i += 0.01) {
+          thresholds.push(i);
+        }
+
+        console.log(thresholds);
+
+        // createObserver(sections, handleStateChange, {
+        //   root: null,
+        //   rootMargin: "0px",
+        //   threshold: .5
+        // });
+    }
+
     intro();
     observeProductsSection();
     changeProductSectionState();
+    parallax();
 
   });
 
