@@ -102,10 +102,13 @@
 
       function handleStateChange(entry) {
 
+        let target;
+
         if (entry.isIntersecting && entry.intersectionRatio === .5) {
 
-          const _target = entry.target,
-                flavorHandle = _target.dataset.sfTheme;
+          const flavorHandle = _target.dataset.sfTheme;
+
+          _target = entry.target;
 
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
@@ -116,7 +119,7 @@
         }
 
         if (entry.isIntersecting) {
-          parallax(entry, _target);
+          parallax(entry, target);
         }
       }
 
