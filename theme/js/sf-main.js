@@ -98,11 +98,9 @@
         background = document.querySelector(elementSelectors[0]),
         parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
         thresholds = [],
-        animateBackgroundElements = function(el) {
-
+        animateBackgroundElements = function(entry) {
+          entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
         };
-
-        console.log(parallaxElements);
 
         if (!parallaxElements) return;
 
@@ -110,13 +108,15 @@
           thresholds.push(i);
         }
 
-        console.log(thresholds);
+        function handleParallax(entry) {
+          if (entry.isIntersecting) animateBackgroundElements();
+        }
 
-        // createObserver(sections, handleStateChange, {
-        //   root: null,
-        //   rootMargin: "0px",
-        //   threshold: .5
-        // });
+        createObserver(parallaxElements, handleParallax, {
+          root: null,
+          rootMargin: "0px",
+          threshold: thresholds
+        });
     }
 
     intro();
