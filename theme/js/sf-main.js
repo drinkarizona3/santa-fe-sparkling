@@ -112,6 +112,8 @@
 
             sections.forEach( section => section.classList.remove('sf-active'));
             _target.classList.add('sf-active');
+
+            console.log(_target);
   
             elementSelectors.forEach( (selector, i) => {
               changeSectionState(selector, flavorHandle);
