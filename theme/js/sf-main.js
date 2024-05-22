@@ -102,9 +102,9 @@
 
         if (entry.isIntersecting) {
 
-          console.log(entry.intersectionRatio);
+          console.log(entry.intersectionRatio.round(1));
 
-          if (Math.floor(entry.intersectionRatio) === 0.5 ) {
+          if (entry.intersectionRatio === 0.5 ) {
 
             const _target = entry.target,
                   flavorHandle = _target.dataset.sfTheme;
