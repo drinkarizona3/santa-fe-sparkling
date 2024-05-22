@@ -104,7 +104,7 @@
 
         let _target;
 
-        if (entry.isIntersecting && entry.intersectionRatio === .5) {
+        if (entry.isIntersecting && entry.intersectionRatio <= .5) {
 
           _target = entry.target;
           
