@@ -75,26 +75,24 @@
         thresholds.push(i);
       }
 
-      function parallax(entry, target) {
+      function parallax(entry) {
 
-        // const 
-        //   // target = entry.target;
-        //   // // background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`),
-        //   // // parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
-        //   // // animateBackgroundElements = function(entry) {
-        //   // //   entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
-        //   // // };
+        const 
+           target = entry.target;
+            background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`),
+            parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
+            animateBackgroundElements = function(entry) {
+              entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
+            }
 
-        //   // // if (background) {
-        //   // //   if (!parallaxElements.length) return;
+          // if (background) {
+          //   if (!parallaxElements.length) return
+          //   console.log(entry.intersectionRatio);
+          // }
 
-        //   // //   console.log(entry.intersectionRatio);
-        //   // // }
-  
-  
-        //   // // function handleParallax(entry) {
-        //   // //   if (entry.isIntersecting) animateBackgroundElements();
-        //   // // }
+          // function handleParallax(entry) {
+          //   if (entry.isIntersecting) animateBackgroundElements();
+          // }
 
           console.log(target)
 
@@ -118,7 +116,7 @@
             });
           }   
           
-          parallax(entry, entry.target);
+          parallax(entry);
         }
 
     
