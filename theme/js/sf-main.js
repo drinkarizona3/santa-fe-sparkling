@@ -102,7 +102,7 @@
 
         if (entry.isIntersecting) {
 
-          console.log(Math.round(entry.intersectionRatio));
+          console.log(entry.intersectionRatio.toFixed(1));
 
           if (entry.intersectionRatio === 0.5 ) {
 
