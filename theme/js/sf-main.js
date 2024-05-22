@@ -96,7 +96,7 @@
     function parallax() {
       const 
         background = document.querySelector(elementSelectors[0]),
-        parallaxElements = background.querySelector('[data-sf-parallax]'),
+        parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
         thresholds = [],
         animateBackgroundElements = function(el) {
 
