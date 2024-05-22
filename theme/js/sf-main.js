@@ -102,19 +102,19 @@
 
         if (entry.isIntersecting) {
 
-          const roundedRatio = +entry.intersectionRatio.toFixed(1);
 
-          console.log(roundedRatio);
-
-          if (roundedRatio === 0.5) {
+          if (entry.intersectionRatio >= .45 && entry.intersectionRatio <= .5) {
 
             const _target = entry.target,
-                  flavorHandle = _target.dataset.sfTheme;
+                  getFlavorHandle = function(target) {
+                    return target.dataset.sfTheme;;
+                  },
+                  flavorHandle = getFlavorHandle();
 
             sections.forEach( section => section.classList.remove('sf-active'));
             _target.classList.add('sf-active');
 
-            console.log(_target);
+            console.log(flavorHandle);
   
             elementSelectors.forEach( (selector, i) => {
               changeSectionState(selector, flavorHandle);
