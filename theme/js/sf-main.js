@@ -67,78 +67,82 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor, #sf-social'),
-            thresholds = [];
+      const sections = document.querySelectorAll('.sf-flavor, #sf-social');
+
+      function handleStateChange(entry) {
+
+        if (entry.isIntersecting) {
+
+          const _target = entry.target,
+                flavorHandle = _target.dataset.sfTheme;
+
+          sections.forEach( section => section.classList.remove('sf-active'));
+          _target.classList.add('sf-active');
+
+          console.log(_target);
+
+          elementSelectors.forEach( (selector, i) => {
+            changeSectionState(selector, flavorHandle);
+          });
+        }   
+        
+      }
+
+      createObserver(sections, handleStateChange, {
+        root: null,
+        rootMargin: "0px",
+        threshold: .5
+      });
+
+
+    }
+
+    function parallaxContainer(){
+
+
+      const 
+        sections = document.querySelectorAll('.sf-flavor__container'),
+        thresholds = [];
 
 
       for (let i = 0; i <= 1.0; i += 0.01) {
         thresholds.push(i);
       }
 
-      function parallax(entry) {
+      function handleParallax(entry) {
+       
+        // const 
+        //    target = entry.target,
+        //     background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`);
+        //     parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
+        //     animateBackgroundElements = function(entry) {
+        //       entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
+        //     }
 
-        const 
-           target = entry.target,
-            background = document.querySelector(`#sf-background[data-sf-theme="${target.getAttribute('data-sf-theme')}"]`);
-            // parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
-            // animateBackgroundElements = function(entry) {
-            //   entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
-            // }
+        //   if (background) {
+        //     if (!parallaxElements.length) return
+        //     console.log(entry.intersectionRatio);
+        //   }
 
-          // if (background) {
-          //   if (!parallaxElements.length) return
-          //   console.log(entry.intersectionRatio);
-          // }
+        //   function handleParallax(entry) {
+        //     if (entry.isIntersecting) animateBackgroundElements();
+        //   }
 
-          // function handleParallax(entry) {
-          //   if (entry.isIntersecting) animateBackgroundElements();
-          // }
-
-          //console.log(entry.target, background)
-
+          console.log(entry.intersectionRatio);
       }
 
-      function handleStateChange(entry) {
-
-        if (entry.isIntersecting) {
-
-
-          if (entry.intersectionRatio >= .45 && entry.intersectionRatio <= .5) {
-
-            const _target = entry.target,
-                  getFlavorHandle = function(target) {
-                    return target.dataset.sfTheme;;
-                  },
-                  flavorHandle = getFlavorHandle(_target);
-
-            sections.forEach( section => section.classList.remove('sf-active'));
-            _target.classList.add('sf-active');
-
-            console.log(flavorHandle);
-  
-            elementSelectors.forEach( (selector, i) => {
-              changeSectionState(selector, flavorHandle);
-            });
-          }   
-          
-          parallax(entry);
-        }
-
-    
-      }
-
-      createObserver(sections, handleStateChange, {
+      createObserver(sections, handleParallax, {
         root: null,
         rootMargin: "0px",
         threshold: thresholds
       });
-
 
     }
 
     intro();
     observeProductsSection();
     changeProductSectionState();
+    parallaxContainer();
 
   });
 
