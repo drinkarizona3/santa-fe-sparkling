@@ -60,7 +60,7 @@
 
       createObserver([flavorsSection], checkIfInProductsSection, {
         root: null,
-        rootMargin: "-25% 0% -50% 0%",
+        rootMargin: "-15% 0% -50% 0%",
         threshold: 0
       });
     }
@@ -105,7 +105,7 @@
 
           console.log(entry.intersectionRatio);
 
-          if (entry.intersectionRatio === .5) {
+          if (entry.intersectionRatio === .25) {
 
             const _target = entry.target,
                   flavorHandle = _target.dataset.sfTheme;
