@@ -105,7 +105,7 @@
 
           console.log(entry.intersectionRatio);
 
-          if (entry.intersectionRatio >= .4 && entry.intersectionRatio <= .5 ) {
+          if (entry.intersectionRatio == .50 ) {
 
             const _target = entry.target,
                   flavorHandle = _target.dataset.sfTheme;
