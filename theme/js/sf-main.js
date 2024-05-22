@@ -84,7 +84,7 @@
 
           console.log(parallaxElements);
   
-          if (!parallaxElements.length) return;
+          if (!parallaxElements.length || !target) return;
 
           console.log(entry.intersectionRatio, 'parallax');
   
@@ -113,7 +113,7 @@
         }
 
 
-        if (_target && entry.isIntersecting) {
+        if (entry.isIntersecting) {
           parallax(_target, entry);
         }
       }
