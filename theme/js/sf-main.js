@@ -109,7 +109,7 @@
                   getFlavorHandle = function(target) {
                     return target.dataset.sfTheme;;
                   },
-                  flavorHandle = getFlavorHandle();
+                  flavorHandle = getFlavorHandle(_target);
 
             sections.forEach( section => section.classList.remove('sf-active'));
             _target.classList.add('sf-active');
