@@ -109,7 +109,9 @@
         }
 
         function handleParallax(entry) {
-          if (entry.isIntersecting) animateBackgroundElements();
+          if (entry.isIntersecting) {
+            console.log(entry.target)
+          }
         }
 
         createObserver(parallaxElements, handleParallax, {
