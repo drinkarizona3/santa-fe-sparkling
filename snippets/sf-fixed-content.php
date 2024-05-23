@@ -1,6 +1,8 @@
 <?php 
   $flavors = SF_get_flavors();
 ?>
+
+etstsets
 <div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= SF_get_first_flavor()->ID ?>">
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-fixed-content.css">
 
