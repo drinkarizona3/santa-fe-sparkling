@@ -13,7 +13,11 @@
 
 <?php b4st_navbar_before();?>
 
-<nav id="navbar" class="bg-light navbar navbar-light" data-sf-theme="pink-grapefruit">
+<?php
+  $flavors = SF_get_flavors();
+?>
+
+<nav id="navbar" class="bg-light navbar navbar-light" data-sf-theme="<?= $flavors[0]->post_name; ?>">
 
   <div  class="collapse navbar-collapse d-flex flex-column justify-content-center align-items-center" id="navbarDropdown">
     <?php b4st_nav(); ?>
