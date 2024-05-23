@@ -131,9 +131,9 @@
 
             if (!parallaxElements.length) return
 
-          }
+            console.log(parallaxElements);
 
-          console.log(background)
+          }
 
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
