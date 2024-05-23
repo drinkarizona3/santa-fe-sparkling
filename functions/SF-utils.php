@@ -9,6 +9,11 @@ function SF_get_flavors(){
   ));
 }
 
+function SF_get_first_flavor() {
+  $flavors = SF_get_flavors();
+  return $flavors[0];
+}
+
 function SF_test($array = array()) {
   echo '<pre>'; 
   echo print_r($array);
