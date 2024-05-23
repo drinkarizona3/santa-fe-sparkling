@@ -133,6 +133,7 @@
           
             if (entry.isIntersecting) {
               parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+              console.log(entry.intersectionRatio);
             }
 
           }
