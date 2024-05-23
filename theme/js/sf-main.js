@@ -120,14 +120,17 @@
         const 
           target = entry.target,
           handle = target.firstElementChild.getAttribute('data-sf-theme'),     
-          background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`);
-          parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
+          background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
           animateBackgroundElements = function(entry) {
             entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
           };
 
           if (background) {
+
+            const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
+
             if (!parallaxElements.length) return
+            
             console.log(entry.intersectionRatio);
           }
 
