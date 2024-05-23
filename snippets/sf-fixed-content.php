@@ -4,7 +4,7 @@
   //SF_test($flavors);
 
 ?>
-<div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= SF_get_first_flavor()->post_name ?>">
+<div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= SF_get_first_flavor()->ID ?>">
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-fixed-content.css">
 
   <div class="sf-foreground">
