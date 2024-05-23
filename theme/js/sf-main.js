@@ -115,6 +115,8 @@
         thresholds.push(i);
       }
 
+      console.log(thresholds);
+
       function handleParallax(entry) {
        
         const 
