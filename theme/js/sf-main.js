@@ -105,8 +105,7 @@
 
           object[handle] = {
             el: section,
-            height: section.innerHeight,
-            background: document.querySelector(`#sf-background[data-sf-theme="${handle}"]`)
+            height: section.innerHeight
           };
 
           return object;
@@ -116,7 +115,7 @@
         thresholds.push(i);
       }
 
-      console.log(sections);
+      console.log(sectionElements);
 
       function handleParallax(entry) {
        
