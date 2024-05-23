@@ -105,7 +105,7 @@
 
           object[handle] = {
             el: section,
-            height: section.innerHeight
+            top: section.offsetTop
           };
 
           return object;
