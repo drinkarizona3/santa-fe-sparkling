@@ -79,8 +79,6 @@
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
 
-          console.log(_target);
-
           elementSelectors.forEach( (selector, i) => {
             changeSectionState(selector, flavorHandle);
           });
@@ -113,7 +111,8 @@
        
         const 
           target = entry.target,
-          sectionTheme = target.firstElementChild.getAttribute('data-sf-theme');          // background = document.querySelector(`#sf-background[data-sf-theme="${target.childElement.getAttribute('data-sf-theme')}"]`);
+          sectionTheme = target.firstElementChild.getAttribute('data-sf-theme'),     
+          background = document.querySelector(`#sf-background[data-sf-theme="${sectionTheme}"]`);
           // parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
           // animateBackgroundElements = function(entry) {
           //   entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
@@ -128,7 +127,7 @@
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
 
-          console.log(sectionTheme);
+          console.log(background);
       }
 
       createObserver(sections, handleParallax, {
