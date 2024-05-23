@@ -131,13 +131,12 @@
 
             if (!parallaxElements.length) return
 
-            console.log(parallaxElements);
+          
+            if (entry.isIntersecting) animateBackgroundElements();
 
           }
 
-          // function handleParallax(entry) {
-          //   if (entry.isIntersecting) animateBackgroundElements();
-          // }
+          
       }
 
       createObserver(sections, handleParallax, {
