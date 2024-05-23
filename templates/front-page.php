@@ -25,11 +25,11 @@
         <span class="sf-brandname"><?= bloginfo('name'); ?></span>
         <span class="d-block sf-subtitle"><?= bloginfo('description'); ?></span>
       </h1>
-    </div>
+  </div>
 
   </section>
 
-  <section id="sf-main__content" class="sf-section d-flex align-items-center">
+  <section id="sf-main__content" class="sf-section d-flex align-items-center" data-sf-theme="pink-grapefruit">
       <div class="container-xl">
         <div class="row">
       
