@@ -97,15 +97,22 @@
 
     function parallaxContainer(){
 
-
       const 
         sections = document.querySelectorAll('.sf-flavor__container'),
-        thresholds = [];
+        thresholds = [],
+        sectionElements = sections.reduce((object, section) => {
+          const handle = section.getAttribute('data-sf-theme');
 
+          object[handle] = section;
+
+          return object;
+        }, {})
 
       for (let i = 0; i <= 1.0; i += 0.01) {
         thresholds.push(i);
       }
+
+      console.log(sectionElements);
 
       function handleParallax(entry) {
        
@@ -127,7 +134,7 @@
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
 
-          console.log(sectionTheme);
+          //console.log(sectionTheme);
       }
 
       createObserver(sections, handleParallax, {
