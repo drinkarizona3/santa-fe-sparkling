@@ -3,9 +3,9 @@
 
   //SF_test($flavors);
 
-  echo $flavors[0]->post_name
+  $first_post = $flavors[0]->post_name
 ?>
-<div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= $flavors[0]->post_name ?>">
+<div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= $first_post; ?>">
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-fixed-content.css">
 
   <div class="sf-foreground">
