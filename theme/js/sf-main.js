@@ -103,7 +103,11 @@
         sectionElements = sections.reduce((object, section) => {
           const handle = section.getAttribute('data-sf-theme');
 
-          object[handle] = section;
+          object[handle] = {
+            el: section,
+            height: section.innerHeight,
+            background: document.querySelector(`#sf-background[data-sf-theme="${handle}"]`)
+          };
 
           return object;
         }, {})
