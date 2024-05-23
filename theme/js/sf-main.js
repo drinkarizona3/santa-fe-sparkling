@@ -105,7 +105,8 @@
 
           object[handle] = {
             el: section,
-            top: section.offsetTop
+            top: section.offsetTop,
+            background: document.querySelector(`#sf-background[data-sf-theme="${lemon}"]`)
           };
 
           return object;
