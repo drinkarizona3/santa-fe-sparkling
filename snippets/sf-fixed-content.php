@@ -2,6 +2,8 @@
   $flavors = SF_get_flavors();
 
   SF_test($flavors);
+
+  echo $flavors[0]->ID
 ?>
 <div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= $flavors[0]->post_name ?>">
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-fixed-content.css">
