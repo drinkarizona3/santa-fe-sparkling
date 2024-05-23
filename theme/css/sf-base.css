@@ -303,7 +303,11 @@ section.sf-hero {
 }
 
 /* homepage page content */
-section#sf-main__content a {
+#sf-main__content {
+  background-color: var(--sf-theme-primary);
+}
+
+#sf-main__content a {
   font-family: var(--sf-font-heading);
 }
 
