@@ -1,7 +1,9 @@
 <?php 
   $flavors = SF_get_flavors();
+
+  echo array_key_first($flavors)
 ?>
-<div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= reset($flavors)->post_name ?>">
+<div id="sf-background" class="position-fixed sf-stretch overflow-hidden" data-sf-theme="<?= $flavors)->post_name ?>">
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-component-fixed-content.css">
 
   <div class="sf-foreground">
