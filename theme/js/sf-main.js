@@ -130,8 +130,8 @@
             const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
 
             if (!parallaxElements.length) return
-            
-            console.log(entry.intersectionRatio);
+
+            console.log(entry.intersectionRatio, handle);
           }
 
           // function handleParallax(entry) {
