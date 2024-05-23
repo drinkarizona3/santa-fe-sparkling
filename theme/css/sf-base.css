@@ -20,6 +20,7 @@
   --sf-theme-secondary:#F27FB2;
   --sf-theme-rind: #FFFFFF;
   --sf-theme-pulp: #FFF27F;
+  --sf-theme-cloud: #FFFFFF;
 
   --sf-theme-transition: 1s ease-out;
 }
@@ -50,6 +51,7 @@
   --sf-theme-secondary:#F27FB2;
   --sf-theme-rind: #FFFFFF;
   --sf-theme-pulp: #FFF27F;
+  --sf-theme-cloud: #F27FB2;
 }
 
 [data-sf-theme="orange-mango"] {
