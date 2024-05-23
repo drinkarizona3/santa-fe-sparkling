@@ -116,7 +116,7 @@
         thresholds.push(i);
       }
 
-      console.log(sectionElements);
+      console.log(sections);
 
       function handleParallax(entry) {
        
