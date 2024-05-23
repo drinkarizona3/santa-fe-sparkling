@@ -54,7 +54,7 @@
         } else {
           $body.removeClass('sf-intersecting-products');
 
-          elementSelectors.forEach( selector => changeSectionState(selector, 'pink-grapefruit'));
+          //elementSelectors.forEach( selector => changeSectionState(selector, 'pink-grapefruit'));
         }
       }
 
