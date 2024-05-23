@@ -131,7 +131,6 @@
 
             if (!parallaxElements.length) return
 
-            console.log(entry.intersectionRatio, handle);
           }
 
           console.log(background)
