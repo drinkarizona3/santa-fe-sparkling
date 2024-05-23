@@ -55,7 +55,7 @@
         } else {
           $body.removeClass('sf-intersecting-products');
 
-          elementSelectors.forEach( selector => changeSectionState(selector, 'pink-grapefruit'));
+          //elementSelectors.forEach( selector => changeSectionState(selector, 'pink-grapefruit'));
         }
       }
 
@@ -68,7 +68,7 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor, #sf-social');
+      const sections = document.querySelectorAll('.sf-flavor');
 
         function handleStateChange(entry) {
           if (entry.isIntersecting) {
