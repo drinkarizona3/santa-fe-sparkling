@@ -101,7 +101,7 @@
         sections = document.querySelectorAll('.sf-flavor__container'),
         thresholds = [],
         sectionElements = [...sections].reduce((object, section) => {
-          const handle = section.getAttribute('data-sf-theme');
+          const handle = section.firstElementChild.getAttribute('data-sf-theme');
 
           object[handle] = {
             el: section,
