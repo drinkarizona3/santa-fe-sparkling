@@ -121,8 +121,9 @@
           target = entry.target,
           handle = target.firstElementChild.getAttribute('data-sf-theme'),     
           background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
-          animateBackgroundElements = function(entry) {
-            entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
+          animateBackgroundElements = function(el, ratio) {
+            const percentage = (ratio - sectionElements[handle].top) * 100;
+            el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
           };
 
           if (background) {
@@ -130,14 +131,15 @@
             const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
 
             if (!parallaxElements.length) return
-
-            console.log(parallaxElements);
+          
+            if (entry.isIntersecting) {
+              parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+              console.log(entry.intersectionRatio);
+            }
 
           }
 
-          // function handleParallax(entry) {
-          //   if (entry.isIntersecting) animateBackgroundElements();
-          // }
+          
       }
 
       createObserver(sections, handleParallax, {
