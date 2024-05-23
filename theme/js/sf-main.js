@@ -122,7 +122,7 @@
           handle = target.firstElementChild.getAttribute('data-sf-theme'),     
           background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
           animateBackgroundElements = function(el, ratio) {
-            const percentage = ((ratio - sectionElements[handle].top / window.innerHeight) + target.innerHeight) * 100;
+            const percentage = ratio.toFixed(2) * 100;
             el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
           };
 
