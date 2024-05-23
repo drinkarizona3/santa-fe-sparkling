@@ -67,7 +67,7 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor, #sf-social');
+      const sections = document.querySelectorAll('.sf-flavor');
 
       function handleStateChange(entry) {
 
