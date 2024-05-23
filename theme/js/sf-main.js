@@ -105,8 +105,7 @@
 
           object[handle] = {
             el: section,
-            top: section.offsetTop,
-            background: document.querySelector(`#sf-background[data-sf-theme="${handle}"]`)
+            top: section.offsetTop
           };
 
           return object;
@@ -116,29 +115,25 @@
         thresholds.push(i);
       }
 
-      console.log(sectionElements);
-
       function handleParallax(entry) {
        
         const 
           target = entry.target,
-          sectionTheme = target.firstElementChild.getAttribute('data-sf-theme'),     
-          background = document.querySelector(`#sf-background[data-sf-theme="${sectionTheme}"]`);
-          // parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
-          // animateBackgroundElements = function(entry) {
-          //   entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
-          // }
+          handle = target.firstElementChild.getAttribute('data-sf-theme'),     
+          background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`);
+          parallaxElements = background.querySelectorAll('[data-sf-parallax]'),
+          animateBackgroundElements = function(entry) {
+            entry.target.style.transform = `translate3d(${Math.floor(entry.intersectionRatio * 100)}%, 0, 0)`;
+          };
 
-          // if (background) {
-          //   if (!parallaxElements.length) return
-          //   console.log(entry.intersectionRatio);
-          // }
+          if (background) {
+            if (!parallaxElements.length) return
+            console.log(entry.intersectionRatio);
+          }
 
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
           // }
-
-          //console.log(sectionTheme);
       }
 
       createObserver(sections, handleParallax, {
