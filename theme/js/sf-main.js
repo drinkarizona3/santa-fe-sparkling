@@ -67,7 +67,7 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor, #sf-social');
+      const sections = document.querySelectorAll('.sf-flavor');
 
       function handleStateChange(entry) {
 
@@ -133,6 +133,8 @@
 
             console.log(entry.intersectionRatio, handle);
           }
+
+          console.log(background)
 
           // function handleParallax(entry) {
           //   if (entry.isIntersecting) animateBackgroundElements();
