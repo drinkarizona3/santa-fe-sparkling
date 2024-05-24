@@ -97,6 +97,11 @@
 
     function parallaxContainer(){
 
+      /* todo
+        This observer won't work beause ratio percentage stops when element takes up the entire viewport. 
+       Maybe use threshhold to slide the can in from the right as an introduction and use normal scroll events for the background scene.
+      */
+
       const 
         sections = document.querySelectorAll('.sf-flavor__container'),
         thresholds = [],
@@ -135,7 +140,7 @@
             if (!parallaxElements.length) return
           
             if (entry.isIntersecting) {
-              parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+            //  parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
               console.log(entry.intersectionRatio);
             }
 
