@@ -1,4 +1,6 @@
 #sf-background {
+
+  --top-space: 20%;
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition);
   position: relative;
@@ -40,13 +42,14 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud.sf-cloud-back {
-  top: 30%;
+  top: var(--top-space);
+  left: 20%;
   max-width: max(15%, 119px);
 }
 
 .sf-cloud.sf-cloud-front {
-  top: 10%;
-  right: 100%;
+  top: calc(var(--top-space) * 2);
+  right: 50%;
   max-width: max(34%, 250px);
 }
 
@@ -89,3 +92,6 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   fill: var(--sf-theme-secondary);
 }
 
+[data-sf-parallax] {
+  will-change: transform;
+}
