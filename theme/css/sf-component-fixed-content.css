@@ -46,7 +46,7 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 
 .sf-cloud.sf-cloud-front {
   top: 10%;
-  right: 0;
+  right: 100%;
   max-width: max(34%, 250px);
 }
 
