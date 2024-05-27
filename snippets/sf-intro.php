@@ -19,10 +19,10 @@
               <div class="sf-intro__slice-container" >
                 <?php get_template_part('snippets/sf-citrus-slice'); ?>
               </div>
-              <? /* <div class="sf-intro__drop-container" style="animation-delay: calc(120ms * <?= $i ?>);">
+              <?php /* <div class="sf-intro__drop-container" style="animation-delay: calc(120ms * <?= $i ?>);">
                 <?php get_template_part(('snippets/sf-juice-drop')); ?>
               </div> 
-            </div>  */ <?php
+            </div>  */ ?> <?php
   
           endforeach;
         ?>
