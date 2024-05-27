@@ -138,7 +138,9 @@
 
             if (!parallaxElements.length) return
           
-            parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+            if (entry.intersectionRatio > 0) {
+              parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+            }
 
           }
 
