@@ -8,6 +8,7 @@
       $body = $('body'),
       loadingWait = 1500,
       elementSelectors = ['#sf-background', '#navbar'],
+      flavorContainers = document.querySelectorAll('.sf-flavor__container'),
       createObserver = function(sections, func, options) {
 
         const callback = (entries, observer) => entries.forEach( entry => {
@@ -94,53 +95,21 @@
 
     }
 
-    function parallaxContainer(){
+    function introduceElements(){
 
-      const 
-        sections = document.querySelectorAll('.sf-flavor__container'),
-        thresholds = [],
-        sectionElements = [...sections].reduce((object, section) => {
-          const handle = section.firstElementChild.getAttribute('data-sf-theme');
-
-          object[handle] = {
-            el: section,
-            top: section.offsetTop
-          };
-
-          return object;
-        }, {})
+      const thresholds = [];
 
       for (let i = 0; i <= 1.0; i += 0.01) {
         thresholds.push(i);
       }
 
-      function handleParallax(entry) {
+      function handleIntro(entry) {
        
-        const 
-          target = entry.target,
-          handle = target.firstElementChild.getAttribute('data-sf-theme'),     
-          background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
-          animateBackgroundElements = function(el, ratio) {
-            const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
-            el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
-          };
-
-          if (background) {
-
-            const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
-
-            if (!parallaxElements.length) return
-          
-            if (entry.isIntersecting) {
-              parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
-            }
-
-          }
-
-          
+        const target = entry.target;
+       
       }
 
-      createObserver(sections, handleParallax, {
+      createObserver(flavorContainers, handleIntro, {
         root: null,
         rootMargin: "0px",
         threshold: thresholds
@@ -148,10 +117,52 @@
 
     }
 
+    function parallax() {
+
+      const 
+        sectionElements = [...flavorContainers].reduce((object, container) => {
+          const handle = container.firstElementChild.getAttribute('data-sf-theme');
+
+          object[handle] = {
+            el: container,
+            top: container.offsetTop
+          };
+
+          return object;
+        }, {});
+
+
+        
+        // activeSection = .firstElementChild,
+        // handle = target.firstElementChild.getAttribute('data-sf-theme'),     
+        // background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
+        // animateBackgroundElements = function(el, ratio) {
+        //   const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
+        //   el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
+        // };
+
+        // if (background) {
+
+        //   const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
+
+        //   if (!parallaxElements.length) return
+        
+        //   if (b) {
+        //     parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+        //   }
+
+        // }
+
+
+      console.log(sectionElements);
+
+    }
+
     intro();
     observeProductsSection();
     changeProductSectionState();
-    parallaxContainer();
+    //introduceElements();
+    parallax();
 
   });
 
