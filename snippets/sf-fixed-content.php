@@ -35,7 +35,7 @@
         break;
       } 
     ?>
-      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i ?>">
+      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i * 10 ?>">
         <?php get_template_part('snippets/sf-cloud'); ?>
       </div>
     <?php endfor; ?>
