@@ -131,30 +131,38 @@
           return object;
         }, {});
 
+        function handleScroll() {
 
-        
-        // activeSection = .firstElementChild,
-        // handle = target.firstElementChild.getAttribute('data-sf-theme'),     
-        // background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
-        // animateBackgroundElements = function(el, ratio) {
-        //   const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
-        //   el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
-        // };
-
-        // if (background) {
-
-        //   const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
-
-        //   if (!parallaxElements.length) return
-        
-        //   if (b) {
-        //     parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
-        //   }
-
-        // }
-
-
-      console.log(sectionElements);
+          flavorContainers.forEach( container => {
+  
+            const 
+              section = container.firstElementChild,
+              handle = section.getAttribute('data-sf-theme'),     
+              background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
+              animateBackgroundElements = function(el, ratio) {
+                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
+                el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
+              };
+    
+            // if (background) {
+    
+            //   const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
+    
+            //   if (!parallaxElements.length) return
+            
+            //   parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+            
+            // }
+  
+            if (section.classList.contains('sf-active')) {
+              console.log(background);
+            }
+  
+          });
+          
+        }
+ 
+        window.addEventListener('scroll', handleScroll);
 
     }
 
