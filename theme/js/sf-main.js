@@ -141,7 +141,8 @@
               background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
               animateBackgroundElements = function(el, percentage) {
 
-                console.log(el.getAttribute('data-sf-parallax'));
+                const tolerance = +el.getAttribute('data-sf-parallax');
+                console.log(tolerance);
                 el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
               };
     
