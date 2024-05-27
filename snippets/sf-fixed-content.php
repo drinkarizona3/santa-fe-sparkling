@@ -14,7 +14,7 @@
       <?php get_template_part('snippets/sf-dots-rectangle'); ?>
     </div>
 
-    <div class="sf-pueblo-house position-absolute">
+    <div class="sf-pueblo-house position-absolute" data-sf-parallax="30">
       <?php get_template_part('snippets/sf-pueblo-house'); ?>
     </div>
 
@@ -22,20 +22,20 @@
       <?php get_template_part('snippets/sf-dots-square'); ?>
     </div>
     
-    <?php for ($i = 0; $i <= 1; $i++): 
+    <?php for ($i = 1; $i <= 2; $i++): 
 
       $cloud_class = '';
 
       switch ($i) {
-        case 0:
+        case 1:
           $cloud_class = ' sf-cloud-front';
           break;
-        case 1:
+        case 2:
           $cloud_class = ' sf-cloud-back';
         break;
       } 
     ?>
-      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i * 10 ?>">
+      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i * 20 ?>">
         <?php get_template_part('snippets/sf-cloud'); ?>
       </div>
     <?php endfor; ?>
