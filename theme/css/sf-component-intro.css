@@ -117,9 +117,13 @@ body.sf-end-intro #sf-intro .sf-intro__drop-container {
     transform: translate3d(0, -100%, 0) scale(0);
     opacity: 0;
   }
-  90%, 100% {
+  10%,80% {
     transform: translate3d(0,0,0) scale(1);
     opacity: 1;
+  }
+  90%,100% {
+    transform: translate3d(0, 100%, 0) scale(0);
+    opacity: 0;
   }
 }
 
