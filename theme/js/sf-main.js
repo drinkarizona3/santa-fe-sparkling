@@ -149,16 +149,10 @@
                 const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
       
                 if (!parallaxElements.length) return
+
+                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
               
-                parallaxElements.forEach( el => {
-
-                  const
-                      tolerance = el.getAttribute('[data-sf-parallax]'),
-                      percentage = (((window.scrollY / tolerance) - sectionElements[handle].top) / window.innerHeight) * 100;
-
-                  animateBackgroundElements(el, percentage);
-
-                });
+                parallaxElements.forEach( el => animateBackgroundElements(el, percentage));
               
               }
             }
