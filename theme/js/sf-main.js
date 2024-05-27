@@ -143,7 +143,7 @@
 
                 const tolerance = +el.getAttribute('data-sf-parallax');
                 console.log(tolerance);
-                el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
+                el.style.transform = `translate3d(${percentage / tolerance}vw, 0, 0)`;
               };
     
             if (section.classList.contains('sf-active')) {
