@@ -144,18 +144,18 @@
                 el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
               };
     
-            // if (background) {
-    
-            //   const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
-    
-            //   if (!parallaxElements.length) return
-            
-            //   parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
-            
-            // }
+        
   
             if (section.classList.contains('sf-active')) {
-              console.log(background);
+              if (background) {
+    
+                const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
+      
+                if (!parallaxElements.length) return
+              
+                parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+              
+              }
             }
   
           });
