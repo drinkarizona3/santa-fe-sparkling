@@ -140,9 +140,7 @@
               handle = section.getAttribute('data-sf-theme'),     
               background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
               animateBackgroundElements = function(el, percentage) {
-
-                const tolerance = el.getAttribute('[data-sf-parallax]');
-                el.style.transform = `translate3d(${percentage / tolerance}vw, 0, 0)`;
+                el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
               };
     
   
@@ -152,10 +150,16 @@
                 const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
       
                 if (!parallaxElements.length) return
-
-                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
               
-                parallaxElements.forEach( el => animateBackgroundElements(el, percentage));
+                parallaxElements.forEach( el => {
+
+                  const
+                      tolerance = el.getAttribute('[data-sf-parallax]'),
+                      percentage = (((window.scrollY / tolerance) - sectionElements[handle].top) / window.innerHeight) * 100;
+
+                  animateBackgroundElements(el, percentage);
+
+                });
               
               }
             }
