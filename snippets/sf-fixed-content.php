@@ -14,7 +14,7 @@
       <?php get_template_part('snippets/sf-dots-rectangle'); ?>
     </div>
 
-    <div class="sf-pueblo-house position-absolute">
+    <div class="sf-pueblo-house position-absolute" data-sf-parallax="4">
       <?php get_template_part('snippets/sf-pueblo-house'); ?>
     </div>
 
