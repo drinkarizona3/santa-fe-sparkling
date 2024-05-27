@@ -6,7 +6,7 @@
 
   <div class="sf-foreground">
 
-    <svg preserveAspectRatio="none" class="sf-horizon position-absolute" width="1819" height="557" viewBox="0 0 1819 557" fill="none">
+    <svg preserveAspectRatio="none" class="sf-horizon position-absolute" width="1819" height="557" viewBox="0 0 1819 557" fill="none" data-sf-parallax="8">
       <path d="M1819 0V557H0L1819 0Z" fill="var(--sf-theme-midground)"/>
     </svg>
 
