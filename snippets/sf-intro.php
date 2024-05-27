@@ -15,9 +15,13 @@
   
           foreach($flavors as $i => $flavor): ?>
   
-            <div class="sf-fruit" data-sf-theme="<?= $flavor->post_name ?>" style="animation-delay: calc(120ms * <?= $i ?>);">
-              <?php get_template_part('snippets/sf-citrus-slice'); ?>
-              <?php get_template_part(('snippets/sf-juice-drop')); ?>
+            <div class="sf-fruit" data-sf-theme="<?= $flavor->post_name ?>">
+              <div class="sf-intro__slice-container" style="animation-delay: calc(120ms * <?= $i ?>);">
+                <?php get_template_part('snippets/sf-citrus-slice'); ?>
+              </div>
+              <div class="sf-intro__drop-container" style="animation-delay: calc(120ms * <?= $i ?>);">
+                <?php get_template_part(('snippets/sf-juice-drop')); ?>
+              </div>
             </div> <?php
   
           endforeach;
