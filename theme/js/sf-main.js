@@ -92,7 +92,6 @@
         threshold: .5
       });
 
-
     }
 
     function parallaxContainer(){
@@ -122,7 +121,7 @@
           handle = target.firstElementChild.getAttribute('data-sf-theme'),     
           background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
           animateBackgroundElements = function(el, ratio) {
-            const percentage = (ratio - sectionElements[handle].top) * 100;
+            const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
             el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
           };
 
@@ -134,7 +133,6 @@
           
             if (entry.isIntersecting) {
               parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
-              console.log(entry.intersectionRatio);
             }
 
           }
