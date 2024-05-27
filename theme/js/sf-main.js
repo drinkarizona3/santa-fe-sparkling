@@ -139,8 +139,7 @@
               section = container.firstElementChild,
               handle = section.getAttribute('data-sf-theme'),     
               background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
-              animateBackgroundElements = function(el, ratio) {
-                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
+              animateBackgroundElements = function(el, percentage) {
                 el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
               };
     
@@ -152,8 +151,10 @@
                 const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
       
                 if (!parallaxElements.length) return
+
+                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
               
-                parallaxElements.forEach( el => animateBackgroundElements(el, entry.intersectionRatio));
+                parallaxElements.forEach( el => animateBackgroundElements(el, percentage));
               
               }
             }
