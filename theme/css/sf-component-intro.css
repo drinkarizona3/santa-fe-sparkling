@@ -48,43 +48,61 @@ body.sf-end-intro #intro-tranition {
   animation: var(--sf-transition-duration) swipe cubic-bezier(1,0,0,1) forwards;
 }
 
-svg {
+#sf-intro svg {
   width: 100%;
   height: auto;
   display: inline-block;
 }
 
-.sf-fruits {
+#sf-intro .sf-fruits {
   gap: 1em;
   opacity: 0;
   transition: opacity .3s ease;
 }
 
-body.sf-start-intro .sf-fruits {
+body.sf-start-intro #sf-intro .sf-fruits {
   opacity: 1;
 }
 
-.sf-logo {
+#sf-intro .sf-logo {
   width: 100%;
   max-width: clamp(10rem, 72vw, 70rem);
 }
 
-.sf-fruits {
+#sf-intro .sf-fruits {
   display: grid;
   grid-template-columns: repeat(4, max(7vw, 2em));
   grid-column-gap: 1em;
 }
 
-.sf-fruit {
-  transition: all .3s ease;
-  animation: bounce var( --sf-animation-duration) infinite cubic-bezier(0.34, 1.56, 0.64, 1);
+#sf-intro .sf-fruit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-body.sf-end-intro .sf-fruit {
+#sf-intro .sf-fruit .sf-fruit-slice {
+  animation: squeeze var( --sf-animation-duration) infinite cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#sf-intro .sf-fruit .sf-fruit-slice {
+  position: relative;
+  z-index: 2;
+}
+
+#sf-intro .sf-svg__juice-drop {
+  max-width: 60%;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  animation: drip var( --sf-animation-duration) infinite cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+body.sf-end-intro #sf-intro .sf-fruit {
   animation: none;
 }
 
-@keyframes bounce {
+@keyframes squeeze {
   0%,15% {
     transform: translate(0,0) scaleX(1);
   }
@@ -95,6 +113,19 @@ body.sf-end-intro .sf-fruit {
     transform: translate(0,0) scaleX(1);
   };
 }
+
+@keyframes drip {
+  0%,15% {
+    transform: translate3d(0, -100%, 0) scale(0);
+  }
+  50% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+  85%, 100% {
+    transform: translate3d(0, -100%, 0) scale(0);
+  };
+}
+
 
 @keyframes swipe {
   0% {
