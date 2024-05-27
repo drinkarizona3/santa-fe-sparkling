@@ -143,7 +143,6 @@
                 el.style.transform = `translate3d(${percentage}vw, 0, 0)`;
               };
     
-  
             if (section.classList.contains('sf-active')) {
               if (background) {
     
