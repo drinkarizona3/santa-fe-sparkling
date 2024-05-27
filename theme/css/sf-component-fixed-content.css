@@ -41,12 +41,13 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 
 .sf-cloud.sf-cloud-back {
   top: 30%;
+  left: 20%;
   max-width: max(15%, 119px);
 }
 
 .sf-cloud.sf-cloud-front {
   top: 10%;
-  right: 100%;
+  right: 50%;
   max-width: max(34%, 250px);
 }
 
