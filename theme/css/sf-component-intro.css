@@ -91,11 +91,11 @@ body.sf-start-intro #sf-intro .sf-fruits {
 }
 
 #sf-intro .sf-intro__drop-container {
-  max-width: 60%;
+  max-width: 40%;
   position: relative;
   z-index: 1;
   transform-origin: center;
-  animation: drip var( --sf-animation-duration) infinite cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation: drip var( --sf-animation-duration) infinite cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 body.sf-end-intro #sf-intro .sf-intro__slice-container,
@@ -112,19 +112,22 @@ body.sf-end-intro #sf-intro .sf-intro__drop-container {
   }
   85%, 100% {
     transform: translate(0,0) scaleX(1);
-  };
+  }
 }
 
 @keyframes drip {
   0%,15% {
     transform: translate3d(0, -100%, 0) scale(0);
+    opacity: 0;
   }
-  50% {
+  25%, 50% {
     transform: translate3d(0,0,0) scale(1);
+    opacity: 1;
   }
   85%, 100% {
-    transform: translate3d(0, -100%, 0) scale(0);
-  };
+    transform: translate3d(0, 100%, 0) scale(0);
+    opacity: 0;
+  }
 }
 
 
