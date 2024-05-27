@@ -113,17 +113,13 @@ body.sf-end-intro #sf-intro .sf-intro__drop-container {
 }
 
 @keyframes drip {
-  0% {
+  0%, 10% {
     transform: translate3d(0, -100%, 0) scale(0);
     opacity: 0;
   }
-  80% {
+  90%, 100% {
     transform: translate3d(0,0,0) scale(1);
     opacity: 1;
-  }
-  100% {
-    transform: translate3d(0, 100%, 0) scale(0);
-    opacity: 0;
   }
 }
 
