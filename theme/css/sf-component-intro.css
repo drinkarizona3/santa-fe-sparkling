@@ -87,13 +87,13 @@ body.sf-start-intro #sf-intro .sf-fruits {
   z-index: 2;
 }
 
-#sf-intro .sf-intro__drop-container {
+/* #sf-intro .sf-intro__drop-container {
   max-width: 50%;
   position: relative;
   z-index: 1;
   transform-origin: center;
   animation: drip var( --sf-animation-duration) infinite cubic-bezier(0.7, 0, 0.84, 0);
-}
+} */
 
 body.sf-end-intro #sf-intro .sf-fruit,
 body.sf-end-intro #sf-intro .sf-intro__drop-container {
@@ -112,7 +112,7 @@ body.sf-end-intro #sf-intro .sf-intro__drop-container {
   }
 }
 
-@keyframes drip {
+/* @keyframes drip {
   0% {
     transform: translate3d(0, -100%, 0) scale(0);
     opacity: 0;
@@ -125,7 +125,7 @@ body.sf-end-intro #sf-intro .sf-intro__drop-container {
     transform: translate3d(0, 100%, 0) scale(0);
     opacity: 0;
   }
-}
+} */
 
 
 @keyframes swipe {
