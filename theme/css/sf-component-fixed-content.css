@@ -48,14 +48,15 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud.sf-cloud-front {
-  top: calc(var(--top-space) * 2);
+  top: calc(var(--top-space) * 1.25);
   right: 50%;
   max-width: max(34%, 250px);
+  z-index: 3;
 }
 
 .sf-pueblo-house {
   bottom: -7%;
-  left: -15%;
+  left: -20%;
   width: 46%;
   z-index: 2;
 }
