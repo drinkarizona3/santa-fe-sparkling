@@ -22,15 +22,15 @@
       <?php get_template_part('snippets/sf-dots-square'); ?>
     </div>
     
-    <?php for ($i = 0; $i <= 1; $i++): 
+    <?php for ($i = 1; $i <= 2; $i++): 
 
       $cloud_class = '';
 
       switch ($i) {
-        case 0:
+        case 1:
           $cloud_class = ' sf-cloud-front';
           break;
-        case 1:
+        case 2:
           $cloud_class = ' sf-cloud-back';
         break;
       } 
