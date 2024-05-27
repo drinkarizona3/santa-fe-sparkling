@@ -22,20 +22,20 @@
       <?php get_template_part('snippets/sf-dots-square'); ?>
     </div>
     
-    <?php for ($i = 1; $i <= 2; $i++): 
+    <?php for ($i = 0; $i <= 1; $i++): 
 
       $cloud_class = '';
 
       switch ($i) {
-        case 1:
+        case 0:
           $cloud_class = ' sf-cloud-front';
           break;
-        case 2:
+        case 1:
           $cloud_class = ' sf-cloud-back';
         break;
       } 
     ?>
-      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i * 4 ?>">
+      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i ?>">
         <?php get_template_part('snippets/sf-cloud'); ?>
       </div>
     <?php endfor; ?>
