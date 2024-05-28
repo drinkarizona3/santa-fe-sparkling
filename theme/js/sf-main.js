@@ -12,8 +12,8 @@
       // Utility Functions
       createObserver = function(sections, func, options) {
 
-        const callback = (entries, observer) => entries.forEach( entry => {
-          func(entry);
+        const callback = (entries, observer) => entries.forEach( (entry, i) => {
+          func(entry, i);
         });
 
         sections.forEach( section => {
@@ -80,6 +80,8 @@
             
           });
 
+          console.log(i);
+          
           parallaxItems.forEach( (element, i) => {
             setTimeout(function(){
               element.classList.add('sf-animate');
