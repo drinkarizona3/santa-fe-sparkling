@@ -1,6 +1,6 @@
 #sf-background {
-
-  --top-space: 20%;
+  --y-distance: 65%;
+  --x-distance: 8%;
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition);
   position: relative;
@@ -17,6 +17,8 @@
 .sf-horizon {
   top: auto;
   bottom: -6%;
+  width: 120%;
+  height: max(30vw, 220px);
 }
 
 .sf-foreground path {
@@ -42,22 +44,23 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud.sf-cloud-back {
-  top: var(--top-space);
-  left: 20%;
+  top: var(--y-distance);
+  left: var(--x-distance);
   max-width: max(15%, 119px);
 }
 
 .sf-cloud.sf-cloud-front {
-  top: calc(var(--top-space) * 1.25);
-  right: 50%;
+  top: calc(var(--top-space)* 1.1);
+  left: calc(var(--x-distance)* 2);
+  right: auto;
   max-width: max(34%, 250px);
   z-index: 3;
 }
 
 .sf-pueblo-house {
-  bottom: -7%;
+  bottom: max(-7%, -20px);
   left: -20%;
-  width: 46%;
+  width: max(46%, 300px);
   z-index: 2;
 }
 
@@ -69,30 +72,12 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   fill: var(--sf-theme-secondary);
 }
 
-#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-roof,
-#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-pole,
-#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .cls-6 {
-  fill: var(--sf-theme-midground)
-}
-
-#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-roof,
-#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-pole,
-#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-4 {
-  fill: var(--sf-theme-accent)
-}
-
-#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-5 {
-  fill: var(--sf-theme-secondary);
-}
-
-#sf-background[data-sf-theme="raspberry-lime"] .cls-4 {
-  fill: var(--sf-theme-midground);
-}
-
-#sf-background[data-sf-theme="raspberry-lime"] .cls-6 {
-  fill: var(--sf-theme-secondary);
-}
-
 [data-sf-parallax] {
   will-change: transform;
+}
+
+@media only screen and (min-width: 769px) {
+  #sf-background {
+    --y-distance:38%;
+  }
 }
