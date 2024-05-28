@@ -1,4 +1,6 @@
 #sf-background {
+  --y-distance: 65%;
+  --x-distance: 8%;
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition);
   position: relative;
@@ -15,6 +17,8 @@
 .sf-horizon {
   top: auto;
   bottom: -6%;
+  width: 120%;
+  height: max(30vw, 220px);
 }
 
 .sf-horizon path {
@@ -40,15 +44,40 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud.sf-cloud-back {
-  top: 30%;
+  top: var(--y-distance);
+  left: var(--x-distance);
   max-width: max(15%, 119px);
 }
 
 .sf-cloud.sf-cloud-front {
-  top: 10%;
-  right: 0;
+  top: calc(var(--top-space)* 1.1);
+  left: calc(var(--x-distance)* 2);
+  right: auto;
   max-width: max(34%, 250px);
+  z-index: 3;
 }
 
+.sf-pueblo-house {
+  bottom: max(-7%, -20px);
+  left: -20%;
+  width: max(46%, 300px);
+  z-index: 2;
+}
 
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-dots__rectangle path {
+  fill: var(--sf-theme-accent);
+}
 
+#sf-background[data-sf-theme="raspberry-lime"] .sf-dots__rectangle path {
+  fill: var(--sf-theme-secondary);
+}
+
+[data-sf-parallax] {
+  will-change: transform;
+}
+
+@media only screen and (min-width: 769px) {
+  #sf-background {
+    --y-distance:38%;
+  }
+}
