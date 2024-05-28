@@ -100,6 +100,36 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   will-change: transform;
 }
 
+.sf-transition-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: var(--sf-theme-accent);
+  z-index: 4;
+  opacity: 0;
+}
+
+.sf-transition-element.sf-transition {
+  animation: 1s sf-transition ease-in-out forwards;
+}
+
+@keyframes sf-transition {
+  0% {
+      opacity: 0;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   #sf-background {
     --y-distance:38%;
