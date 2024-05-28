@@ -41,4 +41,6 @@
     <?php endfor; ?>
     
   </div>
+
+  <div class="sf-transition-element"></div>
 </div>
