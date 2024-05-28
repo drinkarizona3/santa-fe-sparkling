@@ -73,9 +73,8 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor');
-
-      let background = null;
+      const sections = document.querySelectorAll('.sf-flavor'),
+            background = document.querySelector(elementSelectors[0]);
 
       function handleStateChange(entry) {
 
@@ -84,16 +83,14 @@
           const _target = entry.target,
                 flavorHandle = _target.dataset.sfTheme;
           
-          background = getAssociatedBackground(flavorHandle);
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
-          background.classList.add('sf-active');
 
           elementSelectors.forEach( (selector, i) => {
             changeSectionState(selector, flavorHandle);
           });
         } else {
-          background.classList.remove('sf-active');
+          background.classList.add('sf-active');
         }  
         
       }
