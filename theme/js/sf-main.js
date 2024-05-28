@@ -73,8 +73,7 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor'),
-            background = document.querySelector(elementSelectors[0]);
+      const sections = document.querySelectorAll('.sf-flavor');
 
       function handleStateChange(entry) {
 
@@ -89,9 +88,7 @@
           elementSelectors.forEach( (selector, i) => {
             changeSectionState(selector, flavorHandle);
           });
-        } else {
-          background.classList.add('sf-active');
-        }  
+        } 
         
       }
 
