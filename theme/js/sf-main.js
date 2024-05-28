@@ -75,14 +75,16 @@
 
       const sections = document.querySelectorAll('.sf-flavor');
 
+      let background = null;
+
       function handleStateChange(entry) {
 
         if (entry.isIntersecting) {
 
           const _target = entry.target,
-                flavorHandle = _target.dataset.sfTheme,
-                background = getAssociatedBackground(flavorHandle);
-
+                flavorHandle = _target.dataset.sfTheme;
+          
+          background = getAssociatedBackground(flavorHandle);
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
           background.classList.add('sf-active');
