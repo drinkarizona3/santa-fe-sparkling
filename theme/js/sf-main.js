@@ -58,7 +58,7 @@
 
       const sections = document.querySelectorAll('.sf-flavor');
 
-      function handleStateChange(entry) {
+      function handleStateChange(entry, i) {
 
         if (entry.isIntersecting) {
 
