@@ -63,7 +63,8 @@
         if (entry.isIntersecting) {
 
           const _target = entry.target,
-                flavorHandle = _target.dataset.sfTheme;
+                flavorHandle = _target.dataset.sfTheme,
+                parallaxItems = document.querySelectorAll('[data-sf-parallax]');
           
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
@@ -76,11 +77,20 @@
 
             element.classList.add('sf-animate');
             setTimeout( () => element.classList.remove('sf-animate'), 800);
-
-            element.classList.add('sf-transition');
-            setTimeout( () => element.classList.remove('sf-transition'), 1400);
             
           });
+
+          parallaxItems.forEach( (element, i) => {
+            setTimeout(function(){
+              element.classList.add('sf-animate');
+            }, 100 * i );
+          });
+
+          setTimeout( () => function(){
+            parallaxItems.forEach( (element, i) => {
+              element.classList.remove('sf-animate');
+            });
+          }, 2000);
 
         } 
       }
