@@ -21,21 +21,6 @@
           observer.observe(section);
         });
       },
-      changeSectionState = function(selector, handle){
-
-        const element = document.querySelector(selector),
-              navLinks = document.querySelectorAll('.nav-link'),
-              currentMenuLink = document.querySelector(`#nav-link__${handle}`);
-            
-        element.setAttribute('data-sf-theme', handle);
-
-        element.classList.add('sf-animate');
-
-        // navLinks.forEach( link => link.classList.remove('active'));
-        // currentMenuLink.classList.add('active');
-
-        setTimeout( () => element.classList.remove('sf-animate'), 800)
-      },
       getAssociatedBackground = function(handle){   
         return document.querySelector(`#sf-background[data-sf-theme="${handle}"]`);
       };
@@ -59,8 +44,6 @@
           $body.addClass('sf-intersecting-products');
         } else {
           $body.removeClass('sf-intersecting-products');
-
-          //elementSelectors.forEach( selector => changeSectionState(selector, 'pink-grapefruit'));
         }
       }
 
@@ -86,10 +69,20 @@
           _target.classList.add('sf-active');
 
           elementSelectors.forEach( (selector, i) => {
-            changeSectionState(selector, flavorHandle);
-          });
-        } 
+
+            const element = document.querySelector(selector);
         
+            element.setAttribute('data-sf-theme', flavorHandle);
+
+            element.classList.add('sf-animate');
+            setTimeout( () => element.classList.remove('sf-animate'), 800);
+
+            element.classList.add('sf-transition');
+            setTimeout( () => element.classList.remove('sf-transition'), 200);
+            
+          });
+
+        } 
       }
 
       createObserver(sections, handleStateChange, {
