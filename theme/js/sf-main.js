@@ -142,7 +142,7 @@
   
             const 
               targetSection = container.firstElementChild,
-              handle = targetSection.getAttribute('data-sf-theme');  
+              handle = targetSection.getAttribute('data-sf-theme'),
               background = getAssociatedBackground(handle),
               animateBackgroundElements = function(el, percentage) {
 
