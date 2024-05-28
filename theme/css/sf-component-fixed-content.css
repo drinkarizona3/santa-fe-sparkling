@@ -50,7 +50,7 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud.sf-cloud-front {
-  top: calc(var(--top-space)* 1.1);
+  top: calc(var(--y-distance)* 1.1);
   left: calc(var(--x-distance)* 2);
   right: auto;
   max-width: max(34%, 250px);
@@ -69,6 +69,30 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 #sf-background[data-sf-theme="raspberry-lime"] .sf-dots__rectangle path {
+  fill: var(--sf-theme-secondary);
+}
+
+#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-roof,
+#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-pole,
+#sf-background[data-sf-theme="lemon"] .sf-pueblo-house .cls-6 {
+  fill: var(--sf-theme-midground)
+}
+
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-roof,
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .sf-pole,
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-4 {
+  fill: var(--sf-theme-accent)
+}
+
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-pueblo-house .cls-5 {
+  fill: var(--sf-theme-secondary);
+}
+
+#sf-background[data-sf-theme="raspberry-lime"] .cls-4 {
+  fill: var(--sf-theme-midground);
+}
+
+#sf-background[data-sf-theme="raspberry-lime"] .cls-6 {
   fill: var(--sf-theme-secondary);
 }
 
