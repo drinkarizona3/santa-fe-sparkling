@@ -78,7 +78,7 @@
             setTimeout( () => element.classList.remove('sf-animate'), 800);
 
             element.classList.add('sf-transition');
-            setTimeout( () => element.classList.remove('sf-transition'), 200);
+            setTimeout( () => element.classList.remove('sf-transition'), 1400);
             
           });
 
