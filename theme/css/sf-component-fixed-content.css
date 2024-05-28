@@ -64,6 +64,13 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   z-index: 2;
 }
 
+#sf-background[data-sf-theme="pink-grapefruit"] .sf-dots__rectangle path {
+  fill: var(--sf-theme-accent);
+}
+
+#sf-background[data-sf-theme="raspberry-lime"] .sf-dots__rectangle path {
+  fill: var(--sf-theme-secondary);
+}
 
 #sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-roof,
 #sf-background[data-sf-theme="lemon"] .sf-pueblo-house .sf-pole,
@@ -86,14 +93,6 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 #sf-background[data-sf-theme="raspberry-lime"] .cls-6 {
-  fill: var(--sf-theme-secondary);
-}
-
-#sf-background[data-sf-theme="pink-grapefruit"] .sf-dots__rectangle path {
-  fill: var(--sf-theme-accent);
-}
-
-#sf-background[data-sf-theme="raspberry-lime"] .sf-dots__rectangle path {
   fill: var(--sf-theme-secondary);
 }
 
