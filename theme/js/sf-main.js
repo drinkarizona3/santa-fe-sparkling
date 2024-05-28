@@ -9,6 +9,7 @@
       loadingWait = 1500,
       elementSelectors = ['#sf-background', '#navbar'],
       flavorContainers = document.querySelectorAll('.sf-flavor__container'),
+      // Utility Functions
       createObserver = function(sections, func, options) {
 
         const callback = (entries, observer) => entries.forEach( entry => {
@@ -34,8 +35,16 @@
         // currentMenuLink.classList.add('active');
 
         setTimeout( () => element.classList.remove('sf-animate'), 800)
-      };
+      },
+      getAssociatedBackground = function(originElement){
+        const 
+          targetSection = originElement.firstElementChild,
+          handle = targetSection.getAttribute('data-sf-theme');     
 
+        return document.querySelector(`#sf-background[data-sf-theme="${handle}"]`);
+      };
+    
+    // Main functions
     function intro() {
       $body.addClass('sf-start-intro');
   
@@ -45,7 +54,7 @@
       });
     }
 
-    function observeProductsSection(){
+    function observeProductSections(){
       const flavorsSection = document.querySelector('#sf-flavors');
 
       function checkIfInProductsSection(entry) {
@@ -136,15 +145,11 @@
           flavorContainers.forEach( container => {
   
             const 
-              section = container.firstElementChild,
-              handle = section.getAttribute('data-sf-theme'),     
-              background = document.querySelector(`#sf-background[data-sf-theme="${handle}"]`),
+              background = getAssociatedBackground(container),
               animateBackgroundElements = function(el, percentage) {
 
                 const tolerance = +el.getAttribute('data-sf-parallax') * 3;
 
-                console.log(tolerance);
-        
                 el.style.transform = `translate3d(${percentage / tolerance}vw, 0, 0)`;
               };
     
@@ -171,7 +176,7 @@
     }
 
     intro();
-    observeProductsSection();
+    observeProductSections();
     changeProductSectionState();
     //introduceElements();
     parallax();
