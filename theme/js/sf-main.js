@@ -86,7 +86,7 @@
             }, 100 * i );
           });
 
-          setTimeout( () => function(){
+          setTimeout( () => {
             parallaxItems.forEach( (element, i) => {
               element.classList.remove('sf-animate');
             });
