@@ -112,7 +112,7 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   opacity: 0;
 }
 
-.sf-transition-element.sf-transition {
+#sf-background.sf-transition .sf-transition-element {
   animation: 1s sf-transition ease-in-out forwards;
 }
 
