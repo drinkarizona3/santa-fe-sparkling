@@ -2,8 +2,13 @@
   --y-distance: 65%;
   --x-distance: 8%;
   background-color: var(--sf-theme-primary);
-  transition:background-color var(--sf-theme-transition);
+  transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
   position: relative;
+  opacity: 1;
+}
+
+#sf-background.sf-animate {
+  opacity: 0;
 }
 
 .sf-foreground {
