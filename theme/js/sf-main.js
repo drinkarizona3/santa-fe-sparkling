@@ -36,11 +36,7 @@
 
         setTimeout( () => element.classList.remove('sf-animate'), 800)
       },
-      getAssociatedBackground = function(originElement){
-        const 
-          targetSection = originElement.firstElementChild,
-          handle = targetSection.getAttribute('data-sf-theme');     
-
+      getAssociatedBackground = function(handle){   
         return document.querySelector(`#sf-background[data-sf-theme="${handle}"]`);
       };
     
@@ -145,7 +141,9 @@
           flavorContainers.forEach( container => {
   
             const 
-              background = getAssociatedBackground(container),
+              targetSection = container.firstElementChild,
+              handle = targetSection.getAttribute('data-sf-theme');  
+              background = getAssociatedBackground(handle),
               animateBackgroundElements = function(el, percentage) {
 
                 const tolerance = +el.getAttribute('data-sf-parallax') * 3;
@@ -153,7 +151,7 @@
                 el.style.transform = `translate3d(${percentage / tolerance}vw, 0, 0)`;
               };
     
-            if (section.classList.contains('sf-active')) {
+            if (targetSection.classList.contains('sf-active')) {
               if (background) {
     
                 const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
