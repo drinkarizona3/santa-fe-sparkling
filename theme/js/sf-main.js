@@ -80,15 +80,19 @@
         if (entry.isIntersecting) {
 
           const _target = entry.target,
-                flavorHandle = _target.dataset.sfTheme;
+                flavorHandle = _target.dataset.sfTheme,
+                background = getAssociatedBackground(flavorHandle);
 
           sections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
+          background.classList.add('sf-active');
 
           elementSelectors.forEach( (selector, i) => {
             changeSectionState(selector, flavorHandle);
           });
-        }   
+        } else {
+          background.classList.remove('sf-active');
+        }  
         
       }
 
