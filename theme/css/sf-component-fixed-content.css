@@ -96,10 +96,6 @@ body.sf-intersecting-products #sf-background .sf-foreground {
   fill: var(--sf-theme-secondary);
 }
 
-[data-sf-parallax] {
-  will-change: transform;
-}
-
 @media only screen and (min-width: 769px) {
   #sf-background {
     --y-distance:38%;
