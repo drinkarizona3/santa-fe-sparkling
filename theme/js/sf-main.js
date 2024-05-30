@@ -8,21 +8,18 @@
       $body = $('body'),
       loadingWait = 1500,
       elementSelectors = ['#sf-background', '#navbar'],
-      flavorContainers = document.querySelectorAll('.sf-flavor__container'),
+      flavorSections = document.querySelectorAll('.sf-flavor'),
       // Utility Functions
       createObserver = function(sections, func, options) {
 
-        const callback = (entries, observer) => entries.forEach( (entry, i) => {
-          func(entry, i);
+        const callback = (entries, observer) => entries.forEach( (entry) => {
+          func(entry);
         });
 
         sections.forEach( section => {
           const observer = new IntersectionObserver(callback, options);
           observer.observe(section);
         });
-      },
-      getAssociatedBackground = function(handle){   
-        return document.querySelector(`#sf-background[data-sf-theme="${handle}"]`);
       };
     
     // Main functions
@@ -56,20 +53,17 @@
 
     function changeProductSectionState(){
 
-      const sections = document.querySelectorAll('.sf-flavor');
-
-      function handleStateChange(entry, i) {
+      function handleStateChange(entry) {
 
         if (entry.isIntersecting) {
 
           const _target = entry.target,
-                flavorHandle = _target.dataset.sfTheme,
-                parallaxItems = document.querySelectorAll('[data-sf-parallax]');
+                flavorHandle = _target.dataset.sfTheme;
           
-          sections.forEach( section => section.classList.remove('sf-active'));
+          flavorSections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
 
-          elementSelectors.forEach( (selector, i) => {
+          elementSelectors.forEach( (selector) => {
 
             const element = document.querySelector(selector);
         
@@ -80,24 +74,10 @@
             
           });
 
-          console.log(i);
-          
-          parallaxItems.forEach( (element, i) => {
-            setTimeout(function(){
-              element.classList.add('sf-animate');
-            }, 100 * i );
-          });
-
-          setTimeout( () => {
-            parallaxItems.forEach( (element, i) => {
-              element.classList.remove('sf-animate');
-            });
-          }, 2000);
-
         } 
       }
 
-      createObserver(sections, handleStateChange, {
+      createObserver(flavorSections, handleStateChange, {
         root: null,
         rootMargin: "0px",
         threshold: .5
@@ -119,7 +99,7 @@
        
       }
 
-      createObserver(flavorContainers, handleIntro, {
+      createObserver(flavorSections, handleIntro, {
         root: null,
         rootMargin: "0px",
         threshold: thresholds
@@ -127,62 +107,10 @@
 
     }
 
-    function parallax() {
-
-      const 
-        sectionElements = [...flavorContainers].reduce((object, container) => {
-          const handle = container.firstElementChild.getAttribute('data-sf-theme');
-
-          object[handle] = {
-            el: container,
-            top: container.offsetTop
-          };
-
-          return object;
-        }, {});
-
-        function handleScroll() {
-
-          flavorContainers.forEach( container => {
-  
-            const 
-              targetSection = container.firstElementChild,
-              handle = targetSection.getAttribute('data-sf-theme'),
-              background = getAssociatedBackground(handle),
-              animateBackgroundElements = function(el, percentage) {
-
-                const tolerance = +el.getAttribute('data-sf-parallax') * 3;
-
-                el.style.transform = `translate3d(${percentage / tolerance}vw, 0, 0)`;
-              };
-    
-            if (targetSection.classList.contains('sf-active')) {
-              if (background) {
-    
-                const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
-      
-                if (!parallaxElements.length) return
-
-                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
-              
-                parallaxElements.forEach( el => animateBackgroundElements(el, percentage));
-              
-              }
-            }
-  
-          });
-          
-        }
- 
-        window.addEventListener('scroll', handleScroll);
-
-    }
-
     intro();
     observeProductSections();
     changeProductSectionState();
     //introduceElements();
-    parallax();
 
   });
 
