@@ -47,14 +47,16 @@
 
     <?php 
     
-      $flavors = SF_get_flavors();
+    $flavors = SF_get_flavors();
       
-      foreach ($flavors as $i => $post) : setup_postdata($post); 
-      
-        $link = get_field('sf_pdp_button', $post->ID);
-        $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
+    foreach ($flavors as $i => $post) : setup_postdata($post); 
+    
+      $link = get_field('sf_pdp_button', $post->ID);
+      $link_target = $link['target'] ? $link['target'] : '_self';
+      $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
 
-        <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-section sf-flavor d-flex align-items-center" data-sf-theme="<?= $post->post_name ?>">
+      <article id="sf-flavor-section__<?= $post->post_name ?>" class="d-flex align-items-center sf-flavor__container">
+        <div class="sf-section sf-flavor sf-sticky container-lg" data-sf-theme="<?= $post->post_name ?>">
           <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
 
             <div class="col-md-6 sf-flavor__content">
@@ -66,9 +68,7 @@
                     <?php the_content(); ?>
                   </div>
 
-                  <?php if(!empty($link)): 
-                    $link_target = $link['target'] ? $link['target'] : '_self';
-                  ?>
+                  <?php if(!empty($link)): ?>
                     <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
                   <?php endif; ?>
 
@@ -83,10 +83,11 @@
                     'loading' => 'lazy'
                   )); ?>
               </figure>
-            </div>
 
+            </div>
           </div>
-        </article> <?php
+        </div>
+      </article> <?php
 
       endforeach;   wp_reset_postdata(); 
     ?>
