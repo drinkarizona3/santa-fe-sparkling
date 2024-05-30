@@ -6,7 +6,7 @@
 
   <div class="sf-foreground">
 
-    <svg preserveAspectRatio="none" class="sf-horizon position-absolute" width="1819" height="557" viewBox="0 0 1819 557" fill="none">
+    <svg preserveAspectRatio="none" class="sf-horizon position-absolute" width="1819" height="557" viewBox="0 0 1819 557" fill="none" data-sf-parallax="8">
       <path d="M1819 0V557H0L1819 0Z" fill="var(--sf-theme-midground)"/>
     </svg>
 
@@ -14,7 +14,7 @@
       <?php get_template_part('snippets/sf-dots-rectangle'); ?>
     </div>
 
-    <div class="sf-pueblo-house position-absolute">
+    <div class="sf-pueblo-house position-absolute" data-sf-parallax="4">
       <?php get_template_part('snippets/sf-pueblo-house'); ?>
     </div>
 
@@ -35,7 +35,7 @@
         break;
       } 
     ?>
-      <div class="position-absolute sf-cloud<?= $cloud_class; ?>">
+      <div class="position-absolute sf-cloud<?= $cloud_class; ?>" data-sf-parallax="<?= $i ?>">
         <?php get_template_part('snippets/sf-cloud'); ?>
       </div>
     <?php endfor; ?>
