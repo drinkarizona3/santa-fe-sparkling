@@ -41,6 +41,7 @@
           $body.addClass('sf-intersecting-products');
         } else {
           $body.removeClass('sf-intersecting-products');
+          flavorSections.forEach( section => section.classList.remove('sf-active'));
         }
       }
 
