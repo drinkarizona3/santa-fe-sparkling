@@ -40,7 +40,7 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud {
-  --animation-duration: 15s;
+  --animation-duration: 50s;
 
   width: 100%;
   will-change: transform;
