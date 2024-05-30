@@ -1,6 +1,6 @@
 #sf-background {
   --y-distance: 65%;
-  --x-distance: 8%;
+  --x-distance: 20%;
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
   position: relative;
@@ -50,8 +50,8 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud.sf-cloud-front {
-  top: calc(var(--y-distance)* 1.1);
-  left: calc(var(--x-distance)* 2);
+  top: var(--y-distance);
+  left: calc(var(--x-distance) * 1.3);
   right: auto;
   max-width: max(34%, 250px);
   z-index: 3;
@@ -59,8 +59,8 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 
 .sf-pueblo-house {
   bottom: max(-7%, -20px);
-  left: -20%;
-  width: max(46%, 300px);
+  left: min(-10%, -70px);
+  width: clamp(300px, 46%, 900px);
   z-index: 2;
 }
 
@@ -98,6 +98,6 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 
 @media only screen and (min-width: 769px) {
   #sf-background {
-    --y-distance:38%;
+    --y-distance:30%;
   }
 }
