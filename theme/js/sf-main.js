@@ -118,9 +118,11 @@
           navbar.classList.remove('show');
         }));
     }
+
     intro();
     observeProductSections();
     changeProductSectionState();
+    nav();
     //introduceElements();
 
   });
