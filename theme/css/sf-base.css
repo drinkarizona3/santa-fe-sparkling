@@ -322,6 +322,11 @@ section.sf-hero {
   text-transform: uppercase;
 }
 
+.sf-flavor .sf-title,
+.sf-flavor .sf-flavor__tagline {
+  z-index: 1;
+}
+
 .sf-flavor .sf-title:before,
 .sf-flavor .sf-flavor__tagline::before {
   content: attr(data-text);
