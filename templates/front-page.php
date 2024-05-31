@@ -2,11 +2,14 @@
     get_header(); 
     b4st_main_before();
     /* Template Name: Front Page */
+
+    $hero_title = bloginfo('name');
+    $hero_subtitle = bloginfo('description');
 ?>
 
 <main id="main" class="position-relative">
 
-  <section class="sf-hero d-flex flex-column justify-content-center position-relative">
+  <section class="sf-hero d-flex flex-column justify-content-center position-relative" data-sf-theme="pink-grapefruit">
 
     <div class="sf-hero__background position-absolute">
       <?= wp_get_attachment_image( 10, null, null, array(
@@ -22,8 +25,8 @@
 
     <div class="position-relative sf-hero__content">
       <h1 class="sf-bloomsbury text-center sf-scaling-text">
-        <span class="sf-brandname"><?= bloginfo('name'); ?></span>
-        <span class="d-block sf-subtitle"><?= bloginfo('description'); ?></span>
+        <span class="sf-brandname position-relative" data-text="<?= strip_tags($hero_title) ?>"><?= $hero_title ?></span>
+        <span class="d-block sf-subtitle position-relative" data-text="<?= strip_tags($hero_subtitle) ?>"><?= $hero_subtitle; ?></span>
       </h1>
   </div>
 
@@ -51,6 +54,7 @@
       
     foreach ($flavors as $i => $post) : setup_postdata($post); 
       
+      $flavor_title = get_the_title($post->ID);
       $tagline = get_field('sf_flavor_tagline', $post->ID);
       $link = get_field('sf_pdp_button', $post->ID);
       $link_target = $link['target'] ? $link['target'] : '_self';
@@ -63,7 +67,7 @@
           <div class="col-md-6 sf-flavor__content">
               <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
 
-                <h4 class="sf-bloomsbury sf-title position-relative" data-text="<?= strip_tags(get_the_title()) ?>"><?php the_title(); ?></h4>
+                <h4 class="sf-bloomsbury sf-title position-relative" data-text="<?= strip_tags($flavor_title) ?>"><?= $flavor_title ?></h4>
 
                 <?php if($tagline): ?>
                   <div>
