@@ -312,13 +312,23 @@ section.sf-hero {
 }
 
 /* Flavor loop */
-.sf-flavor h4.sf-title {
+.sf-flavor .sf-title {
   line-height: .9;
   margin: 0;
 }
 
-.sf-flavor p {
-  margin: 0;
+.sf-flavor .sf-flavor__tagline {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.sf-flavor .sf-title:before,
+.sf-flavor .sf-flavor__tagline::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: var(--sf-theme-primary) .2em;
 }
 
 .sf-flavor .sf-button {

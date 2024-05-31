@@ -50,7 +50,8 @@
     $flavors = SF_get_flavors();
       
     foreach ($flavors as $i => $post) : setup_postdata($post); 
-    
+      
+      $tagline = get_field('sf_flavor_tagline', $post->ID);
       $link = get_field('sf_pdp_button', $post->ID);
       $link_target = $link['target'] ? $link['target'] : '_self';
       $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; ?>
@@ -62,11 +63,13 @@
           <div class="col-md-6 sf-flavor__content">
               <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
 
-                <h4 class="sf-bloomsbury sf-title"><?php the_title(); ?></h4>
+                <h4 class="sf-bloomsbury sf-title position-relative" data-text="strip_tags(<?php the_title(); ?>)"><?php the_title(); ?></h4>
 
-                <div>
-                  <?php the_content(); ?>
-                </div>
+                <?php if($tagline): ?>
+                  <div>
+                    <h5 class="sf-flavor__tagline position-relative" data-text="strip_tags(<?= $tagline ?>)"><?= $tagline ?></h5>
+                  </div>
+                <?php endif; ?>
 
                 <?php if(!empty($link)): ?>
                   <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
