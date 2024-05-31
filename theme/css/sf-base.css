@@ -96,7 +96,6 @@ main {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-weight: 400;
 }
 
 h2 {
@@ -415,15 +414,6 @@ section.sf-hero {
   font-family: 'Quicksand';
   src: url('./fonts/Quicksand-Medium.woff2') format('woff2'),
       url('./fonts/Quicksand-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('./fonts/Quicksand-Bold.woff2') format('woff2'),
-      url('./fonts/Quicksand-Bold.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
