@@ -108,6 +108,16 @@
 
     }
 
+    function nav() {
+        const
+          navbar = document.querySelector('#navbarDropdown'); 
+          links = document.querySelectorAll('.nav-link');
+
+    
+        links.forEach( link => link.addEventListener('click', function(){
+          navbar.classList.remove('show');
+        }));
+    }
     intro();
     observeProductSections();
     changeProductSectionState();

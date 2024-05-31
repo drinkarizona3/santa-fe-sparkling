@@ -154,7 +154,7 @@ body:not(.sf-intersecting-products) .navbar-brand.sf-brandname:after {
   width: 70px;
 }
 
-.navbar-toggler:focus {
+#navbarDropdown.collapsing + div > .navbar-toggler {
   -webkit-animation: .8s toggler-reaction cubic-bezier(1, 0, 0, 1) forwards;
           animation: .8s toggler-reaction cubic-bezier(1, 0, 0, 1) forwards; 
 }
@@ -377,13 +377,16 @@ section.sf-hero {
 /* ==========================================================================
    Misc
    ========================================================================== */
-   
+
+.nav-link,
 .sf-hero__content .sf-brandname,
 .sf-hero__content .sf-subtitle,
 .sf-flavor .sf-title,
 .sf-flavor .sf-flavor__tagline {
   z-index: 1;
 }
+
+.nav-link:before,
 .sf-hero__content .sf-brandname:before,
 .sf-hero__content .sf-subtitle:after,
 .sf-flavor .sf-title:before,
