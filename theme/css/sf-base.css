@@ -323,21 +323,6 @@ section.sf-hero {
   font-weight: bold;
 }
 
-.sf-flavor .sf-title,
-.sf-flavor .sf-flavor__tagline {
-  z-index: 1;
-}
-
-.sf-flavor .sf-title:before,
-.sf-flavor .sf-flavor__tagline::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-text-stroke: var(--sf-theme-primary) .2em;
-  z-index: -1;
-}
-
 .sf-flavor .sf-button {
   margin: .5em 0;
 }
@@ -357,6 +342,29 @@ section.sf-hero {
   html {
     font-size:62.5%;
   }
+}
+
+
+/* ==========================================================================
+   Misc
+   ========================================================================== */
+   
+.sf-hero__content .sf-brandname,
+.sf-hero__content .sf-subtitle,
+.sf-flavor .sf-title,
+.sf-flavor .sf-flavor__tagline {
+  z-index: 1;
+}
+.sf-hero__content .sf-brandname,
+.sf-hero__content .sf-subtitle,
+.sf-flavor .sf-title:before,
+.sf-flavor .sf-flavor__tagline::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: var(--sf-theme-primary) .15em;
+  z-index: -1;
 }
 
 
