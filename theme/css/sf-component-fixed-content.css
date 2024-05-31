@@ -1,6 +1,6 @@
 #sf-background {
   --y-distance: 65%;
-  --x-distance: 20%;
+  --x-distance: 0%;
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
   position: relative;
@@ -40,7 +40,7 @@ body.sf-intersecting-products #sf-background .sf-foreground {
 }
 
 .sf-cloud {
-  --animation-duration: 150s;
+  --animation-duration: 100s;
 
   width: 100%;
   will-change: transform;

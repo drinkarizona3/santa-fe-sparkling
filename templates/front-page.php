@@ -63,11 +63,11 @@
           <div class="col-md-6 sf-flavor__content">
               <div class="inner d-flex flex-column align-items-center align-items-md-start sf-gap__large">
 
-                <h4 class="sf-bloomsbury sf-title position-relative" data-text="strip_tags(<?php the_title(); ?>)"><?php the_title(); ?></h4>
+                <h4 class="sf-bloomsbury sf-title position-relative" data-text="<?= strip_tags(get_the_title()) ?>"><?php the_title(); ?></h4>
 
                 <?php if($tagline): ?>
                   <div>
-                    <h5 class="sf-flavor__tagline position-relative" data-text="strip_tags(<?= $tagline ?>)"><?= $tagline ?></h5>
+                    <h5 class="sf-flavor__tagline position-relative" data-text="<?= strip_tags($tagline) ?>"><?= $tagline ?></h5>
                   </div>
                 <?php endif; ?>
 

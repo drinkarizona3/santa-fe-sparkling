@@ -329,6 +329,7 @@ section.sf-hero {
   top: 0;
   left: 0;
   -webkit-text-stroke: var(--sf-theme-primary) .2em;
+  z-index: -1;
 }
 
 .sf-flavor .sf-button {
