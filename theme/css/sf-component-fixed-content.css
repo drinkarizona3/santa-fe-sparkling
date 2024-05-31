@@ -21,7 +21,8 @@
   height: max(30vw, 220px);
 }
 
-.sf-foreground path {
+.sf-foreground path,
+.sf-foreground polygon {
   transition:fill var(--sf-theme-transition);
 }
 
