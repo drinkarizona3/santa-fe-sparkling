@@ -3,8 +3,8 @@
     b4st_main_before();
     /* Template Name: Front Page */
 
-    $hero_title = bloginfo('name');
-    $hero_subtitle = bloginfo('description');
+    $hero_title = get_bloginfo('name');
+    $hero_subtitle = get_bloginfo('description');
 ?>
 
 <main id="main" class="position-relative">
