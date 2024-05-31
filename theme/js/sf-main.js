@@ -110,7 +110,7 @@
 
     function nav() {
         const
-          navbar = document.querySelector('#navbarDropdown'); 
+          navbar = document.querySelector('#navbarDropdown'),
           links = document.querySelectorAll('.nav-link');
 
     
