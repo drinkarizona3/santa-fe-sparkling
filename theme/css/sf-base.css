@@ -96,6 +96,7 @@ main {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  font-weight: 400;
 }
 
 h2 {
@@ -355,8 +356,8 @@ section.sf-hero {
 .sf-flavor .sf-flavor__tagline {
   z-index: 1;
 }
-.sf-hero__content .sf-brandname,
-.sf-hero__content .sf-subtitle,
+.sf-hero__content .sf-brandname:before,
+.sf-hero__content .sf-subtitle:after,
 .sf-flavor .sf-title:before,
 .sf-flavor .sf-flavor__tagline::before {
   content: attr(data-text);
@@ -365,6 +366,7 @@ section.sf-hero {
   left: 0;
   -webkit-text-stroke: var(--sf-theme-primary) .15em;
   z-index: -1;
+  width: 100%;
 }
 
 
