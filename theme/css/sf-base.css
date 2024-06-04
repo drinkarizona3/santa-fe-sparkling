@@ -239,6 +239,10 @@ span.navbar-toggler-icon svg {
           transition-delay: calc(var(--sf-mobile-menu-speed) * 1.5);
 }
 
+#navbarDropdown .navbar-nav ul {
+  gap: 1.5em;
+}
+
 .navbar-nav .nav-link {
   --sf-transition: cubic-bezier(0.16, 1, 0.3, 1);
 
