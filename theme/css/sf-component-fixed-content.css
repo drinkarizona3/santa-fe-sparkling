@@ -10,7 +10,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
 }
 
