@@ -227,6 +227,7 @@ span.navbar-toggler-icon svg {
        -o-transition-delay: 0s;
           transition-delay: 0s;
   padding: var(--sf-header-height) 0 2rem;
+  gap: 1.5em;
   -webkit-transform: translateY(calc(var(--sf-header-height) * -1));
       -ms-transform: translateY(calc(var(--sf-header-height) * -1));
           transform: translateY(calc(var(--sf-header-height) * -1));
@@ -237,10 +238,6 @@ span.navbar-toggler-icon svg {
   -webkit-transition-delay: calc(var(--sf-mobile-menu-speed) * 1.5);
        -o-transition-delay: calc(var(--sf-mobile-menu-speed) * 1.5);
           transition-delay: calc(var(--sf-mobile-menu-speed) * 1.5);
-}
-
-#navbarDropdown .navbar-nav ul {
-  gap: 1.5em;
 }
 
 .navbar-nav .nav-link {
