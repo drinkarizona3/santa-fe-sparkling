@@ -354,6 +354,7 @@ section.sf-hero {
 .sf-flavor .sf-title {
   line-height: .9;
   margin: 0;
+  font-size: clamp(7rem, 8vw, 10rem);
 }
 
 .sf-flavor .sf-flavor__tagline {
@@ -364,6 +365,11 @@ section.sf-hero {
 
 .sf-flavor .sf-button {
   margin: .5em 0;
+}
+
+figure.sf-flavor__image-image {
+  max-width: max(20vw, 250px);
+  margin: 0 auto;
 }
 
 .sf-flavor[data-sf-theme="pink-grapefruit"] .sf-button {
