@@ -354,7 +354,7 @@ section.sf-hero {
 .sf-flavor .sf-title {
   line-height: .9;
   margin: 0;
-  font-size: clamp(6rem, 5vw, 8rem);
+  font-size: clamp(6rem, 7vw, 10rem);
 }
 
 .sf-flavor .sf-flavor__tagline {
