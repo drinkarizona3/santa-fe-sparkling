@@ -62,7 +62,7 @@
 
       <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-section sf-flavor d-flex align-items-center" data-sf-theme="<?= $post->post_name ?>">
 
-        <div class="container-lg">
+        <div class="container-md">
 
           <div class="row flex-column-reverse text-center text-md-left align-items-center<?= $column_direction ?>">
   
