@@ -108,6 +108,58 @@
 
     }
 
+    function parallax() {
+
+      const 
+        parallaxElements = document.querySelectorAll('[data-sf-parallax]'),
+        sectionElements = [...parallaxElements].reduce((object, container) => {
+          const handle = container.firstElementChild.getAttribute('data-sf-theme');
+
+          object[handle] = {
+            el: container,
+            top: container.offsetTop
+          };
+
+          return object;
+        }, {});
+
+        function handleScroll() {
+
+          parallaxElements.forEach( container => {
+  
+            const 
+              targetSection = container.firstElementChild,
+              handle = targetSection.getAttribute('data-sf-theme'),
+              background = getAssociatedBackground(handle),
+              animateBackgroundElements = function(el, percentage) {
+
+                const tolerance = +el.getAttribute('data-sf-parallax') * 3;
+
+                el.style.transform = `translate3d(${percentage / tolerance}vw, 0, 0)`;
+              };
+    
+            if (targetSection.classList.contains('sf-active')) {
+              if (background) {
+    
+                const parallaxElements = background.querySelectorAll('[data-sf-parallax]');
+      
+                if (!parallaxElements.length) return
+
+                const percentage = ((window.scrollY - sectionElements[handle].top) / window.innerHeight) * 100;
+              
+                parallaxElements.forEach( el => animateBackgroundElements(el, percentage));
+              
+              }
+            }
+  
+          });
+          
+        }
+ 
+        window.addEventListener('scroll', handleScroll);
+
+    }
+
     intro();
     observeProductSections();
     changeProductSectionState();
