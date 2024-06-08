@@ -245,9 +245,8 @@ span.navbar-toggler-icon svg {
 
   font-size: clamp(34px, calc(5vw + 1rem), 70px) !important;
   font-family: var(--sf-font-heading);
-  color: black;
   position: relative;
-  color: black !important;
+  color: white;
   line-height: 1;
   display: inline-block;
   perspective: 550px;
