@@ -258,23 +258,11 @@ span.navbar-toggler-icon svg {
   align-items: center;
 }
 
-/* .navbar-nav .nav-link:hover {
-  transform: translateY(.25em) scale(1.05);
-  min-height: 1.75em;
-} */
-
 .nav-link:before {
   transition: all .3s var(--sf-transition);
   transform-origin: center;
   display: inline-block;
 }
-
-/* .navbar-nav .nav-item.active .nav-link:before,
-.navbar-nav .nav-item:hover .nav-link:before {
-  -webkit-text-stroke-color: transparent;
-  transform: translateY(-144%) scale(.75);
-  color: var(--sf-theme-accent);
-} */
 
 /* FOOTER */
 footer {
@@ -337,7 +325,7 @@ section.sf-hero {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* text-shadow: 0 0 .05em rgba(0,0,0,.25); */
+  text-shadow: -.0055em .022em .012em rgba(0,0,0,.25);
   color: #FFFFFF;
 }
 
@@ -355,10 +343,25 @@ section.sf-hero {
   line-height: .9;
   margin: 0;
   font-size: clamp(6rem, 5.5vw, 11rem);
+  z-index: 1;
 }
 
+.sf-flavor .sf-title:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  -webkit-text-stroke: var(--sf-theme-primary) .15em;
+  z-index: -1;
+  width: 100%;
+}
+
+
 .sf-flavor .sf-flavor__tagline {
-  font-size: 100%;
+  font-size: 110%;
   font-weight: 500;
 }
 
@@ -394,31 +397,6 @@ figure.sf-flavor__image-image {
     font-size:62.5%;
   }
 }
-
-
-/* ==========================================================================
-   Misc
-   ========================================================================== */
-   
-.sf-flavor .sf-title,
-.sf-flavor .sf-flavor__tagline {
-  z-index: 1;
-}
-
-.sf-flavor .sf-title:before,
-.sf-flavor .sf-flavor__tagline::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-  -webkit-text-stroke: var(--sf-theme-primary) .15em;
-  z-index: -1;
-  width: 100%;
-}
-
 
 /* ==========================================================================
    Animations
