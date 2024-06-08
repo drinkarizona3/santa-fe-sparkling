@@ -291,6 +291,7 @@ footer a.mpire-link:hover {
 section.sf-hero {
   height: 100svh;
   overflow: hidden;
+  background-color: var(--sf-theme-primary);
 }
 
 .sf-hero__background {
