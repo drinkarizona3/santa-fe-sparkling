@@ -20,7 +20,8 @@
 
           <div class="sf-hero__background position-absolute <?= $background['position'] ?>">
             <?= wp_get_attachment_image( $background['image']['ID'], null, null, array(
-              'class' => 'sf-object-fit'
+              'class' => 'sf-object-fit',
+              'onload' => 'javascript: this.classList.add("sf-img-loaded")'
             )); ?>
           </div> <?php
         
