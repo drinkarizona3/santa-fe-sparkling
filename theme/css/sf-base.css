@@ -332,6 +332,7 @@ section.sf-hero {
 /* homepage page content */
 #sf-main__content {
   background-color: var(--sf-theme-primary);
+  color: white;
 }
 
 #sf-main__content a {
