@@ -304,7 +304,7 @@ section.sf-hero {
   transition: opacity .5s ease-out;
 }
 
-.sf-hero__background.sf-img-loaded img {
+.sf-hero__background img.sf-img-loaded {
   opacity: 1;
 }
 
