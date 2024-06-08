@@ -13,18 +13,22 @@
 
   <section class="sf-hero d-flex flex-column justify-content-center position-relative" data-sf-theme="pink-grapefruit">
 
-    <?php
-      foreach($hero_backgrounds as $background): ?>
-
-        <div class="sf-hero__background position-absolute <?= $background['position'] ?>">
-          <?= wp_get_attachment_image( $background['image']['ID'], null, null, array(
-            'class' => 'sf-object-fit'
-          )); ?>
-        </div> <?php
-      
-      endforeach;
-    ?>
+    <?php 
+      if($hero_backgrounds): 
     
+        foreach($hero_backgrounds as $background): ?>
+
+          <div class="sf-hero__background position-absolute <?= $background['position'] ?>">
+            <?= wp_get_attachment_image( $background['image']['ID'], null, null, array(
+              'class' => 'sf-object-fit'
+            )); ?>
+          </div> <?php
+        
+        endforeach;
+
+      endif;
+    ?>
+
     <div class="position-relative sf-hero__content">
       <h1 class="sf-bloomsbury text-center sf-scaling-text">
         <span class="sf-brandname position-relative" data-text="<?= strip_tags($hero_title) ?>"><?= $hero_title ?></span>
