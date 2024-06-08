@@ -296,15 +296,18 @@ section.sf-hero {
 .sf-hero__background {
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transition: opacity .3s ease-out;
 }
 
-.sf-hero__background.sf-image-loaded {
+.sf-hero__background img {
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+
+.sf-hero__background.sf-image-loaded img {
   opacity: 1;
 }
 
-body.no-js .sf-hero__background {
+body.no-js .sf-hero__background img {
   opacity: 1 !important;
 }
 
