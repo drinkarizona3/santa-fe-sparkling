@@ -297,6 +297,16 @@ section.sf-hero {
 .sf-hero__background {
   height: 100%;
   width: 100%;
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+
+.sf-hero__background.sf-image-loaded {
+  opacity: 1;
+}
+
+body.no-js .sf-hero__background {
+  opacity: 1 !important;
 }
 
 .sf-hero__background.sf-cans {
