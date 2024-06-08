@@ -5,24 +5,26 @@
 
     $hero_title = get_bloginfo('name');
     $hero_subtitle = get_bloginfo('description');
+    $hero_fields = get_field('sf_hero');
+    $hero_backgrounds = $hero_fields['backgrounds'];
 ?>
 
 <main id="main" class="position-relative">
 
   <section class="sf-hero d-flex flex-column justify-content-center position-relative" data-sf-theme="pink-grapefruit">
 
-    <div class="sf-hero__background position-absolute">
-      <?= wp_get_attachment_image( 10, null, null, array(
-        'class' => 'sf-object-fit'
-      )); ?>
-    </div>
+    <?php
+      foreach($hero_backgrounds as $background): ?>
 
-    <div class="sf-hero__background position-absolute sf-cans">
-      <?= wp_get_attachment_image( 48, null, null, array(
-        'class' => 'sf-object-fit'
-      )); ?>
-    </div>
-
+        <div class="sf-hero__background position-absolute <?= $background['position'] ?>">
+          <?= wp_get_attachment_image( $background['image']['ID'], null, null, array(
+            'class' => 'sf-object-fit'
+          )); ?>
+        </div> <?php
+      
+      endforeach;
+    ?>
+    
     <div class="position-relative sf-hero__content">
       <h1 class="sf-bloomsbury text-center sf-scaling-text">
         <span class="sf-brandname position-relative" data-text="<?= strip_tags($hero_title) ?>"><?= $hero_title ?></span>
