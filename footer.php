@@ -1,5 +1,5 @@
 <?php if(is_front_page()): ?>
-  <?php get_template_part('snippets/sf-intro'); ?>
+  <?php //get_template_part('snippets/sf-intro'); ?>
 <?php endif; ?>
 
 <footer id="footer" class="position-relative">

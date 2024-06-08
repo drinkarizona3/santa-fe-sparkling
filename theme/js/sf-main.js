@@ -163,6 +163,7 @@
     intro();
     observeProductSections();
     changeProductSectionState();
+    nav();
     //introduceElements();
 
   });
