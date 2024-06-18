@@ -97,36 +97,44 @@
               <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
 
               <figure class="sf-flavor__image-image mb-5 mb-lg-0">
-                
-                  <?php 
-                      for($i = 0; $i >= 2; $i++):  
-                          $_class = ($i == 0) ? ' top' : ' bottom';
+
+                <?php 
+                  for($i = 0; $i >= 2; $i++):  
+                      
+                    $_class = ($i == 0) ? ' top' : ' bottom'; ?>
+
+                    <?php if($i == 0): ?>
+                      <div class="sf-flavor__slice<?= $_class ?>">
+                        <?php  get_template_part('/snippets/sf-citrus-slice'); ?>
+                      </div> 
+                    <?php else: ?>
+                      <div class="sf-flavor__slice<?= $_class ?>">
+                        <?php 
+
+                          $post_name = $post->$post_name;
+      
+                          switch ($post_name):
+                            case 'raspberry-lime':
+                              get_template_part('/snippets/sf-raspberry');
+                              break;
+                            case 'orange-mango':
+                              get_template_part('/snippets/sf-mango');
+                              break;
+                            default:
+                              get_template_part('/snippets/sf-citrus-slice');
+                              break;
+                          endswitch; 
+      
                         ?>
-                          <div class="sf-flavor__slice<?= $_class ?>">
-                            <?php 
+                      </div>
+                    <?php endif; 
 
-                              $post_name = $post->$post_name;
-          
-                              switch ($post_name):
-                                case 'raspberry-lime':
-                                  get_template_part('/snippets/sf-raspberry');
-                                  break;
-                                case 'orange-mango':
-                                  get_template_part('/snippets/sf-mango');
-                                  break;
-                                default:
-                                  get_template_part('/snippets/sf-citrus-slice');
-                                  break;
-                              endswitch; 
-          
-                            ?>
-                          </div> <?php
-                      endfor;   
-                  ?>
+                  endfor;
+                ?>
 
-                  <?= wp_get_attachment_image( $flavor_img_ID, null, null, array(
-                    'loading' => 'lazy'
-                  )); ?>
+                <?= wp_get_attachment_image( $flavor_img_ID, null, null, array(
+                  'loading' => 'lazy'
+                )); ?>
 
               </figure>
   
