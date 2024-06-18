@@ -126,7 +126,7 @@
 
             }, {}),
             animate = function(el) {
-              const percentage = ((window.scrollY - parallaxElements[el.id].top) / window.innerHeight) * 100;
+              const percentage = ((window.scrollY - parallaxElProps[el.id].top) / window.innerHeight) * 100;
 
               console.log(percentage);
             };
