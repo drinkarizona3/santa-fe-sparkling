@@ -97,8 +97,8 @@
             can.style.transform = `translate3d(${offset}${percentage}vw, 0, 0)`;
 
             if (percentage === 0) {
-              observer.unobserve(entry.target);
               can.style.transform = `translate3d(0, 0, 0)`;
+              observer.unobserve(entry.target);
             }
         }
 
