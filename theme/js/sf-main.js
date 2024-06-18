@@ -98,11 +98,9 @@
 
             if (percentage === 0) {
               can.style.transform = `translate3d(0, 0, 0)`;
-              observer.unobserve(entry.target);
+              return;
             }
         }
-
-      
        
       }
 
