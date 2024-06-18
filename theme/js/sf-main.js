@@ -127,7 +127,7 @@
               const percentage = ((window.scrollY - parallaxElements[el.id].top) / window.innerHeight) * 100;
             };
 
-      function handleParallax() {
+      function handleParallax(entry) {
 
         const target = entry.target;
 
