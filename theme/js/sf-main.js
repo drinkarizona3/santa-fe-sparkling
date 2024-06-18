@@ -139,7 +139,7 @@
             
           target.classList.add('in-view');
 
-          animate();
+          animate(target);
 
         } else {
           target.classList.remove('in-view');
