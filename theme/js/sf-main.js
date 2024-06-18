@@ -109,9 +109,11 @@
         }));
     }
 
-    function parallax() {
+    function parallax(sectionSelector) {
 
-      const parallaxElements = document.querySelectorAll('[data-sf-parallax]'),
+      const 
+            section = document.querySelector(sectionSelector),
+            parallaxElements = section.querySelectorAll('[data-sf-parallax]'),
             parallaxElProps = [...parallaxElements].reduce( (props, element) => {
 
               props[element.id] = {
@@ -138,20 +140,21 @@
         }
       }
 
-      createObserver(parallaxElements, handleParallax, {
+      createObserver(section, handleParallax, {
         root: null,
         rootMargin: "0px",
         threshold: 1.0
       });
 
-      console.log(parallaxElProps);
+      console.log(parallaxElProps)
+
     }
 
     observeProductSections();
     changeProductSectionState();
     nav();
     //introduceElements();
-    parallax();
+    parallax('.sf-hero');
 
   });
 
