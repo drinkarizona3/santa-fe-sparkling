@@ -135,8 +135,6 @@
                   tolerance = parallaxElProps[elementID].speed * 2;
 
                 element.style.transform = `translate3d(0, ${percentage / tolerance}vh, 0)`;
-
-                console.log({elementID, percentage, tolerance });
               })
 
             };
