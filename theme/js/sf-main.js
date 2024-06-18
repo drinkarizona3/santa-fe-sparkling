@@ -134,7 +134,7 @@
                   percentage = ((window.scrollY - parallaxElProps[elementID].top) / window.innerHeight) * 100,
                   tolerance = parallaxElProps[elementID].speed;
 
-                element.style.transform = `translate3d(${percentage / tolerance}vh, 0, 0)`;
+                element.style.transform = `translate3d(0, ${percentage / tolerance}vh, 0)`;
 
                 console.log({elementID, percentage, tolerance });
               })
