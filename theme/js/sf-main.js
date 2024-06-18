@@ -53,6 +53,7 @@
           
           flavorSections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
+          _target.classList.add('sf-flavor__animate');
 
           elementSelectors.forEach( (selector) => {
 
