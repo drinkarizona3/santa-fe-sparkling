@@ -86,7 +86,9 @@
 
       function handleIntro(entry) {
 
-        if (entry.isIntersecting && entry.intersectionRatio >= .5) {
+        if (entry.isIntersecting) {
+
+          console.log(intersectionRatio);
           
            const target = entry.target,
                   can = target.querySelector('.sf-flavor__image-image'),
