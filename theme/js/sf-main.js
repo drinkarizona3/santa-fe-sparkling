@@ -96,7 +96,9 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
 
-            if (entry.intersectionRatio === 1) observer.unobserve(entry);
+            console.log(entry.intersectionRatio);
+
+            if (entry.intersectionRatio === 1.0) observer.unobserve(entry);
         }
 
       
