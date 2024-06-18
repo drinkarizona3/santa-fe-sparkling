@@ -53,7 +53,6 @@
           
           flavorSections.forEach( section => section.classList.remove('sf-active'));
           _target.classList.add('sf-active');
-          _target.classList.add('sf-flavor__animate');
 
           elementSelectors.forEach( (selector) => {
 
@@ -101,6 +100,7 @@
             console.log(+entry.intersectionRatio.toFixed(1));
 
             if ( +entry.intersectionRatio.toFixed(1) === 1.0 || +entry.intersectionRatio.toFixed(1) === .9 ) {
+              target.classList.add('sf-flavor__animate');
               can.style.transition = 'none';
               can.style.transform = `translate3d(0, 0, 0)`;
               can.parentElement.classList.remove(...offsetClasses);
