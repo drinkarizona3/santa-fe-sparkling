@@ -394,9 +394,9 @@ body.no-js .sf-hero__background img {
 }
 
 figure.sf-flavor__image-image {
-  max-width: max(20vw, 250px);
+  max-width: max(8vw, 228px);
   margin: 0 auto;
-  //transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1);
+  /* transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); */
 }
 
 .sf-flavor[data-sf-theme="pink-grapefruit"] .sf-button {
@@ -416,29 +416,29 @@ figure.sf-flavor__image-image {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 7em;
-  transform: translate(-103%, 0%) rotate(-20deg);
+  width: max(29%, 4em);
+  transform: translate(-100%, 0%) rotate(-20deg);
   opacity: 0;
   transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1), transform .6s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
 }
 
 .sf-flavor:nth-child(even) .sf-flavor__image .sf-flavor__slice {
   left: auto;
   right: 50%;
-  transform: translate(103%, 0%) rotate(-20deg);
+  transform: translate(100%, 0%) rotate(-20deg);
 }
 
 .sf-flavor.sf-flavor__animate .sf-flavor__slice {
   opacity: 1;
-  transform: translate(-103%, -27%) rotate(0);
+  transform: translate(-100%, -30%) rotate(0);
 }
 
 .sf-flavor:nth-child(even).sf-flavor__animate .sf-flavor__image .sf-flavor__slice {
   left: auto;
   right: 50%;
-  transform: translate(103%, -27%) rotate(0);
+  transform: translate(103%, -30%) rotate(0);
 }
-
 
 @media only screen and (min-width: 1023px) {
 
