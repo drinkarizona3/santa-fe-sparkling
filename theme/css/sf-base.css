@@ -403,6 +403,14 @@ figure.sf-flavor__image-image {
   border-color: var(--sf-theme-accent);
 }
 
+.sf-flavors > .sf-flavor:nth-child(odd) .sf-flavor__image {
+  transform: translateX(100vh);
+}
+
+.sf-flavors > .sf-flavor:nth-child(even) .sf-flavor__image {
+  transform: translateX(-100vh);
+}
+
 @media only screen and (min-width: 1023px) {
 
   .sf-flavor .sf-title {
