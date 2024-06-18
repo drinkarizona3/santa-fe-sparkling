@@ -394,7 +394,7 @@ body.no-js .sf-hero__background img {
 }
 
 figure.sf-flavor__image-image {
-  max-width: max(8vw, 228px);
+  max-width: clamp(200px, 18vw, 340px);
   margin: 0 auto;
   /* transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); */
 }

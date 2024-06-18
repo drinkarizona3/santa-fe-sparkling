@@ -99,13 +99,14 @@
               <figure class="sf-flavor__image-image mb-5 mb-lg-0">
 
                 <?php 
+                  
                   for($i = 0; $i >= 2; $i++):  
                       
                     $_class = ($i == 0) ? ' top' : ' bottom'; ?>
 
-                    <?php if($i == 0): ?>
+                    <?php if ($i == 0): ?>
                       <div class="sf-flavor__slice<?= $_class ?>">
-                        <?php  get_template_part('/snippets/sf-citrus-slice'); ?>
+                        <?php get_template_part('/snippets/sf-citrus-slice'); ?>
                       </div> 
                     <?php else: ?>
                       <div class="sf-flavor__slice<?= $_class ?>">
