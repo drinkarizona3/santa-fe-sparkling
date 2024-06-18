@@ -95,9 +95,11 @@
                  offset = (targetPosition % 2 === 0) ? '-' : '';
 
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
+
+            if (entry.intersectionRatio === 1) observer.unobserve(entry);
         }
 
-        if (entry.intersectionRatio === 1) observer.unobserve(entry);
+      
        
       }
 
