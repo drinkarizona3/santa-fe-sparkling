@@ -131,8 +131,6 @@
 
         const target = entry.target;
 
-        console.log(target.getAttribute('data-sf-parallax'))
-
         if (entry.isIntersecting) {
             target.classList.add('in-view');
         } else {
@@ -146,7 +144,7 @@
         threshold: 1.0
       });
 
-      console.log(parallaxElements);
+      console.log(parallaxElProps);
     }
 
     observeProductSections();
