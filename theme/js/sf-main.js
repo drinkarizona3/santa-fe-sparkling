@@ -131,35 +131,38 @@
                 
                 const percentage = ((window.scrollY - parallaxElProps[element.id].top) / window.innerHeight) * 100;
 
-                console.log(percentage);
+                console.log(element.id, percentage);
               })
 
             };
 
-      function handleParallax(entry) {
+      function handleInstersection(entry) {
 
         const target = entry.target;
 
         if (entry.isIntersecting) {
-
-          const currentParallaxEls = target.querySelectorAll('[data-sf-parallax]');
-            
           target.classList.add('in-view');
-
-          animateElements(currentParallaxEls);
-
         } else {
           target.classList.remove('in-view');
         }
       }
 
-      createObserver([section], handleParallax, {
+      function handleParallax() {
+
+        if (section.classList.contains('in-view')) {
+          animateElements(parallaxElements);
+        }
+      }
+
+      createObserver([section], handleInstersection, {
         root: null,
         rootMargin: "0px",
         threshold: .1
       });
 
-      console.log(parallaxElProps)
+      window.addEventListener('scroll', handleParallax);
+      
+      console.log(parallaxElProps);
 
     }
 
