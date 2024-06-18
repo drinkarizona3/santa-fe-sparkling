@@ -92,7 +92,7 @@
                   can = target.querySelector('.sf-flavor__image-image'),
                  percentage = Math.floor(entry.intersectionRatio * 100),
                  targetPosition = [...flavorSections].indexOf(target),
-                 offset = (targetPosition % 2 === 0) ? '' : '-';
+                 offset = (targetPosition % 2 === 0) ? '-' : '';
 
 
             console.log({targetPosition, offset});
