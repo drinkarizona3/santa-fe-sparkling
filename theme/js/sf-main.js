@@ -125,10 +125,15 @@
               return props;
 
             }, {}),
-            animate = function(el) {
-              const percentage = ((window.scrollY - parallaxElProps[el.id].top) / window.innerHeight) * 100;
+            animateElements = function(elements) {
 
-              console.log(percentage);
+              elements.forEach( element => {
+                
+                const percentage = ((window.scrollY - parallaxElProps[element.id].top) / window.innerHeight) * 100;
+
+                console.log(percentage);
+              })
+
             };
 
       function handleParallax(entry) {
@@ -136,10 +141,12 @@
         const target = entry.target;
 
         if (entry.isIntersecting) {
+
+          const currentParallaxEls = target.querySelector('[data-sf-parallax]');
             
           target.classList.add('in-view');
 
-          animate(target);
+          animateElements(currentParallaxEls);
 
         } else {
           target.classList.remove('in-view');
