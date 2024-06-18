@@ -129,9 +129,14 @@
 
               elements.forEach( element => {
                 
-                const percentage = ((window.scrollY - parallaxElProps[element.id].top) / window.innerHeight) * 100;
+                const 
+                  elementID = element.id,
+                  percentage = ((window.scrollY - parallaxElProps[elementID].top) / window.innerHeight) * 100,
+                  tolerance = parallaxElProps[elementID].speed;
 
-                console.log(element.id, percentage);
+                el.style.transform = `translate3d(${percentage / tolerance}vh, 0, 0)`;
+
+                console.log({elementID, percentage, tolerance });
               })
 
             };
