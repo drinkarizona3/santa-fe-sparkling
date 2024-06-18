@@ -128,9 +128,10 @@
 
       function handleParallax(entries) {
 
-        const target = entry.target;
-
         entries.forEach(entry => {
+
+          const target = entry.target;
+
           if (entry.isIntersecting) {
               target.classList.add('in-view');
           } else {
