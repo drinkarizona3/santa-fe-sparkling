@@ -100,7 +100,7 @@
             console.log(+entry.intersectionRatio.toFixed(1));
 
             if ( +entry.intersectionRatio.toFixed(1) === 1.0 || +entry.intersectionRatio.toFixed(1) === .9 ) {
-              can.style.trasition = 'none';
+              can.style.transition = 'none';
               can.style.transform = `translate3d(0, 0, 0)`;
               can.parentElement.classList.remove(...offsetClasses);
               observer.unobserve(entry.target);
