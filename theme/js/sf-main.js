@@ -164,9 +164,7 @@
       });
 
       window.addEventListener('scroll', handleParallax);
-      
-      console.log(parallaxElProps);
-
+    
     }
 
     observeProductSections();
