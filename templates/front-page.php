@@ -120,9 +120,6 @@
                             case 'orange-mango':
                               get_template_part('/snippets/sf-mango');
                               break;
-                            default:
-                              get_template_part('/snippets/sf-citrus-slice');
-                              break;
                           endswitch; 
       
                         ?>
