@@ -99,7 +99,7 @@
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
         }
 
-        if (entry.intersectionRatio == 1) oberver.unobserve(target);
+        if (entry.intersectionRatio === .9) oberver.unobserve(target);
        
       }
 
