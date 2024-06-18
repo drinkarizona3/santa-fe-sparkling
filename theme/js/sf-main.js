@@ -112,7 +112,7 @@
     function parallax() {
 
       const parallaxElements = document.querySelector('[data-sf-parallax]'),
-            parallaxElProps = parallaxElements.reduce( (props, element) => {
+            parallaxElProps = [...parallaxElements].reduce( (props, element) => {
 
               const elementID = element.id;
 
