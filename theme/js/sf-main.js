@@ -97,7 +97,9 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vw, 0, 0)`;
 
-            if (percentage === 0) {
+            console.log(Math.floor(entry.intersectionRatio));
+
+            if (entry.intersectionRatio === .9 ) {
               can.style.transform = `translate3d(0, 0, 0)`;
               can.parentElement.classList.remove(...offsetClasses);
               observer.unobserve(entry.target);
