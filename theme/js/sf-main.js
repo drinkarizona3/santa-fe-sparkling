@@ -6,7 +6,6 @@
     
     const
       $body = $('body'),
-      loadingWait = 1500,
       elementSelectors = ['#sf-background', '#navbar'],
       flavorSections = document.querySelectorAll('.sf-flavor'),
       // Utility Functions
@@ -23,15 +22,6 @@
       };
     
     // Main functions
-    function intro() {
-      $body.addClass('sf-start-intro');
-  
-      $(window).on('load', ()=> {
-        setTimeout( () => $body.addClass('sf-end-intro'), loadingWait);
-        setTimeout( () => $body.addClass('sf-loaded'), loadingWait * 1.5 );
-      });
-    }
-
     function observeProductSections(){
       const flavorsSection = document.querySelector('#sf-flavors');
 
@@ -119,11 +109,50 @@
         }));
     }
 
-    intro();
+    function parallax() {
+
+      const parallaxElements = documnet.querySelector('[data-sf-parallax]'),
+            parallaxElProps = parallaxElements.reduce( (props, element) => {
+
+              const elementID = element.id;
+
+              props[elementID] = {
+                height: element.innerHeight,
+                top: element.scrollTop
+              }
+
+              return props;
+
+            }, {});
+  
+
+      function handleParallax(entries) {
+
+        const target = entry.target;
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              target.classList.add('in-view');
+          } else {
+            target.classList.remove('in-view');
+          }
+        })
+      }
+
+      createObserver(parallaxElements, handleParallax, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0
+      });
+
+      console.log(parallaxElProps)
+    }
+
     observeProductSections();
     changeProductSectionState();
     nav();
     //introduceElements();
+    parallax();
 
   });
 

@@ -16,9 +16,9 @@
     <?php 
       if($hero_backgrounds): 
     
-        foreach($hero_backgrounds as $background): ?>
+        foreach($hero_backgrounds as $i => $background): ?>
 
-          <div class="sf-hero__background position-absolute <?= $background['position'] ?>">
+          <div id="<?= uniqid('sf-id_'); ?>" class="sf-hero__background position-absolute <?= $background['position'] ?>" data-sf-parallax='{"speed": <? 1 * $i ?>}'>
             <?= wp_get_attachment_image( $background['image']['ID'], null, null, array(
               'class' => 'sf-object-fit',
               'onload' => 'this.classList.add("sf-img-loaded")'
