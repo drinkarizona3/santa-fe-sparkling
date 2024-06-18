@@ -100,7 +100,7 @@
 
                 <?php 
                   
-                  for($i = 0; $i <= 2; $i++):  
+                  for($i = 0; $i < 2; $i++):  
                       
                     $_class = ($i == 0) ? ' top' : ' bottom'; ?>
 
