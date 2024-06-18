@@ -140,7 +140,7 @@
         }
       }
 
-      createObserver(section, handleParallax, {
+      createObserver([section], handleParallax, {
         root: null,
         rootMargin: "0px",
         threshold: 1.0
