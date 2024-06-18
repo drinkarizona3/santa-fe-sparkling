@@ -396,7 +396,7 @@ body.no-js .sf-hero__background img {
 figure.sf-flavor__image-image {
   max-width: max(20vw, 250px);
   margin: 0 auto;
-  transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1);
+  //transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .sf-flavor[data-sf-theme="pink-grapefruit"] .sf-button {
