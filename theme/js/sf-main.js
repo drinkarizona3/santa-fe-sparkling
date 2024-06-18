@@ -143,7 +143,7 @@
       createObserver([section], handleParallax, {
         root: null,
         rootMargin: "0px",
-        threshold: 1.0
+        threshold: .1
       });
 
       console.log(parallaxElProps)
