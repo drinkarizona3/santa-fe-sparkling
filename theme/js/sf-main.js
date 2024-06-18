@@ -95,7 +95,7 @@
 
             console.log(target,can);
    
-            can.style.transform = `translate3d(0, -${percentage}vh, 0)`;
+            can.style.transform = `translate3d(-${percentage}vh, 0, 0)`;
         }
        
       }
