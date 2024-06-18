@@ -98,9 +98,10 @@
 
             console.log(percentage);
 
-            if (entry.intersectionRatio >= .5 && entry.intersectionRatio <= 1.0) {
-              console.log('test')
-              //observer.unobserve(entry);
+            if (percentage === 0) {
+
+              console.log('test');
+              observer.unobserve(entry);
             }
         }
 
