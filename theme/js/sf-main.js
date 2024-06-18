@@ -114,17 +114,17 @@
       const parallaxElements = document.querySelectorAll('[data-sf-parallax]'),
             parallaxElProps = [...parallaxElements].reduce( (props, element) => {
 
-              const elementID = element.id;
-
-              props[elementID] = {
-                height: element.innerHeight,
+              props[element.id] = {
+                el: element,
                 top: element.scrollTop
               }
 
               return props;
 
-            }, {});
-  
+            }, {}),
+            animate = function(el) {
+              const percentage = ((window.scrollY - parallaxElements[el.id].top) / window.innerHeight) * 100;
+            };
 
       function handleParallax(entries) {
 
