@@ -96,7 +96,7 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
 
-            console.log(entry.intersectionRatio);
+            console.log(percentage);
 
             if (entry.intersectionRatio >= .5 && entry.intersectionRatio <= 1.0) {
               console.log('test')
