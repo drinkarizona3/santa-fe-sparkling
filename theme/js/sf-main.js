@@ -87,8 +87,6 @@
       function handleIntro(entry, observer) {
 
         if (entry.isIntersecting) {
-
-          console.log(entry.intersectionRatio);
           
            const target = entry.target,
                   can = target.querySelector('.sf-flavor__image-image'),
@@ -99,7 +97,7 @@
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
         }
 
-        if (entry.intersectionRatio === 1) observer.unobserve(target);
+        if (entry.intersectionRatio === 1) observer.unobserve(entry);
        
       }
 
