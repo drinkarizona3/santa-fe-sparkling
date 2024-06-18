@@ -97,7 +97,7 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vw, 0, 0)`;
 
-            console.log(Math.floor(entry.intersectionRatio));
+            console.log(entry.intersectionRatio.tofixed(1));
 
             if (entry.intersectionRatio === .9 ) {
               can.style.transform = `translate3d(0, 0, 0)`;
