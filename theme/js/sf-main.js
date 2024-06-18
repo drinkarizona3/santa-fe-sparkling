@@ -84,7 +84,7 @@
         thresholds.push(i);
       }
 
-      function handleIntro(entry) {
+      function handleIntro(entry, oberver) {
 
         if (entry.isIntersecting) {
 
@@ -98,6 +98,8 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
         }
+
+        if (entry.intersectionRatio == 1) oberver.unobserve(target);
        
       }
 
