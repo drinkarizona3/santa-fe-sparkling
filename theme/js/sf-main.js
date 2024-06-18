@@ -127,18 +127,17 @@
               const percentage = ((window.scrollY - parallaxElements[el.id].top) / window.innerHeight) * 100;
             };
 
-      function handleParallax(entries) {
+      function handleParallax() {
 
-        entries.forEach(entry => {
+        const target = entry.target;
 
-          const target = entry.target;
+        console.log(target.getAttribute('data-sf-parallax'))
 
-          if (entry.isIntersecting) {
-              target.classList.add('in-view');
-          } else {
-            target.classList.remove('in-view');
-          }
-        })
+        if (entry.isIntersecting) {
+            target.classList.add('in-view');
+        } else {
+          target.classList.remove('in-view');
+        }
       }
 
       createObserver(parallaxElements, handleParallax, {
