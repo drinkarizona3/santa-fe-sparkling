@@ -404,11 +404,11 @@ figure.sf-flavor__image-image {
   border-color: var(--sf-theme-accent);
 }
 
-.sf-flavor:nth-child.sf-offset-right .sf-flavor__image {
+.sf-flavor__image.sf-offset-right {
   transform: translateX(100vw);
 }
 
-.sf-flavor:nth-child.sf-offset-left .sf-flavor__image {
+.sf-flavor__image.sf-offset-left {
   transform: translateX(-100vw);
 }
 
