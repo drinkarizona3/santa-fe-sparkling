@@ -132,9 +132,10 @@
                 const 
                   elementID = element.id,
                   percentage = ((window.scrollY - parallaxElProps[elementID].top) / window.innerHeight) * 100,
-                  tolerance = parallaxElProps[elementID].speed * 2;
+                  tolerance = parallaxElProps[elementID].speed * 2,
+                  transformValue = (percentage / tolerance).toFixed(2)
 
-                element.style.transform = `translate3d(0, ${percentage / tolerance}vh, 0)`;
+                element.style.transform = `translate3d(0, ${transformValue}vh, 0)`;
               })
 
             };
