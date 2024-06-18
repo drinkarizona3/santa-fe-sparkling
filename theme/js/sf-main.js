@@ -86,14 +86,14 @@
 
       function handleIntro(entry) {
 
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio >= .5) {
           
            const target = entry.target,
                   can = target.querySelector('.sf-flavor__image-image'),
                  percentage = Math.floor(entry.intersectionRatio * 100),
                  targetPosition = [...flavorSections].indexOf(target),
                  offset = (targetPosition % 2 === 0) ? '-' : '';
-   
+
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
         }
        
