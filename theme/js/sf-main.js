@@ -88,7 +88,7 @@
 
         if (entry.isIntersecting) {
 
-          console.log(intersectionRatio);
+          console.log(entry.intersectionRatio);
           
            const target = entry.target,
                   can = target.querySelector('.sf-flavor__image-image'),
