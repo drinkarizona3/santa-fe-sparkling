@@ -11,7 +11,7 @@
       // Utility Functions
       createObserver = function(sections, func, options) {
 
-        const callback = (entries, observer) => entries.forEach( (entry, observer) => {
+        const callback = (entries, observer) => entries.forEach( (entry) => {
           func(entry, observer);
         });
 
@@ -96,7 +96,7 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
 
-            console.log(percentage);
+            console.log(observer);
 
             if (percentage === 0) {
               observer.unobserve(entry);
