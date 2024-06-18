@@ -91,11 +91,11 @@
            const target = entry.target,
                   can = target.querySelector('.sf-flavor__image-image'),
                  percentage = Math.floor(entry.intersectionRatio * 100),
-                 targetPosition = flavorSections.indexOf(target),
+                 targetPosition = [...flavorSections].indexOf(target),
                  offset = (targetPosition % 2 === 0) ? '' : '-';
 
 
-            console.log(target,can);
+            console.log({targetPosition, offset});
    
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
         }
