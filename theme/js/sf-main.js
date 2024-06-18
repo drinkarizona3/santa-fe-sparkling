@@ -99,8 +99,8 @@
 
             if (percentage === 0) {
               can.style.transform = `translate3d(0, 0, 0)`;
-              //can.parentElement.classList.remove(...offsetClasses);
-              return;
+              can.parentElement.classList.remove(...offsetClasses);
+              observer.unobserve(entry.target);
             }
         }
        
