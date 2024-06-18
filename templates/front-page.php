@@ -30,12 +30,12 @@
       endif;
     ?>
 
-    <div class="position-relative sf-hero__content">
+    <div class="position-relative sf-hero__content" data-sf-parallax='{"speed": 1.5}'>
       <h1 class="sf-bloomsbury text-center sf-scaling-text">
         <span class="sf-brandname position-relative" data-text="<?= strip_tags($hero_title) ?>"><?= $hero_title ?></span>
         <span class="d-block sf-subtitle position-relative" data-text="<?= strip_tags($hero_subtitle) ?>"><?= $hero_subtitle; ?></span>
       </h1>
-  </div>
+    </div>
 
   </section>
 
