@@ -11,8 +11,8 @@
       // Utility Functions
       createObserver = function(sections, func, options) {
 
-        const callback = (entries, observer) => entries.forEach( (entry) => {
-          func(entry);
+        const callback = (entries, observer) => entries.forEach( (entry, observer) => {
+          func(entry, observer);
         });
 
         sections.forEach( section => {
