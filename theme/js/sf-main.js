@@ -99,8 +99,8 @@
             console.log(percentage);
 
             if (percentage === 0) {
-
-              return;
+              observer.unobserve(entry);
+              can.style.transform = `translate3d(0, 0, 0)`;
             }
         }
 
