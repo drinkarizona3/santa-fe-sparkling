@@ -142,7 +142,7 @@
 
         if (entry.isIntersecting) {
 
-          const currentParallaxEls = target.querySelector('[data-sf-parallax]');
+          const currentParallaxEls = target.querySelectorAll('[data-sf-parallax]');
             
           target.classList.add('in-view');
 
