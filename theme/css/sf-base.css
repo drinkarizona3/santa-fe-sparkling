@@ -111,9 +111,6 @@ p {
   margin: 0;
 }
 
-[data-sf-parallax] {
-  transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 /* header */
 #navbar {
@@ -401,6 +398,10 @@ figure.sf-flavor__image-image {
 
   .sf-flavor .sf-title {
     white-space: nowrap;
+  }
+
+  [data-sf-parallax] {
+    transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
