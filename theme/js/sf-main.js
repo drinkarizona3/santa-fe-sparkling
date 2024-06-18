@@ -127,6 +127,8 @@
             }, {}),
             animate = function(el) {
               const percentage = ((window.scrollY - parallaxElements[el.id].top) / window.innerHeight) * 100;
+
+              console.log(percentage);
             };
 
       function handleParallax(entry) {
@@ -134,7 +136,11 @@
         const target = entry.target;
 
         if (entry.isIntersecting) {
-            target.classList.add('in-view');
+            
+          target.classList.add('in-view');
+
+          animate();
+
         } else {
           target.classList.remove('in-view');
         }
