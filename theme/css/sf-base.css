@@ -417,13 +417,14 @@ figure.sf-flavor__image-image {
   top: 0;
   left: 50%;
   width: 7em;
-  transform: translate(-103%, -27%);
+  transform: translate(-103%, -27%) rotate(-20deg);
   opacity: 0;
-  transition: opacity .6s ease-in-out;
+  transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1), transform .6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.sf-flavor.sf-flavor__animate {
+.sf-flavor.sf-flavor__animate .sf-flavor__slice {
   opacity: 1;
+  transform: translate(-103%, -27%) rotate(0);
 }
 
 
