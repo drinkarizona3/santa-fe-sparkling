@@ -110,19 +110,11 @@
                       </div> 
                     <?php else: ?>
                       <div class="sf-flavor__slice<?= $_class ?>">
-                        <?php 
-
-                          $post_name = $post->$post_name;
-      
-                          switch ($post_name):
-                            case 'raspberry-lime':
-                              get_template_part('/snippets/sf-raspberry');
-                              break;
-                            case 'orange-mango':
-                              get_template_part('/snippets/sf-mango');
-                              break;
-                          endswitch; 
-      
+                        <?php if ($post->$post_name == 'raspberry-lime') {
+                            get_template_part('/snippets/sf-raspberry');
+                          } else {
+                            get_template_part('/snippets/sf-mango');
+                          }
                         ?>
                       </div>
                     <?php endif; 
