@@ -96,12 +96,11 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vh, 0, 0)`;
 
-            console.log(observer);
+            console.log(entry.intersectionRatio);
 
-            if (percentage === 0) {
-              observer.unobserve(entry);
-              can.style.transform = `translate3d(0, 0, 0)`;
-            }
+            // if (percentage ) {
+            //   can.style.transform = `translate3d(0, 0, 0)`;
+            // }
         }
 
       
