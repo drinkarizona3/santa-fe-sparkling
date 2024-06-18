@@ -99,7 +99,7 @@
 
             console.log(+entry.intersectionRatio.toFixed(1));
 
-            if ( +entry.intersectionRatio.toFixed(1) === 1.0 || +entry.intersectionRatio.toFixed(1) === .9 ) {
+            if ( +entry.intersectionRatio.toFixed(1) === 1.0) {
               target.classList.add('sf-flavor__animate');
               can.style.transition = 'none';
               can.style.transform = `translate3d(0, 0, 0)`;

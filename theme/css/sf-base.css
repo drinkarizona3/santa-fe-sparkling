@@ -420,17 +420,24 @@ figure.sf-flavor__image-image {
   transform: translate(-103%, 0%) rotate(-20deg);
   opacity: 0;
   transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1), transform .6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: .25s;
 }
 
-.sf-flavor:nth-child(odd) .sf-flavor__image .sf-flavor__slice {
+.sf-flavor:nth-child(even) .sf-flavor__image .sf-flavor__slice {
   left: auto;
   right: 50%;
-  transform: translate(103%, 0%) rotate(20deg);
+  transform: translate(103%, 0%) rotate(-20deg);
 }
 
 .sf-flavor.sf-flavor__animate .sf-flavor__slice {
   opacity: 1;
   transform: translate(-103%, -27%) rotate(0);
+}
+
+.sf-flavor:nth-child(even).sf-flavor__animate .sf-flavor__image .sf-flavor__slice {
+  left: auto;
+  right: 50%;
+  transform: translate(103%, -27%) rotate(0);
 }
 
 
