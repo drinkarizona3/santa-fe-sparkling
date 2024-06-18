@@ -422,10 +422,10 @@ figure.sf-flavor__image-image {
   transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1), transform .6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.sf-flavor__image.sf-offset-left .sf-flavor__slice {
+.sf-flavor:nth-child(odd) .sf-flavor__image .sf-flavor__slice {
   left: auto;
   right: 50%;
-  transform: translate(103%, 0%) rotate(-20deg);
+  transform: translate(103%, 0%) rotate(20deg);
 }
 
 .sf-flavor.sf-flavor__animate .sf-flavor__slice {
