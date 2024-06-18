@@ -96,14 +96,38 @@
             <div class="col-md-4 sf-flavor__image<?= $offset_class ?>">
               <?php $flavor_img_ID = get_post_thumbnail_id($post->ID); ?>
 
-              <div class="sf-flavor__slice">
-                <?php get_template_part('/snippets/sf-citrus-slice'); ?>
-              </div>
-  
               <figure class="sf-flavor__image-image mb-5 mb-lg-0">
+                
+                  <?php 
+                      for($i = 0; $i >= 2; $i++):  
+                          $_class = ($i == 0) ? ' top' : ' bottom';
+                        ?>
+                          <div class="sf-flavor__slice<?= $_class ?>">
+                            <?php 
+
+                              $post_name = $post->$post_name;
+          
+                              switch ($post_name):
+                                case 'raspberry-lime':
+                                  get_template_part('/snippets/sf-raspberry');
+                                  break;
+                                case 'orange-mango':
+                                  get_template_part('/snippets/sf-mango');
+                                  break;
+                                default:
+                                  get_template_part('/snippets/sf-citrus-slice');
+                                  break;
+                              endswitch; 
+          
+                            ?>
+                          </div> <?php
+                      endfor;   
+                  ?>
+
                   <?= wp_get_attachment_image( $flavor_img_ID, null, null, array(
                     'loading' => 'lazy'
                   )); ?>
+
               </figure>
   
             </div>
