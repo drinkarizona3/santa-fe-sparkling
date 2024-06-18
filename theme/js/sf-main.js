@@ -100,8 +100,7 @@
 
             if (percentage === 0) {
 
-              console.log('test');
-              observer.unobserve(entry);
+              return;
             }
         }
 
