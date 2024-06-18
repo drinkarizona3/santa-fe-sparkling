@@ -85,8 +85,15 @@
       }
 
       function handleIntro(entry) {
-       
-        const target = entry.target;
+
+        if (entry.isIntersecting) {
+          
+           const target = entry.target,
+                  can = target.querySelectorAll('.sf-flavor__image-image'),
+                 percentage = Math.floor(entry.intersectionRatio * 100);
+   
+            can.style.transform = `translate3d(0, -${percentage}vh, 0)`;
+        }
        
       }
 
@@ -171,7 +178,7 @@
     observeProductSections();
     changeProductSectionState();
     nav();
-    //introduceElements();
+    introduceElements();
     parallax('.sf-hero');
 
   });
