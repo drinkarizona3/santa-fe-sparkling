@@ -18,7 +18,7 @@
     
         foreach($hero_backgrounds as $i => $background): ?>
 
-          <div id="<?= uniqid('sf-id_'); ?>" class="sf-hero__background position-absolute <?= $background['position'] ?>" data-sf-parallax='{"speed": <?= count($hero_backgrounds) / ($i + 1) ?>}'>
+          <div id="<?= uniqid('sf-id_'); ?>" class="sf-hero__background position-absolute <?= $background['position'] ?>" data-sf-parallax='{"speed": <?= (count($hero_backgrounds) / ($i + 1) * 2) ?>}'>
             <?= wp_get_attachment_image( $background['image']['ID'], null, null, array(
               'class' => 'sf-object-fit',
               'onload' => 'this.classList.add("sf-img-loaded")'
@@ -30,7 +30,7 @@
       endif;
     ?>
 
-    <div class="position-relative sf-hero__content" data-sf-parallax='{"speed": 1.5}'>
+    <div class="position-relative sf-hero__content" data-sf-parallax='{"speed": 1}'>
       <h1 class="sf-bloomsbury text-center sf-scaling-text">
         <span class="sf-brandname position-relative" data-text="<?= strip_tags($hero_title) ?>"><?= $hero_title ?></span>
         <span class="d-block sf-subtitle position-relative" data-text="<?= strip_tags($hero_subtitle) ?>"><?= $hero_subtitle; ?></span>
