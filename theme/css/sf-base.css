@@ -405,11 +405,11 @@ figure.sf-flavor__image-image {
 }
 
 .sf-flavor:nth-child(odd) .sf-flavor__image {
-  transform: translateX(100vh);
+  transform: translateX(100vw);
 }
 
 .sf-flavor:nth-child(even) .sf-flavor__image {
-  transform: translateX(-100vh);
+  transform: translateX(-100vw);
 }
 
 @media only screen and (min-width: 1023px) {
