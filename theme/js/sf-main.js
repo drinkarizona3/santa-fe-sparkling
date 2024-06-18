@@ -116,7 +116,8 @@
 
               props[element.id] = {
                 el: element,
-                top: element.scrollTop
+                top: element.scrollTop,
+                speed: element.getAttribute('data-sf-parallax')['speed']
               }
 
               return props;
