@@ -396,7 +396,7 @@ body.no-js .sf-hero__background img {
 figure.sf-flavor__image-image {
   max-width: max(20vw, 250px);
   margin: 0 auto;
- transition: none;
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sf-flavor[data-sf-theme="pink-grapefruit"] .sf-button {
@@ -406,12 +406,10 @@ figure.sf-flavor__image-image {
 
 .sf-flavor__image.sf-offset-right {
   transform: translateX(100vw);
-  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sf-flavor__image.sf-offset-left {
   transform: translateX(-100vw);
-  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media only screen and (min-width: 1023px) {
