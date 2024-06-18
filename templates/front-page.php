@@ -69,7 +69,7 @@
       $offset_class = ($i % 2 === 0) ? ' sf-offset-right' : ' sf-offset-left';
       ?>
 
-      <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-section sf-flavor d-flex align-items-center" data-sf-theme="<?= $post->post_name ?>">
+      <article id="sf-flavor-section__<?= $post->post_name ?>" class="sf-section sf-flavor d-flex align-items-center overflow-hidden" data-sf-theme="<?= $post->post_name ?>">
 
         <div class="container-md">
 
