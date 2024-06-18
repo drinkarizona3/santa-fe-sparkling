@@ -89,8 +89,11 @@
         if (entry.isIntersecting) {
           
            const target = entry.target,
-                  can = target.querySelectorAll('.sf-flavor__image-image'),
+                  can = target.querySelector('.sf-flavor__image-image'),
                  percentage = Math.floor(entry.intersectionRatio * 100);
+
+
+            console.log(target,can);
    
             can.style.transform = `translate3d(0, -${percentage}vh, 0)`;
         }
