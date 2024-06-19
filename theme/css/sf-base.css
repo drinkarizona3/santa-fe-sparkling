@@ -452,7 +452,7 @@ figure.sf-flavor__image-image img {
 .sf-flavor__slice.bottom {
   left: 0 !important;
   right: auto !important;
-  transform: translate( calc(var(--x-value) / 4), calc(var(--y-value) * -1 + 20) ) rotate(calc(var(--rotate-value) * -1)) rotateY(0deg) !important;
+  transform: translate( calc(var(--x-value) / 4), calc(var(--y-value) * -1 + -20%) ) rotate(calc(var(--rotate-value) * -1)) rotateY(0deg) !important;
   z-index: 0;
 }
 
