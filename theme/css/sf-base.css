@@ -363,6 +363,11 @@ body.no-js .sf-hero__background img {
 }
 
 /* Flavor loop */
+
+.sf-flavor {
+  margin: 10% 0;
+}
+
 .sf-flavor .sf-title {
   line-height: .9;
   margin: 0;
