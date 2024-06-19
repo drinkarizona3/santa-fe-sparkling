@@ -158,6 +158,18 @@ body:not(.sf-intersecting-products) .navbar-brand.sf-brandname:after {
   background: none !important;
   height: auto;
   width: 70px;
+  -webkit-transition: -webkit-transform .6s cubic-bezier(1,0,0,1);
+  transition: -webkit-transform .6s cubic-bezier(1,0,0,1);
+  -o-transition: transform .6s cubic-bezier(1,0,0,1);
+  transition: transform .6s cubic-bezier(1,0,0,1);
+  transition: transform .6s cubic-bezier(1,0,0,1), -webkit-transform .6s cubic-bezier(1,0,0,1);
+  will-change: transform;
+}
+
+.navbar-toggler-icon:hover {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 #navbarDropdown.collapsing + div > .navbar-toggler {
@@ -411,11 +423,21 @@ figure.sf-flavor__image-image img {
 }
 
 .sf-flavor__image.sf-offset-right {
-  transform: translateX(100vw);
+  -webkit-transform: translateX(100vw);
+      -ms-transform: translateX(100vw);
+          transform: translateX(100vw);
 }
 
 .sf-flavor__image.sf-offset-left {
-  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+      -ms-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+body.no-js .sf-flavor__image {
+  -webkit-transform: translate(0) !important;
+      -ms-transform: translate(0) !important;
+          transform: translate(0) !important;
 }
 
 .sf-flavor__slice {

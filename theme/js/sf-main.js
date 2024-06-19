@@ -65,7 +65,9 @@
             
           });
 
-        } 
+        } else {
+          element.setAttribute('data-sf-theme', 'pink-grapefruit');
+        }
       }
 
       createObserver(flavorSections, handleStateChange, {
