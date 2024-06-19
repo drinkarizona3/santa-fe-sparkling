@@ -343,7 +343,7 @@ body.no-js .sf-hero__background img {
 
 .sf-hero__content {
   width: 100%;
-  max-width: max(min(78%, 90rem), 31rem);
+  max-width:max(min(80%, 90rem), 50rem);
   margin: 0 auto;
 }
 
