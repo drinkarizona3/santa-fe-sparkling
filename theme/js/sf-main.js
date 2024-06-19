@@ -110,7 +110,7 @@
 
       createObserver(flavorSections, handleIntro, {
         root: null,
-        rootMargin: "25% 0% 0% 0%",
+        rootMargin: "-25% 0% 0% 0%",
         threshold: thresholds
       });
 
