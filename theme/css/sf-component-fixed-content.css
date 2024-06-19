@@ -4,6 +4,7 @@
   background-color: var(--sf-theme-primary);
   transition:background-color var(--sf-theme-transition), opacity var(--sf-theme-transition);
   position: relative;
+  min-height: 100dvh;
 }
 
 .sf-foreground {
