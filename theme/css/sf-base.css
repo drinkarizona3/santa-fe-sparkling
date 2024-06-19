@@ -399,6 +399,11 @@ figure.sf-flavor__image-image {
   /* transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); */
 }
 
+figure.sf-flavor__image-image img {
+  position: relative;
+  z-index: 3;
+}
+
 .sf-flavor[data-sf-theme="pink-grapefruit"] .sf-button {
   background-color: var(--sf-theme-secondary);
   border-color: var(--sf-theme-accent);
@@ -424,7 +429,7 @@ figure.sf-flavor__image-image {
   transform: translate(calc(var(--x-value) * -1), 0%) rotate(calc(var(--rotate-value) * -1));
   opacity: 0;
   transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1), transform .6s cubic-bezier(0.22, 1, 0.36, 1);
-  z-index: -1;
+  z-index: 1;
 }
 
 .sf-flavor:nth-child(even) .sf-flavor__image .sf-flavor__slice {
