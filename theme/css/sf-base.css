@@ -7,7 +7,7 @@
   --sf-font-size-body: 3rem;
   --sf-font-size-body-larger: calc(var(--sf-font-size-body) * 1.145);
   --sf-font-size-heading: 9.6rem;
-  --sf-font-size-heading-level-2: calc(var(--sf-font-size-heading) * .74);
+  --sf-font-size-heading-level-2: calc(var(--sf-font-size-heading) * .65);
   --sf-font-body: var(--sf-quicksand), sans-serif; 
   --sf-font-heading: var(--sf-bloomsbury), var(--sf-quicksand), sans-serif;
 
@@ -348,7 +348,7 @@ body.no-js .sf-hero__background img {
 }
 
 .sf-hero__content h1 {
-  font-size: clamp(2rem, 15vw, calc(var(--sf-font-size-heading) * 1.95)) !important;
+  font-size: clamp(6.5rem, 17vw, calc(var(--sf-font-size-heading) * 1.95)) !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
