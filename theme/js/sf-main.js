@@ -97,8 +97,6 @@
 
             can.style.transform = `translate3d(${offset}${percentage}vw, 0, 0)`;
 
-            console.log(+entry.intersectionRatio.toFixed(1));
-
             if ( +entry.intersectionRatio.toFixed(1) === 1.0) {
               target.classList.add('sf-flavor__animate');
               can.style.transition = 'none';
@@ -179,7 +177,7 @@
       }
 
       createObserver([section], handleInstersection, {
-        root: null,
+        root: "-15% 0% 0% 0%",
         rootMargin: "0px",
         threshold: .1
       });

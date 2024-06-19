@@ -413,11 +413,15 @@ figure.sf-flavor__image-image {
 }
 
 .sf-flavor__slice {
+
+  --x-value: 98%;
+  --y-value: 30%;
+  --rotate-value: 20deg;
   position: absolute;
   top: 0;
   left: 50%;
-  width: max(29%, 6em);
-  transform: translate(-100%, 0%) rotate(-20deg);
+  width:  max(60%, 4em);
+  transform: translate(calc(var(--x-value) * -1), 0%) rotate(calc(var(--rotate-value) * -1));
   opacity: 0;
   transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1), transform .6s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: -1;
@@ -426,18 +430,25 @@ figure.sf-flavor__image-image {
 .sf-flavor:nth-child(even) .sf-flavor__image .sf-flavor__slice {
   left: auto;
   right: 50%;
-  transform: translate(100%, 0%) rotate(-20deg);
+  transform: translate(var(--x-value), 0%) rotate(calc(var(--rotate-value) * -1));
 }
 
 .sf-flavor.sf-flavor__animate .sf-flavor__slice {
   opacity: 1;
-  transform: translate(-100%, -30%) rotate(0);
+  transform: translate(calc(var(--x-value) * -1), calc(var(--y-value) * -1)) rotate(0);
 }
 
 .sf-flavor:nth-child(even).sf-flavor__animate .sf-flavor__image .sf-flavor__slice {
   left: auto;
   right: 50%;
-  transform: translate(103%, -30%) rotate(0);
+  transform: translate(var(--x-value), calc(var(--y-value) * -1)) rotate(0);
+}
+
+.sf-flavor__slice.bottom {
+  left: 0 !important;
+  right: auto !important;
+  transform: translate( calc(var(--x-value) / 4), calc(var(--y-value) * -1 + 20) ) rotate(calc(var(--rotate-value) * -1)) rotateY(0deg) !important;
+  z-index: 0;
 }
 
 @media only screen and (min-width: 1023px) {
