@@ -177,8 +177,8 @@
       }
 
       createObserver([section], handleInstersection, {
-        root: "-15% 0% 0% 0%",
-        rootMargin: "0px",
+        root: null,
+        rootMargin: "-15% 0% 0% 0%",
         threshold: .1
       });
 
