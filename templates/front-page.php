@@ -63,8 +63,6 @@
       
       $flavor_title = get_the_title($post->ID);
       $tagline = get_field('sf_flavor_tagline', $post->ID);
-      $link = get_field('sf_pdp_button', $post->ID);
-      $link_target = $link['target'] ? $link['target'] : '_self';
       $column_direction = ($i % 2 === 0) ? ' flex-md-row' : ' flex-md-row-reverse'; 
       $offset_class = ($i % 2 === 0) ? ' sf-offset-right' : ' sf-offset-left';
       ?>
@@ -86,7 +84,10 @@
                     </div>
                   <?php endif; ?>
   
-                  <?php if(!empty($link)): ?>
+                  <?php if(!empty($link)): 
+                      $link = get_field('sf_pdp_button', $post->ID);
+                      $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
                     <a href="<?= $link['url'] ?>" target="<?= $link_target ?>" class="sf-button"><?= $link['title']; ?></a>
                   <?php endif; ?>
   
