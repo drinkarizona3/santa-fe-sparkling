@@ -40,6 +40,9 @@ class b4st_walker_nav_menu extends Walker_Nav_menu {
 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
+		$attributes .= ' data-text="' . esc_attr($item->title) . '"';
+		$attributes .= ' data-sf-theme="' . esc_attr($item->post_name) . '"';
+		$attributes .= ' id="nav-link__' . esc_attr($item->post_name) . '"';
 
 		$attributes .= ( $args->walker->has_children ) ? ' class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="nav-link"';
 

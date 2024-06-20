@@ -25,8 +25,7 @@
 
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon d-flex flex-column align-items-center">
-        <div class="sf-nav-text sf-bloomsbury">Explore</div>
-        <?php get_template_part('snippets/sf-grapefruit'); ?>
+        <?php get_template_part('snippets/sf-citrus-slice'); ?>
       </span>
     </button>
   </div>

@@ -2,8 +2,8 @@
 	 viewBox="0 0 171.15 171.15" style="enable-background:new 0 0 171.15 171.15;" xml:space="preserve">
 <style type="text/css">
 	.st1{fill:var(--sf-theme-accent);}
-	.st2{fill:ar(--sf-theme-rind);}
-	.st3{fill:var(--sf-theme-accent);}
+	.st2{fill:var(--sf-theme-rind);}
+	.st3{fill:var(--sf-theme-pulp);}
 </style>
 <g id="Layer_1">
 	<g>

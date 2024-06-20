@@ -1,4 +1,4 @@
-<div id="sf-social" class="sf-section d-flex align-items-center" data-flavor="arnold-palmer" data-sf-theme="lemon">
+<div id="sf-social" class="sf-section d-flex align-items-center text-center" data-sf-theme="arnold-palmer">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/theme/css/sf-section-social.css">
     <div class="container-lg">
       <div class="row">
@@ -9,7 +9,7 @@
             <p>Follow Us <a href="https://www.instagram.com/drinksantafe/" target="_blank"> @drinksantafe</a></p>
 
             <a href="https://www.instagram.com/drinksantafe/" target="_blank" class="align-items-center d-flex flex-column justify-content-center">
-              <?php get_template_part('snippets/sf-grapefruit'); ?>
+              <?php get_template_part('snippets/sf-citrus-slice'); ?>
             </a>
           </div>
         </div>
